@@ -5,7 +5,7 @@ import Particles from "react-particles";
 //import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
 import { loadSlim } from "tsparticles-slim"; // if you are going to use `loadSlim`, install the "tsparticles-slim" package too.
 
-export const Design = () => {
+export const ResponsiveBG = () => {
     const particlesInit = useCallback(async (engine: Engine) => {
         console.log(engine);
 
