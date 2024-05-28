@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import path from "path";
-import { writeFile } from "fs/promises";
+import { writeFile ,mkdir} from "fs/promises";
 import prisma from "@/db";
 
 
@@ -13,14 +13,24 @@ export const POST = async (req: any, res: any) => {
   }
 
   const buffer = Buffer.from(await file.arrayBuffer());
-  const filename = Date.now() + file.name.replaceAll(" ", "_");
+  const filename = Date.now() + "_" +file.name.replaceAll(" ", "_");
   console.log(filename);
   const techstack = JSON.parse(formData.get("techstack"));
+
+
+  const directoryPath = path.join(process.cwd(), "public/uploads/portfolio");
+  const filePath = path.join(directoryPath, filename);
+
   try {
-    await writeFile(
-      path.join(process.cwd(), "public/uploads/" + filename),
-      buffer
-    );
+    await mkdir(directoryPath, { recursive: true });
+  } catch (mkdirError) {
+    console.error("Error creating directory:", mkdirError);
+    throw mkdirError; 
+  }
+
+  try {
+    await writeFile(filePath, buffer);
+
     await prisma.portfolio.create({
       data: {
         name: formData.get("name"),
