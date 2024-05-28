@@ -26,7 +26,10 @@ export const ResponsiveBG = () => {
         init={particlesInit}
         loaded={particlesLoaded}
         options={{
-          fullScreen: false,
+          fullScreen: {
+            enable: true,
+            zIndex: -1
+          },
           background: {
             // color: {
             //   value: "#0d47a1",
@@ -59,10 +62,10 @@ export const ResponsiveBG = () => {
           },
           particles: {
             color: {
-              value: "#ffffff",
+              value: "#7e7e7e",
             },
             links: {
-              color: "#ffffff",
+              color: "#7e7e7e",
               distance: 120,
               enable: true,
               opacity: 0.6,
