@@ -3,7 +3,6 @@ import path from "path";
 import { writeFile ,mkdir} from "fs/promises";
 import prisma from "@/db";
 
-
 export const POST = async (req: any, res: any) => {
   const formData = await req.formData();
   console.log(formData);
@@ -48,4 +47,15 @@ export const POST = async (req: any, res: any) => {
   }
 };
 
+
+export const GET = async () => {
+  try {
+    const portfolios = await prisma.portfolio.findMany();
+
+    return NextResponse.json({ portfolios }, { status: 200 });
+  } catch (error) {
+    console.error("Error occurred: ", error);
+    return NextResponse.json({ error: "Failed to fetch portfolios" }, { status: 500 });
+  }
+};
 
