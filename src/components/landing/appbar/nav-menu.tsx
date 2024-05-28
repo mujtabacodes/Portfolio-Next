@@ -20,7 +20,7 @@ export function NavigationMenu() {
       <DrawerTrigger asChild>
         <Button
           variant="outline"
-          className="bg-transparent border-none"
+          className="bg-transparent"
           size={'sm'}
         >
           <MenuIcon className="h-5 w-5" />
@@ -34,27 +34,48 @@ export function NavigationMenu() {
             {/* <DrawerDescription>Choose an option</DrawerDescription> */}
           </DrawerHeader>
 
-            <div className="p-4 pb-16">
-              <div className="flex flex-col items-center justify-center space-y-2 text-lg">
-                <Button variant={'navLink'} size={'lg'} asChild>
-                  <DrawerClose asChild>
-                  </DrawerClose>
-                </Button>
-                
+          <div className="p-4 pb-16">
+            <div className="flex flex-col items-center justify-center space-y-2 text-lg">
+              <Button variant="link" size={'lg'} asChild>
+                <DrawerClose asChild>
+                </DrawerClose>
+              </Button>
 
-                
 
-                <Button size={'lg'} variant={'navLink'} asChild>
-                  <DrawerClose asChild>
-                    <Link href={'/section'}>Page or section</Link>
-                  </DrawerClose>
-                </Button>
 
-                
 
-              </div>
+
+              <Button size={'lg'} variant="link" asChild>
+                <DrawerClose asChild>
+                  <Link href={'/section'}>About</Link>
+
+                </DrawerClose>
+              </Button>
+              <Button size={'lg'} variant="link" asChild>
+                <DrawerClose asChild>
+                  <Link href={'/section'}>Projects</Link>
+
+                </DrawerClose>
+              </Button>
+              <Button size={'lg'} variant="link" asChild>
+                <DrawerClose asChild>
+                  <Link href="#contact">Experience</Link>
+
+                </DrawerClose>
+              </Button>
+              <Button size={'lg'} variant="link" asChild>
+                <DrawerClose asChild>
+
+                  <Link href={'/section'}>Contact</Link>
+
+                </DrawerClose>
+              </Button>
+
+
+
             </div>
-        
+          </div>
+
 
           <DrawerFooter>
             <DrawerClose asChild>
