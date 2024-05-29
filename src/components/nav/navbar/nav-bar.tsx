@@ -15,6 +15,7 @@ export const Navbar = () => {
             </Button></li>
         <li> <Button variant="link">Projects</Button></li>
         <li> <Button variant="link">Experience</Button></li>
+        <li> <Button variant="link">Testimonails</Button></li>
       </ul>
 
       <ul className='flex gap-3 items-center'>

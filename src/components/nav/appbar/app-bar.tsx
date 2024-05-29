@@ -59,6 +59,12 @@ export function MobileNav() {
               </Button>
               <Button size={'lg'} variant="link" asChild>
                 <DrawerClose asChild>
+                  <Link href={'/section'}>Testimonials</Link>
+
+                </DrawerClose>
+              </Button>
+              <Button size={'lg'} variant="link" asChild>
+                <DrawerClose asChild>
                   <Link href="#contact">Experience</Link>
 
                 </DrawerClose>
