@@ -12,16 +12,16 @@ export const Header = () => {
         <T24 className="">Hello 👋 My name is</T24>
         <Heading>Mujtaba Shafique</Heading>
         <T24 className="">
-  I&apos;m a software engineer. I possess strong problem-solving skills and specialize in crafting exceptional digital experiences. My current area of focus is in the web2 and web3 domain, where I actively engage in developing and designing immersive applications..
-</T24>
-<Link href="/resume.pdf" className="rounded-full border-[#64FFDA] border-2 border-spacing-2 p-2"
-        download="resume.pdf">
-      
-        Resume
-    </Link>
+          I&apos;m a software engineer. I possess strong problem-solving skills and specialize in crafting exceptional digital experiences. My current area of focus is in the web2 and web3 domain, where I actively engage in developing and designing immersive applications..
+        </T24>
+        <Button variant="outline_styled" className='mt-5'>
+          <a href="/resume.pdf" download='Mujtaba Shafique.pdf'>
+            Resume
+            </a>
+            </Button>
       </div>
-        <Design3D/>
-        <SocialLinks/>
+      <Design3D />
+      <SocialLinks />
     </div>
   )
 }
