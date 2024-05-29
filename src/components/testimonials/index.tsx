@@ -35,13 +35,10 @@ const FixedData: Testimonial[] = [
 ];
 
 const Testimonials: React.FC = () => {
-  const testimonialData = useSelector((state: any) => state.testimonial as ReduxTestimonial[]);
 
   return (
     <section id="testimonials" className="py-8">
       <SectionHeader heading='Testimonails' subTitle='Something which matters' align='left'/>
-      <h5 className="text-center text-gray-400">Review from clients</h5>
-      <h2 className="text-center text-4xl mb-8">Testimonials</h2>
       <Swiper
         spaceBetween={30}
         centeredSlides
@@ -59,19 +56,9 @@ const Testimonials: React.FC = () => {
             <small className="block text-gray-300 mt-2">{comment}</small>
           </SwiperSlide>
         ))}
-        {testimonialData.map(({ _id, selectedFile, clientname, clientcomment }) => (
-          <SwiperSlide key={_id} className="bg-gray-800 text-white p-8 rounded-2xl text-center">
-            <div className="w-16 h-16 mx-auto mb-4">
-              <img src={selectedFile} alt={clientname} className="rounded-full border-4 border-primary-variant" />
-            </div>
-            <h5 className="text-lg">{clientname}</h5>
-            <small className="block text-gray-300 mt-2">{clientcomment}</small>
-          </SwiperSlide>
-        ))}
+      
       </Swiper>
-      <div className="hidden sm:block mt-8">
-        <TestimonialLottie />
-      </div>
+      
     </section>
   );
 };
