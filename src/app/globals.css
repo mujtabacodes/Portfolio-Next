@@ -1,6 +1,12 @@
+/* globals.css */
 @tailwind base;
   @tailwind components;
   @tailwind utilities;
+  @import url("https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap");
+
+
+
+
 
   @layer base {
     :root {

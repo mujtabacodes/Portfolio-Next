@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-export interface IT24 {
+export interface ITypo {
     children: ReactNode;
     className?:string
 }

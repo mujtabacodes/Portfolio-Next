@@ -1,7 +1,11 @@
-import { IT24 } from '@/types/types';
+import { ITypo } from '@/types/types';
 import React from 'react';
 
 
-export const T24 = ({ children,className }:IT24) => {
-  return <div className={`text-[24px] ${className}`}>{children}</div>;
+export const T24 = ({ children,className }:ITypo) => {
+  return <div className={`text-md ${className} font-play`}>{children}</div>;
 };
+export const Heading = ({ children,className }:ITypo) => {
+  return <div className={`text-[48px] ${className} font-play`}>{children}</div>;
+};
+
