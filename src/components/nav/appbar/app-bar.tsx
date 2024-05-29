@@ -13,7 +13,7 @@ import {
 import { MenuIcon } from 'lucide-react';
 import Link from 'next/link';
 
-export function NavigationMenu() {
+export function MobileNav() {
 
   return (
     <Drawer>

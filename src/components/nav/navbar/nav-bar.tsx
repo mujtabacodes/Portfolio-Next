@@ -1,6 +1,6 @@
 import React from 'react'
-import { ModeToggle } from './theme-switcher/mode-toggle'
-import { Button } from './ui/button'
+import { ModeToggle } from '../../theme-switcher/mode-toggle'
+import { Button } from '../../ui/button'
 
 export const Navbar = () => {
   return (
