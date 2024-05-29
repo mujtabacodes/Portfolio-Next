@@ -5,13 +5,14 @@ import React from 'react'
 
 import Nav from "@/components/nav/nav";
 import { Header } from "@/components/header/header";
+import Projects from "@/components/projects";
 export default function Home() {
   return (<React.Fragment>
      {/* <div className="w-full h-screen  bg-slate-500 bg-no-repeat bg-center text-orange dark:bg-black relative"> */}
     <div> 
      <Nav/>
      <Header/>
-        
+        <Projects/>
       <div className="">
         
       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis aperiam beatae ipsam tempore in, facilis suscipit eos blanditiis debitis libero ullam accusantium neque rem ea animi. Necessitatibus modi illum odio.
