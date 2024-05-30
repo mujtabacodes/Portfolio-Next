@@ -1,5 +1,5 @@
-import { ISectionHeader } from "@/types/types";
-import React from "react";
+import { ISectionHeader } from '@/types/types';
+import React from 'react';
 
 export const SectionHeader = ({ heading, subTitle, align }: ISectionHeader) => {
   return (

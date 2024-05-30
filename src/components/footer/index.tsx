@@ -1,5 +1,5 @@
-import React from "react";
-import { ContactUs } from "./contact-us";
+import React from 'react';
+import { ContactUs } from './contact-us';
 
 export const Footer = () => {
   return (

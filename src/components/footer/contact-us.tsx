@@ -1,6 +1,6 @@
-import React from "react";
-import { Button } from "../ui/button";
-import SocialLinks from "../header/components/socials";
+import React from 'react';
+import { Button } from '../ui/button';
+import SocialLinks from '../header/components/socials';
 
 export const ContactUs = () => {
   return (

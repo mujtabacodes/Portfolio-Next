@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ReactNode } from 'react';
 
 export interface ITypo {
   children: ReactNode;
@@ -8,7 +8,7 @@ export interface ITypo {
 export interface ISectionHeader {
   heading: string;
   subTitle: string;
-  align: "left" | "center" | "right";
+  align: 'left' | 'center' | 'right';
 }
 
 export interface IProject {
@@ -33,5 +33,5 @@ export interface IProjectCard {
 }
 
 export type TSocialLink = {
-  layout: "row" | "col";
+  layout: 'row' | 'col';
 };

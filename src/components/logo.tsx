@@ -1,7 +1,7 @@
-"use client";
-import React, { useEffect, useState } from "react";
-import { useTheme } from "next-themes";
-import Image from "next/image";
+'use client';
+import React, { useEffect, useState } from 'react';
+import { useTheme } from 'next-themes';
+import Image from 'next/image';
 
 export const Logo: React.FC = () => {
   const { theme, resolvedTheme } = useTheme(); // resolvedTheme gives the effective theme
@@ -13,7 +13,7 @@ export const Logo: React.FC = () => {
 
   return (
     <div className="flex items-center">
-      {currentTheme === "dark" ? (
+      {currentTheme === 'dark' ? (
         <Image
           src="/darkLogo.png"
           alt="Logo Dark Theme"

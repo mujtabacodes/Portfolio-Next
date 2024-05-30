@@ -1,7 +1,7 @@
-import React from "react";
-import { Navbar } from "./navbar/nav-bar";
-import { MobileNav } from "./appbar/app-bar";
-import { Logo } from "../logo";
+import React from 'react';
+import { Navbar } from './navbar/nav-bar';
+import { MobileNav } from './appbar/app-bar';
+import { Logo } from '../logo';
 
 const Nav = () => {
   return (

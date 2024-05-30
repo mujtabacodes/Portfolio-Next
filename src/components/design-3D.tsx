@@ -1,7 +1,7 @@
-"use client";
-import Image from "next/image";
+'use client';
+import Image from 'next/image';
 
-import Spline from "@splinetool/react-spline";
+import Spline from '@splinetool/react-spline';
 
 export default function Design3D() {
   return (

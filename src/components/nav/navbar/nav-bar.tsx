@@ -1,8 +1,8 @@
-import React from "react";
-import { ModeToggle } from "../../theme-switcher/mode-toggle";
-import { Button } from "../../ui/button";
-import { Logo } from "@/components/logo";
-import Link from "next/link";
+import React from 'react';
+import { ModeToggle } from '../../theme-switcher/mode-toggle';
+import { Button } from '../../ui/button';
+import { Logo } from '@/components/logo';
+import Link from 'next/link';
 
 export const Navbar = () => {
   return (
@@ -10,40 +10,40 @@ export const Navbar = () => {
       <Logo />
       <ul className="flex gap-2">
         <li>
-          {" "}
-          <Button size={"lg"} variant="link">
-            <Link href={"#contact-us"}>About</Link>
+          {' '}
+          <Button size={'lg'} variant="link">
+            <Link href={'#contact-us'}>About</Link>
           </Button>
         </li>
         <li>
-          {" "}
-          <Button size={"lg"} variant="link">
-            <Link href={"#contact-us"}>About</Link>
+          {' '}
+          <Button size={'lg'} variant="link">
+            <Link href={'#contact-us'}>About</Link>
           </Button>
         </li>
         <li>
-          {" "}
-          <Button size={"lg"} variant="link">
-            <Link href={"#contact-us"}>About</Link>
+          {' '}
+          <Button size={'lg'} variant="link">
+            <Link href={'#contact-us'}>About</Link>
           </Button>
         </li>
         <li>
-          {" "}
-          <Button size={"lg"} variant="link">
-            <Link href={"#contact-us"}>About</Link>
+          {' '}
+          <Button size={'lg'} variant="link">
+            <Link href={'#contact-us'}>About</Link>
           </Button>
         </li>
       </ul>
 
       <ul className="flex gap-3 items-center">
         <li>
-          {" "}
+          {' '}
           <ModeToggle />
         </li>
         <li>|</li>
         <li>
-          <Button size={"lg"} variant="outline_styled">
-            <Link href={"#contact-us"}>About</Link>
+          <Button size={'lg'} variant="outline_styled">
+            <Link href={'#contact-us'}>About</Link>
           </Button>
         </li>
       </ul>

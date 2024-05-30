@@ -1,9 +1,9 @@
-"use client";
-import { useCallback } from "react";
-import type { Container, Engine } from "tsparticles-engine";
-import Particles from "react-particles";
+'use client';
+import { useCallback } from 'react';
+import type { Container, Engine } from 'tsparticles-engine';
+import Particles from 'react-particles';
 //import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
-import { loadSlim } from "tsparticles-slim"; // if you are going to use `loadSlim`, install the "tsparticles-slim" package too.
+import { loadSlim } from 'tsparticles-slim'; // if you are going to use `loadSlim`, install the "tsparticles-slim" package too.
 
 export const ResponsiveBG = () => {
   const particlesInit = useCallback(async (engine: Engine) => {
@@ -43,11 +43,11 @@ export const ResponsiveBG = () => {
           events: {
             onClick: {
               enable: true,
-              mode: "push",
+              mode: 'push',
             },
             onHover: {
               enable: true,
-              mode: "repulse",
+              mode: 'repulse',
 
               distance: 400,
             },
@@ -65,10 +65,10 @@ export const ResponsiveBG = () => {
         },
         particles: {
           color: {
-            value: "#7e7e7e",
+            value: '#7e7e7e',
           },
           links: {
-            color: "#7e7e7e",
+            color: '#7e7e7e',
             distance: 120,
             enable: true,
             opacity: 0.6,
@@ -78,10 +78,10 @@ export const ResponsiveBG = () => {
             enable: true,
           },
           move: {
-            directions: "none",
+            directions: 'none',
             enable: true,
             outModes: {
-              default: "bounce",
+              default: 'bounce',
             },
             random: false,
             speed: 3,
@@ -98,7 +98,7 @@ export const ResponsiveBG = () => {
             value: 0.5,
           },
           shape: {
-            type: "circle",
+            type: 'circle',
           },
           size: {
             value: { min: 1, max: 2 },

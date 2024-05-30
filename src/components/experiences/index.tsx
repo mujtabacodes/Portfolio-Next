@@ -1,39 +1,39 @@
-"use client";
-import React, { useState } from "react";
-import { SectionHeader } from "../section-header";
+'use client';
+import React, { useState } from 'react';
+import { SectionHeader } from '../section-header';
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion";
+} from '@/components/ui/accordion';
 const Experience = () => {
   const [accordions, setAccordions] = useState([
     {
       id: 1,
-      title: "Job Title 1",
-      company: "Company Name 1",
-      date: "2024-05-29 to Present",
-      description: "Description about the job 1...",
-      imageSrc: "https://via.placeholder.com/150",
+      title: 'Job Title 1',
+      company: 'Company Name 1',
+      date: '2024-05-29 to Present',
+      description: 'Description about the job 1...',
+      imageSrc: 'https://via.placeholder.com/150',
       isOpen: true,
     },
     {
       id: 2,
-      title: "Job Title 2",
-      company: "Company Name 2",
-      date: "2024-05-30 to Present",
-      description: "Description about the job 2...",
-      imageSrc: "https://via.placeholder.com/150",
+      title: 'Job Title 2',
+      company: 'Company Name 2',
+      date: '2024-05-30 to Present',
+      description: 'Description about the job 2...',
+      imageSrc: 'https://via.placeholder.com/150',
       isOpen: false,
     },
     {
       id: 3,
-      title: "Job Title 3",
-      company: "Company Name 2",
-      date: "2024-05-30 to Present",
-      description: "Description about the job 2...",
-      imageSrc: "https://via.placeholder.com/150",
+      title: 'Job Title 3',
+      company: 'Company Name 2',
+      date: '2024-05-30 to Present',
+      description: 'Description about the job 2...',
+      imageSrc: 'https://via.placeholder.com/150',
       isOpen: false,
     },
   ]);

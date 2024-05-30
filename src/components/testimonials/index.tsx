@@ -1,17 +1,17 @@
-"use client";
-import { SectionHeader } from "../section-header";
-import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
+'use client';
+import { SectionHeader } from '../section-header';
+import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
-import BoyAvator from "./";
-import GirlAvator from "./";
-import rachaAdel from "./";
-import bassi from "./";
-import jef from "./";
+import BoyAvator from './';
+import GirlAvator from './';
+import rachaAdel from './';
+import bassi from './';
+import jef from './';
 
 interface Testimonial {
   id: number;
@@ -31,32 +31,32 @@ const FixedData: Testimonial[] = [
   {
     id: 1,
     avator: GirlAvator,
-    name: "Shaina",
-    comment: "Mujtaba has been great...",
+    name: 'Shaina',
+    comment: 'Mujtaba has been great...',
   },
   {
     id: 2,
     avator: rachaAdel,
-    name: "Racha Adel",
-    comment: "Excellent. Such a pleasure...",
+    name: 'Racha Adel',
+    comment: 'Excellent. Such a pleasure...',
   },
   {
     id: 3,
     avator: bassi,
-    name: "Bassi",
-    comment: "Mujtaba is an incredible developer...",
+    name: 'Bassi',
+    comment: 'Mujtaba is an incredible developer...',
   },
   {
     id: 4,
     avator: BoyAvator,
-    name: "Letlotlompete",
-    comment: "The service was seamless...",
+    name: 'Letlotlompete',
+    comment: 'The service was seamless...',
   },
   {
     id: 5,
     avator: jef,
-    name: "Jefowles",
-    comment: "Polite and easy to communicate with.",
+    name: 'Jefowles',
+    comment: 'Polite and easy to communicate with.',
   },
 ];
 

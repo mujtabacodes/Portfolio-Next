@@ -1,33 +1,33 @@
-import { TSocialLink } from "@/types/types";
-import { Github, Linkedin, Instagram, Mail, Twitter } from "lucide-react";
-import React from "react";
+import { TSocialLink } from '@/types/types';
+import { Github, Linkedin, Instagram, Mail, Twitter } from 'lucide-react';
+import React from 'react';
 
 const SocialLinks: React.FC<TSocialLink> = ({ layout }) => {
   const socialLinks = [
     {
       icon: <Github />,
-      username: "mujtabacodes",
-      url: "https://github.com/mujtabacodes",
+      username: 'mujtabacodes',
+      url: 'https://github.com/mujtabacodes',
     },
     {
       icon: <Linkedin />,
-      username: "mujtaba-shafique",
-      url: "https://linkedin.com/in/mujtaba-shafique",
+      username: 'mujtaba-shafique',
+      url: 'https://linkedin.com/in/mujtaba-shafique',
     },
     {
       icon: <Instagram />,
-      username: "mujtaba.codes_",
-      url: "https://instagram.com/mujtaba.codes_",
+      username: 'mujtaba.codes_',
+      url: 'https://instagram.com/mujtaba.codes_',
     },
     {
       icon: <Twitter />,
-      username: "mujtabacodes",
-      url: "https://twitter.com/mujtabacodes",
+      username: 'mujtabacodes',
+      url: 'https://twitter.com/mujtabacodes',
     },
     {
       icon: <Mail />,
-      username: "mujtaba.shafique@outlook.com",
-      url: "mailto:mujtaba.shafique@outlook.com",
+      username: 'mujtaba.shafique@outlook.com',
+      url: 'mailto:mujtaba.shafique@outlook.com',
     },
   ];
 

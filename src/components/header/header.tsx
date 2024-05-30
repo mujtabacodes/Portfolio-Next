@@ -1,15 +1,15 @@
-import React from "react";
-import Design3D from "../design-3D";
-import { cn } from "@/lib/utils";
-import { Heading, T24 } from "@/styles/typos";
-import { Button } from "../ui/button";
-import Link from "next/link";
-import SocialLinks from "./components/socials";
+import React from 'react';
+import Design3D from '../design-3D';
+import { cn } from '@/lib/utils';
+import { Heading, T24 } from '@/styles/typos';
+import { Button } from '../ui/button';
+import Link from 'next/link';
+import SocialLinks from './components/socials';
 export const Header = () => {
   return (
     <div
       className={cn(
-        "w-full h-[80vh] items-center justify-between p-10 flex flex-col-reverse md:flex-row",
+        'w-full h-[80vh] items-center justify-between p-10 flex flex-col-reverse md:flex-row',
       )}
     >
       <div className="w-[75%]">
