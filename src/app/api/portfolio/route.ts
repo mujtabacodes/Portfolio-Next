@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import path from "path";
-import { writeFile ,mkdir} from "fs/promises";
+import { writeFile, mkdir } from "fs/promises";
 import prisma from "@/db";
 
 export const POST = async (req: any, res: any) => {
@@ -12,10 +12,9 @@ export const POST = async (req: any, res: any) => {
   }
 
   const buffer = Buffer.from(await file.arrayBuffer());
-  const filename = Date.now() + "_" +file.name.replaceAll(" ", "_");
+  const filename = Date.now() + "_" + file.name.replaceAll(" ", "_");
   console.log(filename);
   const techstack = JSON.parse(formData.get("techstack"));
-
 
   const directoryPath = path.join(process.cwd(), "public/uploads/portfolio");
   const filePath = path.join(directoryPath, filename);
@@ -24,7 +23,7 @@ export const POST = async (req: any, res: any) => {
     await mkdir(directoryPath, { recursive: true });
   } catch (mkdirError) {
     console.error("Error creating directory:", mkdirError);
-    throw mkdirError; 
+    throw mkdirError;
   }
 
   try {
@@ -37,8 +36,8 @@ export const POST = async (req: any, res: any) => {
         image: filename,
         live_url: formData.get("live_url"),
         github_url: formData.get("github_url"),
-        techstack: techstack
-      }
+        techstack: techstack,
+      },
     });
     return NextResponse.json({ Message: "Success", status: 200 });
   } catch (error) {
@@ -47,7 +46,6 @@ export const POST = async (req: any, res: any) => {
   }
 };
 
-
 export const GET = async () => {
   try {
     const portfolios = await prisma.portfolio.findMany();
@@ -55,7 +53,9 @@ export const GET = async () => {
     return NextResponse.json({ portfolios }, { status: 200 });
   } catch (error) {
     console.error("Error occurred: ", error);
-    return NextResponse.json({ error: "Failed to fetch portfolios" }, { status: 500 });
+    return NextResponse.json(
+      { error: "Failed to fetch portfolios" },
+      { status: 500 },
+    );
   }
 };
-

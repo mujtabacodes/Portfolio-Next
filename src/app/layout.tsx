@@ -8,16 +8,17 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Mujtaba Shafique - Software Engineer & React Developer",
-  description: "Welcome to the portfolio of Mujtaba Shafique, a software engineer specializing in frontend development with React and NextJS. Explore my projects, skills, work experience, and more.",
+  description:
+    "Welcome to the portfolio of Mujtaba Shafique, a software engineer specializing in frontend development with React and NextJS. Explore my projects, skills, work experience, and more.",
   keywords: [
     "Mujtaba Shafique",
     "Software Engineer",
     "React Developer",
     "NextJS",
     "AWS",
-    'Next.js', 
-    'React', 
-    'JavaScript',
+    "Next.js",
+    "React",
+    "JavaScript",
     "NodeJS",
     "Typescript",
     "MERN Stack",
@@ -25,15 +26,16 @@ export const metadata: Metadata = {
     "Projects",
     "Web Development",
     "Frontend Developer",
-    "Islamabad"
+    "Islamabad",
   ],
-  referrer: 'origin-when-cross-origin',
+  referrer: "origin-when-cross-origin",
   authors: [
-    { name: 'Mujtaba Shafique', url: 'https://github.com/mujtabacodes' }
+    { name: "Mujtaba Shafique", url: "https://github.com/mujtabacodes" },
   ],
   openGraph: {
     title: "Mujtaba Shafique - Software Engineer & React Developer",
-    description: "Explore the professional portfolio of Mujtaba Shafique, featuring his work experience, projects, skills, and contact information.",
+    description:
+      "Explore the professional portfolio of Mujtaba Shafique, featuring his work experience, projects, skills, and contact information.",
     url: "https://mujtabacodes.com",
     type: "website",
     images: [
@@ -47,14 +49,14 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@your-twitter-handle",
+    site: "@mujtabacodes",
     title: "Mujtaba Shafique - Software Engineer & React Developer",
-    description: "Welcome to the professional portfolio of Mujtaba Shafique. Discover his projects, skills, and work experience in web development.",
+    description:
+      "Welcome to the professional portfolio of Mujtaba Shafique. Discover his projects, skills, and work experience in web development.",
     images: "https://mujtabacodes.com/profile-image.jpg",
   },
   robots: "index, follow",
 };
-
 
 export default function RootLayout({
   children,
@@ -71,7 +73,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {children}
-          <ResponsiveBG/>
+          <ResponsiveBG />
         </ThemeProvider>
       </body>
     </html>

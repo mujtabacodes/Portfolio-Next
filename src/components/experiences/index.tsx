@@ -1,13 +1,13 @@
-"use client"
-import React, { useState } from 'react'
-import { SectionHeader } from '../section-header'
+"use client";
+import React, { useState } from "react";
+import { SectionHeader } from "../section-header";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion"
-const  Experience= () => {
+} from "@/components/ui/accordion";
+const Experience = () => {
   const [accordions, setAccordions] = useState([
     {
       id: 1,
@@ -48,22 +48,24 @@ const  Experience= () => {
 
   return (
     <div className="container mx-auto py-8">
-      <SectionHeader heading='Experience' subTitle='A story of growth, leanring & Professional Development' align='right'/>
+      <SectionHeader
+        heading="Experience"
+        subTitle="A story of growth, leanring & Professional Development"
+        align="right"
+      />
 
       {accordions.map((accordion) => (
         <Accordion type="single" collapsible key={accordion.id}>
-        <AccordionItem value="item-1">
-          <AccordionTrigger>Is it accessible?</AccordionTrigger>
-          <AccordionContent>
-            Yes. It adheres to the WAI-ARIA design pattern.
-          </AccordionContent>
-        </AccordionItem>
-      </Accordion>
+          <AccordionItem value="item-1">
+            <AccordionTrigger>Is it accessible?</AccordionTrigger>
+            <AccordionContent>
+              Yes. It adheres to the WAI-ARIA design pattern.
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
       ))}
     </div>
   );
 };
 
-
-
-export default Experience 
+export default Experience;

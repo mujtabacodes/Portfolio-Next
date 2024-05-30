@@ -1,6 +1,6 @@
-import { IProjectCard } from '@/types/types';
-import Image from 'next/image';
-import React from 'react';
+import { IProjectCard } from "@/types/types";
+import Image from "next/image";
+import React from "react";
 
 const ProjectCard = ({ project }: IProjectCard) => {
   const { name, description, live_url, github_url, techstack, image } = project;
@@ -38,7 +38,8 @@ const ProjectCard = ({ project }: IProjectCard) => {
             </a>
           </p>
           <p>
-            <span className="font-semibold">Tech Stack:</span> {techstack.join(', ')}
+            <span className="font-semibold">Tech Stack:</span>{" "}
+            {techstack.join(", ")}
           </p>
         </div>
       </div>
