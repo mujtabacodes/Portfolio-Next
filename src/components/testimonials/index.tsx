@@ -1,16 +1,17 @@
+"use client"
 import { SectionHeader } from '../section-header'
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, Navigation } from "swiper";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 import BoyAvator from "./";
-import GirlAvator from "../../assets/images/girl-profile.webp";
-import rachaAdel from "../../assets/images/racha-adel.webp";
-import bassi from "../../assets/images/bassi.webp";
-import jef from "../../assets/images/jef.webp";
+import GirlAvator from "./";
+import rachaAdel from "./";
+import bassi from "./";
+import jef from "./";
 
 interface Testimonial {
   id: number;

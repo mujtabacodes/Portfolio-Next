@@ -21,7 +21,7 @@ export const ResponsiveBG = () => {
     }, []);
     return (
         <Particles
-        className="w-full h-screen"
+        // className="w-full h-screen"
         id="tsparticles"
         init={particlesInit}
         loaded={particlesLoaded}

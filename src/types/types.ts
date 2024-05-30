@@ -32,3 +32,7 @@ export interface IProjectCard{
         techstack: string[];
       };
 }
+
+export type TSocialLink = {
+    layout:"row" | "col"
+}

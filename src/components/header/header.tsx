@@ -21,7 +21,7 @@ export const Header = () => {
             </Button>
       </div>
       <Design3D />
-      <SocialLinks />
+      <SocialLinks layout='col' />
     </div>
   )
 }

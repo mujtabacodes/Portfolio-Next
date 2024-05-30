@@ -1,8 +1,12 @@
 "use client"
 import React, { useState } from 'react'
 import { SectionHeader } from '../section-header'
-import Accordion from './components/accordions'
-
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
 const  Experience= () => {
   const [accordions, setAccordions] = useState([
     {
@@ -47,16 +51,14 @@ const  Experience= () => {
       <SectionHeader heading='Experience' subTitle='A story of growth, leanring & Professional Development' align='right'/>
 
       {accordions.map((accordion) => (
-        <Accordion
-          key={accordion.id}
-          title={accordion.title}
-          company={accordion.company}
-          date={accordion.date}
-          description={accordion.description}
-          imageSrc={accordion.imageSrc}
-          isOpen={accordion.isOpen}
-          onClick={() => handleAccordionClick(accordion.id)}
-        />
+        <Accordion type="single" collapsible key={accordion.id}>
+        <AccordionItem value="item-1">
+          <AccordionTrigger>Is it accessible?</AccordionTrigger>
+          <AccordionContent>
+            Yes. It adheres to the WAI-ARIA design pattern.
+          </AccordionContent>
+        </AccordionItem>
+      </Accordion>
       ))}
     </div>
   );
