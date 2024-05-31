@@ -1,13 +1,15 @@
 'use client';
+
 import React, { useState } from 'react';
-import { SectionHeader } from '../section-header';
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
-const Experience = () => {
+import { SectionHeader } from '../section-header';
+
+function Experience() {
   const [accordions, setAccordions] = useState([
     {
       id: 1,
@@ -66,6 +68,6 @@ const Experience = () => {
       ))}
     </div>
   );
-};
+}
 
 export default Experience;

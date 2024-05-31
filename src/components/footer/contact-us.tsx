@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from '../ui/button';
 import SocialLinks from '../header/components/socials';
 
-export const ContactUs = () => {
+export function ContactUs() {
   return (
     <div>
       <h1>Lets Work together</h1>
@@ -13,4 +13,4 @@ export const ContactUs = () => {
       <SocialLinks layout="row" />
     </div>
   );
-};
+}

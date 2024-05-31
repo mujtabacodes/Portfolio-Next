@@ -1,8 +1,9 @@
 'use client';
+
 import React, { useState } from 'react';
+import { IProject } from '@/types/types';
 import { SectionHeader } from '../section-header';
 import ProjectCard from './components/project-card';
-import { IProject } from '@/types/types';
 
 // Sample projects data
 const projects: IProject[] = [
@@ -49,7 +50,7 @@ const projects: IProject[] = [
   // Add more projects as needed
 ];
 
-const Projects = () => {
+function Projects() {
   const [activeProjectId, setActiveProjectId] = useState<number>(2); // Default to the first project
 
   const handleProjectClick = (id: number) => {
@@ -86,6 +87,6 @@ const Projects = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Projects;

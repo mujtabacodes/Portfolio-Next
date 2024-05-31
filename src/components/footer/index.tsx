@@ -1,7 +1,7 @@
 import React from 'react';
 import { ContactUs } from './contact-us';
 
-export const Footer = () => {
+export function Footer() {
   return (
     <div>
       <ContactUs />
@@ -10,4 +10,4 @@ export const Footer = () => {
       </h1>
     </div>
   );
-};
+}

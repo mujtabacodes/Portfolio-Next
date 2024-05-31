@@ -12,7 +12,7 @@ export const POST = async (req: any, res: any) => {
   }
 
   const buffer = Buffer.from(await file.arrayBuffer());
-  const filename = Date.now() + '_' + file.name.replaceAll(' ', '_');
+  const filename = `${Date.now()}_${file.name.replaceAll(' ', '_')}`;
   console.log(filename);
   const techstack = JSON.parse(formData.get('techstack'));
 

@@ -2,7 +2,7 @@ import { IProjectCard } from '@/types/types';
 import Image from 'next/image';
 import React from 'react';
 
-const ProjectCard = ({ project }: IProjectCard) => {
+function ProjectCard({ project }: IProjectCard) {
   const { name, description, live_url, github_url, techstack, image } = project;
 
   return (
@@ -45,6 +45,6 @@ const ProjectCard = ({ project }: IProjectCard) => {
       </div>
     </a>
   );
-};
+}
 
 export default ProjectCard;

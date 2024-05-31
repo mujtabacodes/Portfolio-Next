@@ -12,7 +12,7 @@ export const POST = async (req: any, res: any) => {
   }
 
   const buffer = Buffer.from(await file.arrayBuffer());
-  const filename = Date.now() + '_' + file.name.replaceAll(' ', '_');
+  const filename = `${Date.now()}_${file.name.replaceAll(' ', '_')}`;
   console.log(filename);
   const techstack = JSON.parse(formData.get('techstack'));
 
@@ -36,7 +36,7 @@ export const POST = async (req: any, res: any) => {
         image: filename,
         live_url: formData.get('live_url'),
         github_url: formData.get('github_url'),
-        techstack: techstack,
+        techstack,
       },
     });
     return NextResponse.json({ Message: 'Success', status: 200 });

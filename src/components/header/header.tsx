@@ -1,11 +1,12 @@
 import React from 'react';
-import Design3D from '../design-3D';
 import { cn } from '@/lib/utils';
 import { Heading, T24 } from '@/styles/typos';
-import { Button } from '../ui/button';
 import Link from 'next/link';
+import { Button } from '../ui/button';
+import Design3D from '../design-3D';
 import SocialLinks from './components/socials';
-export const Header = () => {
+
+export function Header() {
   return (
     <div
       className={cn(
@@ -31,4 +32,4 @@ export const Header = () => {
       <SocialLinks layout="col" />
     </div>
   );
-};
+}
