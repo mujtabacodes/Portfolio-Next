@@ -31,27 +31,27 @@ export function MobileNav() {
               </Button>
               <Button size={'lg'} variant="link" asChild>
                 <DrawerClose asChild>
-                  <Link href={'/section'}>About</Link>
+                  <Link href={'#'}>About</Link>
                 </DrawerClose>
               </Button>
               <Button size={'lg'} variant="link" asChild>
                 <DrawerClose asChild>
-                  <Link href={''}>Projects</Link>
+                  <Link href={'#projects'}>Projects</Link>
                 </DrawerClose>
               </Button>
               <Button size={'lg'} variant="link" asChild>
                 <DrawerClose asChild>
-                  <Link href={'/section'}>Testimonials</Link>
+                  <Link href="#experiences">Experience</Link>
                 </DrawerClose>
               </Button>
               <Button size={'lg'} variant="link" asChild>
                 <DrawerClose asChild>
-                  <Link href="#contact">Experience</Link>
+                  <Link href={'#testimonails'}>Testimonials</Link>
                 </DrawerClose>
               </Button>
               <Button size={'lg'} variant="link" asChild>
                 <DrawerClose asChild>
-                  <Link href={'/section'}>Contact</Link>
+                  <Link href={'#contact'}>Contact</Link>
                 </DrawerClose>
               </Button>
             </div>
