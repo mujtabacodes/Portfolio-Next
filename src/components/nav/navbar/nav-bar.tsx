@@ -37,11 +37,7 @@ export function Navbar() {
         </li>
         <li>|</li>
         <li>
-          <Button
-            size="lg"
-            // variant="outlineStyled"
-            className="border border-[#50c5d7] rounded-full border-input bg-background shadow-sm hover:bg-[#50c5d7] hover:text-[#020817] hover:bg-transparent dark:hover:text-[#020817] bg-gradient-to-r from-blue-500 to-teal-400"
-          >
+          <Button size="lg" variant="primaryStyled">
             <Link href={'#contact'}>Contact</Link>
           </Button>
         </li>
