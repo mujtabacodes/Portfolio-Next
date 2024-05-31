@@ -19,8 +19,10 @@ const buttonVariants = cva(
           'bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80',
         ghost: 'hover:bg-accent hover:text-accent-foreground',
         link: 'text-primary underline-offset-4 hover:underline',
-        outline_styled:
-          'border border-[#64FFDA] rounded-full border-input bg-background shadow-sm hover:bg-[#64FFDA] hover:text-accent-foreground',
+        outlineStyled:
+          'hover:text-[#ffff] dark:hover:text-[#ffffff] border border-[#50c5d7] rounded-full border-input bg-background shadow-sm hover:bg-[#50c5d7]',
+        primaryStyled:
+          'border border-[#50c5d7] rounded-full border-input bg-background shadow-sm hover:bg-[#50c5d7] hover:text-[#020817] dark:hover:text-[#020817] bg-gradient-to-r from-blue-500 to-teal-400',
       },
       size: {
         default: 'h-9 px-4 py-2',
