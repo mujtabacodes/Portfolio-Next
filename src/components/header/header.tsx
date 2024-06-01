@@ -17,9 +17,9 @@ export function Header() {
   return (
     <div className="flex flex-col-reverse md:flex-row w-full justify-between py-[1rem] md:h-[74vh] x-gap">
       <div className="flex mt-2 md:mt-0 flex-col w-full md:w-[55%] lg:w-[65%] items-start text-center md:text-left justify-center">
-        <Desc className="self-start ml-7 md:ml-0">Hello 👋 My name is</Desc>
+        <Desc className="self-start">Hello 👋 My name is</Desc>
         <Heading>Mujtaba Shafique</Heading>
-        <Desc>
+        <Desc className="md:mt-2">
           I&apos;m <span className="highlighted-text">software engineer </span>.
           I possess strong problem-solving skills and specialize in crafting
           exceptional digital experiences. My current area of focus is in the{' '}
