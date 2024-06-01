@@ -12,12 +12,18 @@ const heading = Baloo_Bhai_2({
 
 export function Desc({ children, className }: ITypo) {
   return (
-    <div className={` text-md ${className}  ${desc.className}`}>{children}</div>
+    <div
+      className={`text-md md:text-xl ${className}  ${desc.className} text-justify`}
+    >
+      {children}
+    </div>
   );
 }
 export function Heading({ children, className }: ITypo) {
   return (
-    <div className={`text-[48px] ${className}  ${heading.className}`}>
+    <div
+      className={`text-4xl md:text-[48px] ${className}  ${heading.className}`}
+    >
       {children}
     </div>
   );

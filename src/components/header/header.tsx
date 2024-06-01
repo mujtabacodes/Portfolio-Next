@@ -11,12 +11,13 @@ import SocialLinks from './components/socials';
 import { Card } from '../ui/card';
 import GradientOverlay from '../gradient';
 import dynamic from 'next/dynamic';
+import { DownloadCloudIcon } from 'lucide-react';
 
 export function Header() {
   return (
-    <div className="flex flex-col-reverse md:flex-row w-full justify-between px-[2rem] py-[1rem] md:h-[74vh]">
-      <div className="flex flex-col w-full md:w-[55%] lg:w-[65%] items-center md:items-start text-center md:text-left justify-center">
-        <Desc>Hello 👋 My name is</Desc>
+    <div className="flex flex-col-reverse md:flex-row w-full justify-between py-[1rem] md:h-[74vh] x-gap">
+      <div className="flex mt-2 md:mt-0 flex-col w-full md:w-[55%] lg:w-[65%] items-start text-center md:text-left justify-center">
+        <Desc className="self-start ml-7 md:ml-0">Hello 👋 My name is</Desc>
         <Heading>Mujtaba Shafique</Heading>
         <Desc>
           I&apos;m <span className="highlighted-text">software engineer </span>.
@@ -26,10 +27,22 @@ export function Header() {
           where I actively engage in developing and designing immersive
           applications.
         </Desc>
-        <Button variant="outlineStyled" className="mt-5">
-          <a href="/resume.pdf" download="Mujtaba Shafique.pdf">
-            Resume
-          </a>
+
+        <Button
+          size="lg"
+          variant="outlineStyled"
+          className="mt-5 relative overflow-hidden w-full sm:w-auto"
+        >
+          <div className="pointer-events-none flex">
+            <DownloadCloudIcon />
+            <span className="ml-2">Resume</span>
+          </div>
+          <Link
+            href={'/resume.pdf'}
+            download="Mujtaba Shafique.pdf"
+            className="absolute inset-0 z-10"
+            style={{ display: 'block', width: '100%', height: '100%' }}
+          />
         </Button>
       </div>
       <div className="flex w-full md:w-[45%] lg:w-[35%] min-h-[30vh] items-center design3d">

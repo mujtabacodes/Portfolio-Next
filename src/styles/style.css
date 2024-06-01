@@ -1,8 +1,11 @@
 .highlighted-text {
-  @apply text-primary-foreground;
+  @apply text-[#007ccb] dark:text-[#00dee4];
 }
 @media (max-width: 768px) {
   .design3d div {
     height: 35vh !important;
   }
+}
+.x-gap {
+  @apply px-[1rem] md:px-[2rem];
 }
