@@ -1,10 +1,12 @@
 import React from 'react';
 import { cn } from '@/lib/utils';
-import { Heading, T24 } from '@/styles/typos';
+import { Heading, Desc } from '@/styles/typos';
 import Link from 'next/link';
 import { Button } from '../ui/button';
 import Design3D from '../design-3D';
 import SocialLinks from './components/socials';
+import { Card } from '../ui/card';
+import GradientOverlay from '../gradient';
 
 export function Header() {
   return (
@@ -14,20 +16,23 @@ export function Header() {
       )}
     >
       <div className="w-[75%]">
-        <T24 className="">Hello 👋 My name is</T24>
+        <Desc className="">Hello 👋 My name is</Desc>
         <Heading>Mujtaba Shafique</Heading>
-        <T24 className="">
-          I&apos;m a software engineer. I possess strong problem-solving skills
-          and specialize in crafting exceptional digital experiences. My current
-          area of focus is in the web2 and web3 domain, where I actively engage
-          in developing and designing immersive applications..
-        </T24>
-        <Button variant="outline_styled" className="mt-5">
+        <Desc className="">
+          I&apos;m <span className="highlighted-text">software engineer </span>.
+          I possess strong problem-solving skills and specialize in crafting
+          exceptional digital experiences. My current area of focus is in the{' '}
+          <span className="highlighted-text">Full Stack Development</span>,
+          where I actively engage in developing and designing immersive
+          applications..
+        </Desc>
+        <Button variant="outlineStyled" className="mt-5">
           <a href="/resume.pdf" download="Mujtaba Shafique.pdf">
             Resume
           </a>
         </Button>
       </div>
+      <Card />
       <Design3D />
       <SocialLinks layout="col" />
     </div>

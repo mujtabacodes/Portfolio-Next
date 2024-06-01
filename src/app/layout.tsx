@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import { ResponsiveBG } from '@/components/particles/particles';
 import { ThemeProvider } from '../components/theme-switcher/theme-provider';
+import GradientOverlay from '@/components/gradient';
 
 const inter = Inter({ subsets: ['latin'] });
 

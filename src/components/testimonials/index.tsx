@@ -13,6 +13,16 @@ import GirlAvator from '.';
 import rachaAdel from '.';
 import bassi from '.';
 import jef from '.';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from '../ui/card';
+import { LinkedinIcon } from 'lucide-react';
+import Image from 'next/image';
 
 interface Testimonial {
   id: number;
@@ -77,19 +87,20 @@ const Testimonials: React.FC = () => (
       className="container mx-auto px-4"
     >
       {FixedData.map(({ id, avator, name, comment }) => (
-        <SwiperSlide
-          key={id}
-          className="bg-gray-800 text-white p-8 rounded-2xl text-center"
-        >
-          <div className="w-16 h-16 mx-auto mb-4">
-            <img
-              src={avator}
-              alt={name}
-              className="rounded-full border-4 border-primary-variant"
-            />
-          </div>
-          <h5 className="text-lg">{name}</h5>
-          <small className="block text-gray-300 mt-2">{comment}</small>
+        <SwiperSlide key={id} className="rounded-full text-center">
+          <Card>
+            <CardHeader>
+              <Image src={avator} alt={name} />
+              <CardTitle>{name}</CardTitle>
+              <CardDescription>Card Description</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <p>{comment}</p>
+            </CardContent>
+            <CardFooter>
+              <LinkedinIcon />
+            </CardFooter>
+          </Card>
         </SwiperSlide>
       ))}
     </Swiper>

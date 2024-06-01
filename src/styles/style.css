@@ -1,0 +1,3 @@
+.highlighted-text {
+  @apply text-primary-foreground;
+}
