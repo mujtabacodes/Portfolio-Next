@@ -75,6 +75,7 @@ export default function RootLayout({
         >
           {children}
           <ResponsiveBG />
+          <GradientOverlay />
         </ThemeProvider>
       </body>
     </html>
