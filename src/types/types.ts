@@ -3,6 +3,7 @@ import { ReactNode } from 'react';
 export interface ITypo {
   children: ReactNode;
   className?: string;
+  onClick?: () => void;
 }
 
 export interface ISectionHeader {
@@ -36,3 +37,15 @@ export type TSocialLink = {
   layout: 'row' | 'col';
   className?: string;
 };
+
+export interface ISection {
+  children: ReactNode;
+  className?: string;
+}
+
+export interface IProjectSwitcher {
+  children: React.ReactNode;
+  className?: string;
+  onClick?: () => void;
+  active?: boolean;
+}

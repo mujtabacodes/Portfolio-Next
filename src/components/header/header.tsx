@@ -12,10 +12,11 @@ import { Card } from '../ui/card';
 import GradientOverlay from '../gradient';
 import dynamic from 'next/dynamic';
 import { DownloadCloudIcon } from 'lucide-react';
+import { Section } from '@/styles/utils';
 
 export function Header() {
   return (
-    <div className="flex flex-col-reverse md:flex-row w-full justify-between py-[1rem] md:h-[74vh] x-gap">
+    <Section className="flex flex-col-reverse md:flex-row w-full justify-between py-[1rem]">
       <div className="flex mt-2 md:mt-0 flex-col w-full md:w-[55%] lg:w-[65%] items-start text-center md:text-left justify-center">
         <Desc className="self-start">Hello 👋 My name is</Desc>
         <Heading>Mujtaba Shafique</Heading>
@@ -49,6 +50,6 @@ export function Header() {
         <Design3D />
         <SocialLinks layout="col" className="hidden md:block" />
       </div>
-    </div>
+    </Section>
   );
 }

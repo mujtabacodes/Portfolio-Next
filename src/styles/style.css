@@ -9,3 +9,6 @@
 .x-gap {
   @apply px-[1rem] md:px-[2rem];
 }
+.dim {
+  @apply text-slate-600 opacity-65 dark:text-slate-500 dark:opacity-100;
+}

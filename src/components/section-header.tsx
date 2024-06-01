@@ -4,7 +4,7 @@ import React from 'react';
 
 export function SectionHeader({ heading, subTitle, align }: ISectionHeader) {
   return (
-    <div className={`flex flex-col items-end items-${align}`}>
+    <div className={`flex flex-col items-${align} py-3`}>
       <Title>{heading}</Title>
       <Subtitle>{subTitle}</Subtitle>
     </div>
