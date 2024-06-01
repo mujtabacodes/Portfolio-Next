@@ -1,3 +1,8 @@
 .highlighted-text {
   @apply text-primary-foreground;
 }
+@media (max-width: 768px) {
+  .design3d div {
+    height: 35vh !important;
+  }
+}

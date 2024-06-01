@@ -25,7 +25,6 @@ export function ResponsiveBG() {
   );
   return (
     <Particles
-      className=""
       id="tsparticles"
       init={particlesInit}
       loaded={particlesLoaded}
@@ -66,13 +65,13 @@ export function ResponsiveBG() {
         },
         particles: {
           color: {
-            value: '#7e7e7e',
+            value: '#7e7e7eab',
           },
           links: {
-            color: '#7e7e7e',
+            color: '#7e7e7eab',
             distance: 120,
             enable: true,
-            opacity: 0.6,
+            opacity: 0.5,
             width: 1,
           },
           collisions: {

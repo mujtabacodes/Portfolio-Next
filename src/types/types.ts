@@ -34,4 +34,5 @@ export interface IProjectCard {
 
 export type TSocialLink = {
   layout: 'row' | 'col';
+  className?: string;
 };

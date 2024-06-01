@@ -11,16 +11,13 @@ import { Footer } from '@/components/footer';
 import '@styles/style.css';
 export default function Home() {
   return (
-    <>
-      {/* <div className="w-full h-screen  bg-slate-500 bg-no-repeat bg-center text-orange dark:bg-black relative"> */}
-      <div className="">
-        <Nav />
-        <Header />
-        <Projects />
-        <Experience />
-        <Testimonails />
-        <Footer />
-      </div>
-    </>
+    <React.Fragment>
+      <Nav />
+      <Header />
+      <Projects />
+      <Experience />
+      <Testimonails />
+      <Footer />
+    </React.Fragment>
   );
 }

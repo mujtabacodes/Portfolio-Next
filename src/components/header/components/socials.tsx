@@ -2,7 +2,7 @@ import { TSocialLink } from '@/types/types';
 import { Github, Linkedin, Instagram, Mail, Twitter } from 'lucide-react';
 import React from 'react';
 
-const SocialLinks: React.FC<TSocialLink> = ({ layout }) => {
+const SocialLinks: React.FC<TSocialLink> = ({ layout, className }) => {
   const socialLinks = [
     {
       icon: <Github />,
@@ -32,7 +32,7 @@ const SocialLinks: React.FC<TSocialLink> = ({ layout }) => {
   ];
 
   return (
-    <div className={`flex flex-${layout} items-center space-y-4`}>
+    <div className={`flex flex-${layout} items-center space-y-4 ${className}`}>
       {socialLinks.map((link, index) => (
         <a
           key={index}
