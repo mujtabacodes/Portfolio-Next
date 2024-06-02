@@ -11,6 +11,7 @@
     "prettier": "npx prettier . --write"
   },
   "dependencies": {
+    "@headlessui/react": "^2.0.4",
     "@prisma/client": "^5.14.0",
     "@radix-ui/react-accordion": "^1.1.2",
     "@radix-ui/react-dialog": "^1.0.5",
