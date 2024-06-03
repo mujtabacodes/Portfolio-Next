@@ -6,11 +6,13 @@ import { Text } from '@/styles/typos';
 import { Section } from '@/styles/utils';
 import { SectionHeader } from '../section-header';
 
+import ProjectCard from './project-card';
+
 export default function Projects() {
-  const [activeProjectIndex, setActiveProjectIndex] = useState(1); // Default to the first project
+  const [activeProject, setActiveProject] = useState<number>(1);
 
   const handleProjectClick = (index: number) => {
-    setActiveProjectIndex(index);
+    setActiveProject(index);
   };
 
   return (
@@ -21,17 +23,23 @@ export default function Projects() {
         align="start"
       />
 
+      <div className="bg-secondary h-5 w-5">secondary</div>
+      <div className="bg-destructive-foreground h-5 w-5">
+        destructive foreground
+      </div>
+      <div className="bg-destructive h-5 w-5">destructive</div>
+
       <TabGroup
         as="div"
-        className="flex flex-col md:flex-row w-full h-[60vh] bg-red-400"
-        selectedIndex={activeProjectIndex}
+        className="flex flex-col md:flex-row w-full h-[60vh]"
+        selectedIndex={activeProject}
       >
-        <TabList className="flex gap-4 overflow-x-auto md:flex-col md:overflow-y-auto md:max-h-full custom-scrollbar bg-orange-400">
+        <TabList className="flex overflow-x-auto md:flex-col md:overflow-y-auto md:max-h-full custom-scrollbar">
           {projects.map(({ id, name }, index) => (
             <Tab
               key={id}
               className={({ selected }) =>
-                selected ? 'flex-shrink-0 text-blue-500' : 'flex-shrink-0'
+                selected ? 'active-tab highlighted-text tab' : 'tab'
               }
               onClick={() => handleProjectClick(index)}
             >
@@ -39,21 +47,13 @@ export default function Projects() {
             </Tab>
           ))}
         </TabList>
-        <TabPanels className="w-full bg-green-600 h-full">
-          {projects.map(({ id, name, description, techstack }) => (
-            <TabPanel key={id} className="rounded-xl bg-white/10 p-3">
-              <h1>{name}</h1>
-              <p>{description}</p>
-              <ul className="mt-3">
-                {techstack.map((tech, index) => (
-                  <li
-                    key={index}
-                    className="text-sm/6 font-semibold text-white"
-                  >
-                    {tech}
-                  </li>
-                ))}
-              </ul>
+        <TabPanels className="w-full  h-full">
+          {projects.map((project) => (
+            <TabPanel
+              key={project.id}
+              className="rounded-xl bg-white/10 p-3 md:ml-3 md:h-full"
+            >
+              <ProjectCard project={project} />
             </TabPanel>
           ))}
         </TabPanels>

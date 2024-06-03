@@ -8,6 +8,7 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion';
 import { SectionHeader } from '../section-header';
+import { Section } from '@/styles/utils';
 
 function Experience() {
   const [accordions, setAccordions] = useState([
@@ -29,15 +30,6 @@ function Experience() {
       imageSrc: 'https://via.placeholder.com/150',
       isOpen: false,
     },
-    {
-      id: 3,
-      title: 'Job Title 3',
-      company: 'Company Name 2',
-      date: '2024-05-30 to Present',
-      description: 'Description about the job 2...',
-      imageSrc: 'https://via.placeholder.com/150',
-      isOpen: false,
-    },
   ]);
 
   const handleAccordionClick = (accordionId: number) => {
@@ -49,11 +41,11 @@ function Experience() {
   };
 
   return (
-    <div className="container mx-auto py-8">
+    <Section>
       <SectionHeader
         heading="Experience"
         subTitle="A story of growth, leanring & Professional Development"
-        align="right"
+        align="end"
       />
 
       {accordions.map((accordion) => (
@@ -66,7 +58,7 @@ function Experience() {
           </AccordionItem>
         </Accordion>
       ))}
-    </div>
+    </Section>
   );
 }
 
