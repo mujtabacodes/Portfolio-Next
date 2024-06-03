@@ -3,16 +3,16 @@
     "id": 1,
     "name": "Weather Dashboard",
     "description": "A real-time weather dashboard that provides weather updates and forecasts for any location.",
-    "image": "/",
+    "image": "/projects/Admin dashboard.png",
     "live_url": "https://example.com/weather-dashboard",
     "github_url": "https://github.com/weather-dashboard",
-    "techstack": ["React", "Node.js", "MongoDB"]
+    "techstack": ["React", "Node.js", "MongoDB", "React", "Node.js", "MongoDB"]
   },
   {
     "id": 2,
     "name": "E-commerce Platform",
     "description": "An e-commerce platform with a user-friendly interface and secure payment gateway integration.",
-    "image": "/",
+    "image": "/projects/Deliveroo Mobile app.png",
     "live_url": "https://example.com/e-commerce-platform",
     "github_url": "https://github.com/e-commerce-platform",
     "techstack": ["Angular", "Express", "MySQL"]
@@ -21,7 +21,7 @@
     "id": 3,
     "name": "Task Manager App",
     "description": "A task management application to help users organize and prioritize their tasks efficiently.",
-    "image": "/",
+    "image": "/projects/React Calculator.png",
     "live_url": "https://example.com/task-manager-app",
     "github_url": "https://github.com/task-manager-app",
     "techstack": ["Vue.js", "Firebase", "PostgreSQL"]
@@ -30,7 +30,7 @@
     "id": 4,
     "name": "Personal Blog",
     "description": "A personal blog platform where users can share their thoughts and ideas with a wider audience.",
-    "image": "/",
+    "image": "/projects/React Calculator.png",
     "live_url": "https://example.com/personal-blog",
     "github_url": "https://github.com/personal-blog",
     "techstack": ["Svelte", "Django", "SQLite"]
@@ -39,7 +39,7 @@
     "id": 5,
     "name": "Fitness Tracker",
     "description": "A fitness tracking application to monitor and manage workouts, nutrition, and health metrics.",
-    "image": "/",
+    "image": "/projects/React Calculator.png",
     "live_url": "https://example.com/fitness-tracker",
     "github_url": "https://github.com/fitness-tracker",
     "techstack": ["React Native", "Node.js", "PostgreSQL"]
@@ -48,7 +48,7 @@
     "id": 6,
     "name": "Recipe App",
     "description": "An application that provides a wide variety of recipes and allows users to save their favorite recipes.",
-    "image": "/",
+    "image": "/projects/React Calculator.png",
     "live_url": "https://example.com/recipe-app",
     "github_url": "https://github.com/recipe-app",
     "techstack": ["Flutter", "Firebase", "MongoDB"]
@@ -57,7 +57,7 @@
     "id": 7,
     "name": "Travel Planner",
     "description": "A travel planning application that helps users create itineraries and manage their travel plans.",
-    "image": "/",
+    "image": "/projects/React Calculator.png",
     "live_url": "https://example.com/travel-planner",
     "github_url": "https://github.com/travel-planner",
     "techstack": ["React", "Express", "MySQL"]
@@ -66,7 +66,7 @@
     "id": 8,
     "name": "Social Media Dashboard",
     "description": "A dashboard for managing and analyzing social media accounts and posts.",
-    "image": "/",
+    "image": "/projects/React Calculator.png",
     "live_url": "https://example.com/social-media-dashboard",
     "github_url": "https://github.com/social-media-dashboard",
     "techstack": ["Vue.js", "Node.js", "MongoDB"]
@@ -75,7 +75,7 @@
     "id": 9,
     "name": "Online Learning Platform",
     "description": "A platform for online learning with various courses and interactive tutorials.",
-    "image": "/",
+    "image": "/projects/React Calculator.png",
     "live_url": "https://example.com/online-learning",
     "github_url": "https://github.com/online-learning",
     "techstack": ["Angular", "Django", "PostgreSQL"]
@@ -84,7 +84,7 @@
     "id": 10,
     "name": "Event Management System",
     "description": "A system to manage and organize events, including scheduling, ticketing, and attendee management.",
-    "image": "/",
+    "image": "/projects/React Calculator.png",
     "live_url": "https://example.com/event-management",
     "github_url": "https://github.com/event-management",
     "techstack": ["Laravel", "Vue.js", "MySQL"]
@@ -93,7 +93,7 @@
     "id": 11,
     "name": "Real Estate Marketplace",
     "description": "A marketplace for buying, selling, and renting properties with advanced search and filtering options.",
-    "image": "/",
+    "image": "/projects/React Calculator.png",
     "live_url": "https://example.com/real-estate-marketplace",
     "github_url": "https://github.com/real-estate-marketplace",
     "techstack": ["Ruby on Rails", "React", "PostgreSQL"]
@@ -102,7 +102,7 @@
     "id": 12,
     "name": "Online Forum",
     "description": "An online forum for community discussions, Q&A, and knowledge sharing.",
-    "image": "/",
+    "image": "/projects/React Calculator.png",
     "live_url": "https://example.com/online-forum",
     "github_url": "https://github.com/online-forum",
     "techstack": ["Node.js", "Express", "MongoDB"]
@@ -111,7 +111,7 @@
     "id": 13,
     "name": "Job Portal",
     "description": "A job portal that connects job seekers with employers, featuring job listings and application tracking.",
-    "image": "/",
+    "image": "/projects/React Calculator.png",
     "live_url": "https://example.com/job-portal",
     "github_url": "https://github.com/job-portal",
     "techstack": ["Spring Boot", "Angular", "MySQL"]
@@ -120,7 +120,7 @@
     "id": 14,
     "name": "E-learning Platform",
     "description": "A platform offering a variety of online courses with interactive content and certification.",
-    "image": "/",
+    "image": "/projects/React Calculator.png",
     "live_url": "https://example.com/e-learning-platform",
     "github_url": "https://github.com/e-learning-platform",
     "techstack": ["Django", "React", "PostgreSQL"]
@@ -129,7 +129,7 @@
     "id": 15,
     "name": "News Aggregator",
     "description": "A news aggregator that collects and displays news articles from various sources.",
-    "image": "/",
+    "image": "/projects/React Calculator.png",
     "live_url": "https://example.com/news-aggregator",
     "github_url": "https://github.com/news-aggregator",
     "techstack": ["Flask", "React", "MongoDB"]
@@ -138,7 +138,7 @@
     "id": 16,
     "name": "Photo Gallery",
     "description": "A photo gallery application where users can upload, view, and share photos.",
-    "image": "/",
+    "image": "/projects/React Calculator.png",
     "live_url": "https://example.com/photo-gallery",
     "github_url": "https://github.com/photo-gallery",
     "techstack": ["Express", "Vue.js", "PostgreSQL"]
@@ -147,7 +147,7 @@
     "id": 17,
     "name": "Chat Application",
     "description": "A real-time chat application with support for group chats and file sharing.",
-    "image": "/",
+    "image": "/projects/React Calculator.png",
     "live_url": "https://example.com/chat-application",
     "github_url": "https://github.com/chat-application",
     "techstack": ["Node.js", "Socket.io", "MongoDB"]
@@ -156,7 +156,7 @@
     "id": 18,
     "name": "Cryptocurrency Tracker",
     "description": "An application for tracking cryptocurrency prices and market trends.",
-    "image": "/",
+    "image": "/projects/React Calculator.png",
     "live_url": "https://example.com/crypto-tracker",
     "github_url": "https://github.com/crypto-tracker",
     "techstack": ["React", "Node.js", "PostgreSQL"]
@@ -165,7 +165,7 @@
     "id": 19,
     "name": "Inventory Management System",
     "description": "A system for managing inventory, tracking stock levels, and generating reports.",
-    "image": "/",
+    "image": "/projects/React Calculator.png",
     "live_url": "https://example.com/inventory-management",
     "github_url": "https://github.com/inventory-management",
     "techstack": ["Ruby on Rails", "React", "MySQL"]
@@ -174,7 +174,7 @@
     "id": 20,
     "name": "Booking System",
     "description": "A booking system for scheduling appointments and managing bookings for various services.",
-    "image": "/",
+    "image": "/projects/React Calculator.png",
     "live_url": "https://example.com/booking-system",
     "github_url": "https://github.com/booking-system",
     "techstack": ["Laravel", "Vue.js", "PostgreSQL"]

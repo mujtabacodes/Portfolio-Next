@@ -49,3 +49,9 @@ export interface IProjectSwitcher {
   onClick?: () => void;
   active?: boolean;
 }
+
+export interface ITechStack {
+  children: React.ReactNode;
+  className?: string;
+  key: number;
+}

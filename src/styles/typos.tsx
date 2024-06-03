@@ -13,6 +13,10 @@ const title = Baloo_Bhai_2({
   weight: '700',
   subsets: ['latin'],
 });
+const p = Baloo_Bhai_2({
+  weight: '400',
+  subsets: ['latin'],
+});
 const subtitle = Kalam({
   weight: '400',
   subsets: ['latin'],
@@ -21,7 +25,7 @@ const subtitle = Kalam({
 export function Desc({ children, className }: ITypo) {
   return (
     <div
-      className={`text-md md:text-2xl 2xl:text-3xl ${className}  ${desc.className} text-justify dim`}
+      className={`text-md md:text-2xl 2xl:text-3xl ${className}  ${desc.className} text-justify text-primary-foreground`}
     >
       {children}
     </div>
@@ -31,7 +35,7 @@ export function Desc({ children, className }: ITypo) {
 export function Heading({ children, className }: ITypo) {
   return (
     <div
-      className={`text-4xl md:text-6xl 2xl:text-7xl ${className}  ${heading.className} uppercase`}
+      className={`text-4xl md:text-6xl 2xl:text-7xl ${className}  ${heading.className} text-primary`}
     >
       {children}
     </div>
@@ -65,3 +69,38 @@ export function Text({ children, className, onClick }: ITypo) {
     </div>
   );
 }
+
+export const P = ({ children, className, onClick }: ITypo) => {
+  return (
+    <p
+      className={`text-md md:text-2xl 2xl:text-3xl  ${p.className} text-justify text-primary-foreground ${className}`}
+      onClick={onClick}
+    >
+      {children}
+    </p>
+  );
+};
+export const H1 = ({ children, className, onClick }: ITypo) => {
+  return (
+    <p
+      className={`text-3xl md:text-4xl 2xl:text-5xl ${className}  ${title.className}`}
+      onClick={onClick}
+    >
+      {children}
+    </p>
+  );
+};
+export const H3 = ({ children, className, onClick }: ITypo) => {
+  return (
+    <p
+      className={`text-lg md:text-xl 2xl:text-2xl ${className}  ${title.className}`}
+      onClick={onClick}
+    >
+      {children}
+    </p>
+  );
+};
+
+export const BoxedText = ({ children, className, onClick }: ITypo) => {
+  return <P>{children}</P>;
+};

@@ -39,7 +39,7 @@ const SocialLinks: React.FC<TSocialLink> = ({ layout, className }) => {
           href={link.url}
           className=" relative flex items-center p-2 rounded-full transition-all duration-300"
         >
-          <span className="text-2xl border-2 border-black dark:border-white rounded-full p-2 transition-all duration-300  border-spacing-7 hover:border-dashed hover:scale-125">
+          <span className="text-2xl border-2 border-primary rounded-full p-2 transition-all duration-300  border-spacing-7 hover:border-dashed hover:scale-125">
             {link.icon}
           </span>
         </a>

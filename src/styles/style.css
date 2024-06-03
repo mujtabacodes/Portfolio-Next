@@ -1,17 +1,12 @@
-.highlighted-text {
-  @apply text-[#007ccb];
-}
 .x-gap {
   @apply px-[1rem] md:px-[2rem];
 }
-.dim {
-  @apply text-slate-600 opacity-65 dark:text-slate-500 dark:opacity-100;
-}
+
 .tab {
-  @apply flex-shrink-0 p-4 bg-gray-400 md:bg-white/50 text-gray-600 rounded-lg md:rounded-r-none mb-1 shadow-md;
+  @apply flex-shrink-0 p-4  rounded-lg md:rounded-r-none mb-1 shadow-md text-secondary bg-secondary-foreground;
 }
 .active-tab {
-  @apply bg-white;
+  @apply text-heightlightColor bg-primary;
 }
 
 @media (max-width: 768px) {
@@ -20,19 +15,18 @@
   }
 }
 
-/* Custom Scrollbar Styles */
-.custom-scrollbar::-webkit-scrollbar {
+.projects-scrollbar::-webkit-scrollbar {
   @apply h-[8px] w-[8px];
 }
 
-.custom-scrollbar::-webkit-scrollbar-thumb {
-  @apply bg-[#00dee4] rounded-sm;
+.projects-scrollbar::-webkit-scrollbar-thumb {
+  @apply bg-heightlightColor rounded-md md:rounded-l-none;
 }
 
-.custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  @apply bg-[#00dce48a];
+.projects-scrollbar::-webkit-scrollbar-thumb:hover {
+  @apply bg-heightlightColor-foreground;
 }
 
-.custom-scrollbar::-webkit-scrollbar-track {
-  @apply bg-[#f1f1f1] rounded-r-md;
+.projects-scrollbar::-webkit-scrollbar-track {
+  @apply bg-secondary-foreground rounded-md md:rounded-l-none;
 }

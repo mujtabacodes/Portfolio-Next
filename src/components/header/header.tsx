@@ -21,10 +21,11 @@ export function Header() {
         <Desc className="self-start">Hello 👋 My name is</Desc>
         <Heading>Mujtaba Shafique</Heading>
         <Desc className="md:mt-2">
-          I&apos;m <span className="highlighted-text">software engineer </span>.
-          I possess strong problem-solving skills and specialize in crafting
+          I&apos;m{' '}
+          <span className="text-heightlightColor">software engineer </span>. I
+          possess strong problem-solving skills and specialize in crafting
           exceptional digital experiences. My current area of focus is in the{' '}
-          <span className="highlighted-text">Full Stack Development</span>,
+          <span className="text-heightlightColor">Full Stack Development</span>,
           where I actively engage in developing and designing immersive
           applications.
         </Desc>
