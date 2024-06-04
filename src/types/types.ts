@@ -39,6 +39,11 @@ export type TSocialLink = {
 };
 
 export interface ISection {
+  id: string;
+  children: ReactNode;
+  className?: string;
+}
+export interface IRow {
   children: ReactNode;
   className?: string;
 }

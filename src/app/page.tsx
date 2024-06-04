@@ -1,4 +1,4 @@
-import { ResponsiveBG } from '@/components/particles/particles';
+import { ResponsiveBG } from '@/components/particles';
 import { ModeToggle } from '@/components/theme-switcher/mode-toggle';
 import Image from 'next/image';
 import React from 'react';
@@ -15,7 +15,7 @@ export default function Home() {
       <Nav />
       {/* <Header /> */}
       {/* <Projects /> */}
-      <Experiences />
+      {/* <Experiences /> */}
       <Testimonails />
       <Footer />
     </React.Fragment>

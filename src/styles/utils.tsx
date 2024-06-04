@@ -1,11 +1,13 @@
-import { ISection } from '@/types/types';
+import { IRow } from '@/types/types';
 
-export const Section = ({ className, children }: ISection) => {
+export const Section = ({ className, children, id }: ISection) => {
   return (
-    <div className={`w-full min-h-screen x-gap ${className}`}>{children}</div>
+    <section id={id} className={`w-full min-h-screen x-gap ${className}`}>
+      {children}
+    </section>
   );
 };
 
-export const Row = ({ className, children }: ISection) => {
+export const Row = ({ className, children }: IRow) => {
   return <div className={`${className} flex `}>{children}</div>;
 };

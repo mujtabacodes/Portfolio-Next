@@ -11,7 +11,7 @@ import { IProjectCard } from '@/types/types';
 import { Desc, H1, H3, P } from '@/styles/typos';
 import Image from 'next/image';
 import TechStack from './techstack';
-import Icon from './icon';
+import Icon from '../../icon';
 
 const ProjectCard = ({ project }: IProjectCard) => {
   const { id, name, description, image, github_url, live_url, techstack } =

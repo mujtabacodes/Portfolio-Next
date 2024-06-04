@@ -1,5 +1,4 @@
 'use client';
-
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
@@ -8,11 +7,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-import BoyAvator from '.';
-import GirlAvator from '.';
-import rachaAdel from '.';
-import bassi from '.';
-import jef from '.';
+import testimonials from '@config/testimonials.json';
 import {
   Card,
   CardContent,
@@ -21,8 +16,10 @@ import {
   CardHeader,
   CardTitle,
 } from '../ui/card';
-import { LinkedinIcon } from 'lucide-react';
 import Image from 'next/image';
+import { Section } from '@/styles/utils';
+import Icon from '../icon';
+import { H3, SubtitleH3 } from '@/styles/typos';
 
 interface Testimonial {
   id: number;
@@ -38,45 +35,14 @@ interface ReduxTestimonial {
   clientcomment: string;
 }
 
-const FixedData: Testimonial[] = [
-  {
-    id: 1,
-    avator: GirlAvator,
-    name: 'Shaina',
-    comment: 'Mujtaba has been great...',
-  },
-  {
-    id: 2,
-    avator: rachaAdel,
-    name: 'Racha Adel',
-    comment: 'Excellent. Such a pleasure...',
-  },
-  {
-    id: 3,
-    avator: bassi,
-    name: 'Bassi',
-    comment: 'Mujtaba is an incredible developer...',
-  },
-  {
-    id: 4,
-    avator: BoyAvator,
-    name: 'Letlotlompete',
-    comment: 'The service was seamless...',
-  },
-  {
-    id: 5,
-    avator: jef,
-    name: 'Jefowles',
-    comment: 'Polite and easy to communicate with.',
-  },
-];
+const FixedData: Testimonial[] = [];
 
 const Testimonials: React.FC = () => (
-  <section id="testimonials" className="py-8">
+  <Section id="testimonials">
     <SectionHeader
       heading="Testimonails"
       subTitle="Something which matters"
-      align="left"
+      align="center"
     />
     <Swiper
       spaceBetween={30}
@@ -84,27 +50,33 @@ const Testimonials: React.FC = () => (
       autoplay={{ delay: 2500, disableOnInteraction: false }}
       pagination={{ dynamicBullets: true, clickable: true }}
       modules={[Autoplay, Pagination, Navigation]}
-      className="container mx-auto px-4"
     >
-      {FixedData.map(({ id, avator, name, comment }) => (
-        <SwiperSlide key={id} className="rounded-full text-center">
-          <Card>
+      {testimonials.map(({ id, avator, name, comment }) => (
+        <SwiperSlide key={id} className="rounded-full text-center w-full">
+          <Card className="border-none w-full">
             <CardHeader>
-              <Image src={avator} alt={name} />
-              <CardTitle>{name}</CardTitle>
-              <CardDescription>Card Description</CardDescription>
+              <div className="flex items-center justify-center">
+                <Image
+                  width={50}
+                  height={50}
+                  className="object-cover rounded-full shadow-md hover:shadow-xl"
+                  src={avator}
+                  alt={name}
+                />
+              </div>
+              <H3 className="text-center">{name}</H3>
             </CardHeader>
             <CardContent>
-              <p>{comment}</p>
+              <SubtitleH3>{comment}</SubtitleH3>
             </CardContent>
             <CardFooter>
-              <LinkedinIcon />
+              <Icon iconOf="linkedIn" url="https://mujtabacodes.tech" />
             </CardFooter>
           </Card>
         </SwiperSlide>
       ))}
     </Swiper>
-  </section>
+  </Section>
 );
 
 export default Testimonials;

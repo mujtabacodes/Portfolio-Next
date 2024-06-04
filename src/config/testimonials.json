@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "avator": "/codejunkie-logo.png",
+    "name": "Shaina",
+    "comment": "Mujtaba has been great..."
+  },
+  {
+    "id": 2,
+    "avator": "/codejunkie-logo.png",
+    "name": "Racha Adel",
+    "comment": "Excellent. Such a pleasure..."
+  },
+  {
+    "id": 3,
+    "avator": "/codejunkie-logo.png",
+    "name": "Bassi",
+    "comment": "Mujtaba is an incredible developer..."
+  },
+  {
+    "id": 4,
+    "avator": "/codejunkie-logo.png",
+    "name": "Letlotlompete",
+    "comment": "The service was seamless..."
+  },
+  {
+    "id": 5,
+    "avator": "/codejunkie-logo.png",
+    "name": "Jefowles",
+    "comment": "Polite and easy to communicate with."
+  }
+]

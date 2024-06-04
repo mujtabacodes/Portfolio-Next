@@ -7,7 +7,7 @@ const Design3D = dynamic(() => import('../design-3D'), {
   loading: () => <p>Loading...</p>,
 });
 // import Design3D from '../design-3D';
-import SocialLinks from './components/socials';
+import SocialLinks from '../socials';
 import { Card } from '../ui/card';
 import GradientOverlay from '../gradient';
 import dynamic from 'next/dynamic';
@@ -16,7 +16,10 @@ import { Section } from '@/styles/utils';
 
 export function Header() {
   return (
-    <Section className="flex flex-col-reverse md:flex-row w-full justify-between py-[1rem]">
+    <Section
+      id="experiences"
+      className="flex flex-col-reverse md:flex-row w-full justify-between py-[1rem]"
+    >
       <div className="flex mt-2 md:mt-0 flex-col w-full md:w-[55%] lg:w-[65%] items-start text-center md:text-left justify-center">
         <Desc className="self-start">Hello 👋 My name is</Desc>
         <Heading>Mujtaba Shafique</Heading>

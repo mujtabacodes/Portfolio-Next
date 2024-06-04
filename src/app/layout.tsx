@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
-import { ResponsiveBG } from '@/components/particles/particles';
+import { ResponsiveBG } from '@/components/particles';
 import { ThemeProvider } from '../components/theme-switcher/theme-provider';
 import GradientOverlay from '@/components/gradient';
 
