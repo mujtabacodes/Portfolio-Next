@@ -56,14 +56,15 @@ export interface ITechStack {
   key: number;
 }
 
-export interface IAccordion {
+export interface IExperience {
   data: {
     id: number;
     title: string;
     company: string;
     date: string;
-    description: string;
+    description: string[];
     image: string;
+    companyUrl: string;
   };
   open?: boolean;
 }

@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { SectionHeader } from '../section-header';
 import { Section } from '@/styles/utils';
-import Accordion from './components/accordions';
+import Accordion from './components/accordion';
 import experiences from '@config/experiences.json';
-function Experience() {
+function Experiences() {
   return (
     <Section>
       <SectionHeader
@@ -11,8 +11,7 @@ function Experience() {
         subTitle="A story of growth, leanring & Professional Development"
         align="end"
       />
-      O+
-      <div className="bg-secondary/50 rounded-xl">
+      <div className="bg-secondary  rounded-xl">
         {experiences.map((experience) => (
           <div key={experience.id}>
             <Accordion
@@ -26,4 +25,4 @@ function Experience() {
   );
 }
 
-export default Experience;
+export default Experiences;

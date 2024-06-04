@@ -93,7 +93,17 @@ export const H1 = ({ children, className, onClick }: ITypo) => {
 export const H3 = ({ children, className, onClick }: ITypo) => {
   return (
     <p
-      className={`text-lg md:text-xl 2xl:text-2xl ${className}  ${title.className}`}
+      className={`text-lg md:text-xl 2xl:text-2xl text-left ${className}  ${title.className}`}
+      onClick={onClick}
+    >
+      {children}
+    </p>
+  );
+};
+export const SubtitleH3 = ({ children, className, onClick }: ITypo) => {
+  return (
+    <p
+      className={`text-sm md:text-md 2xl:text-lg ${className}  ${subtitle.className}`}
       onClick={onClick}
     >
       {children}

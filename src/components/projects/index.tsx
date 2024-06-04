@@ -16,7 +16,7 @@ export default function Projects() {
   };
 
   return (
-    <Section className="h-[80vh]">
+    <Section className="">
       <SectionHeader
         heading="Projects"
         subTitle="Featured Work and Project Showcase"
@@ -41,7 +41,7 @@ export default function Projects() {
             </Tab>
           ))}
         </TabList>
-        <TabPanels className="w-full  h-full">
+        <TabPanels className="w-full h-full">
           {projects.map((project) => (
             <TabPanel
               key={project.id}
