@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "title": "Full Stack Software Engineer",
+    "company": "Moosh Digital",
+    "date": "May 01, 2023 to Present",
+    "description": "Description about the job 1...",
+    "image": "/mooshdigital-logo.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Junior Software Engineer",
+    "company": "CodeJunkie",
+    "date": "Feb 2023 to May 01,2023",
+    "description": "Description about the job 2...",
+    "image": "/codejunkie-logo.png"
+  }
+]

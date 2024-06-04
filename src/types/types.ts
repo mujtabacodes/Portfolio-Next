@@ -55,3 +55,15 @@ export interface ITechStack {
   className?: string;
   key: number;
 }
+
+export interface IAccordion {
+  data: {
+    id: number;
+    title: string;
+    company: string;
+    date: string;
+    description: string;
+    image: string;
+  };
+  open?: boolean;
+}
