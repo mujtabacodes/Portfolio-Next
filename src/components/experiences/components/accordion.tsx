@@ -13,7 +13,8 @@ import { IoMdArrowDropupCircle } from 'react-icons/io';
 
 export default function Accordion({ data, open }: IExperience) {
   const { title, company, date, description, image } = data;
-  console.log(title);
+  const techStack = ['React', 'TypeScript', 'NextJS', 'NodeJS'];
+
   return (
     <Disclosure as="div" defaultOpen={open}>
       <DisclosureButton className="flex group w-full items-center justify-between p-4 bg-secondary rounded-lg">
@@ -49,14 +50,11 @@ export default function Accordion({ data, open }: IExperience) {
         <DisclosurePanel className=" p-2 md:p-3 origin-top text-sm leading-5 text-primary-foreground bg-opacity-50 border-b-2 rounded-b-lg">
           {description.map((item, index) => (
             <p key={index}>
-              &#8226;{' '}
+              &#8226;
               {item.split(' ').map((word, i) =>
-                word === 'React' ||
-                word === 'TypeScript' ||
-                word === 'NextJS' ||
-                word === 'NodeJS' ? (
+                techStack.includes(word) ? (
                   <span key={i} className="text-heightlightColor">
-                    {word}{' '}
+                    {word}
                   </span>
                 ) : (
                   <span key={i}>{word} </span>
