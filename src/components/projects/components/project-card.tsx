@@ -27,24 +27,26 @@ const ProjectCard = ({ project }: IProjectCard) => {
         className="w-full rounded-md md:w-1/2 h-auto md:h-full object-cover rounded-b-none md:rounded-md md:rounded-r-none"
       />
       <Card className="flex-1 justify-between bg-secondary h-full  overflow-hidden rounded-t-none md:rounded-md md:rounded-l-none">
-        <CardHeader>
+        <CardHeader className="bg-orange-400 space-y-0.5">
           <H3 className="text-heightlightColor">Card Description</H3>
           <H1>{name}</H1>
         </CardHeader>
         <CardContent className="overflow-auto max-h-[calc(100%-8rem)] p-4 ">
           <P>{description}</P>
-          <H3 className="flex flex-wrap gap-1">
+        </CardContent>
+        <CardFooter className="flex gap-1 flex-col item-left">
+          <div className="flex flex-wrap gap-1">
             Tech Stack:
             {techstack.map((tech, index) => (
               <TechStack key={index} className="flex-shrink-0">
                 {tech}
               </TechStack>
             ))}
-          </H3>
-        </CardContent>
-        <CardFooter className="flex gap-1">
-          <Icon iconOf="gitHub" url={github_url} />
-          <Icon iconOf="liveUrl" url={live_url} />
+          </div>
+          <div className="flex gap-2">
+            <Icon iconOf="gitHub" url={github_url} />
+            <Icon iconOf="liveUrl" url={live_url} />
+          </div>
         </CardFooter>
       </Card>
     </div>

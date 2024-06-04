@@ -50,11 +50,11 @@ export default function Accordion({ data, open }: IExperience) {
         <DisclosurePanel className=" p-2 md:p-3 origin-top text-sm leading-5 text-primary-foreground bg-opacity-50 border-b-2 rounded-b-lg">
           {description.map((item, index) => (
             <p key={index}>
-              &#8226;
+              &#8226;{' '}
               {item.split(' ').map((word, i) =>
                 techStack.includes(word) ? (
                   <span key={i} className="text-heightlightColor">
-                    {word}
+                    {word}{' '}
                   </span>
                 ) : (
                   <span key={i}>{word} </span>

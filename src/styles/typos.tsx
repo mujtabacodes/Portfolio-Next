@@ -73,7 +73,7 @@ export function Text({ children, className, onClick }: ITypo) {
 export const P = ({ children, className, onClick }: ITypo) => {
   return (
     <p
-      className={`text-md md:text-2xl 2xl:text-3xl  ${p.className} text-justify text-primary-foreground ${className}`}
+      className={`text-lg md:text-xl 2xl:text-2xl text-left  ${p.className} text-justify text-primary-foreground ${className}`}
       onClick={onClick}
     >
       {children}
@@ -83,7 +83,7 @@ export const P = ({ children, className, onClick }: ITypo) => {
 export const H1 = ({ children, className, onClick }: ITypo) => {
   return (
     <p
-      className={`text-3xl md:text-4xl 2xl:text-5xl ${className}  ${title.className}`}
+      className={`text-xl md:text-2xl 2xl:text-3xl ${className}  ${title.className}`}
       onClick={onClick}
     >
       {children}

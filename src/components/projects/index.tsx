@@ -16,7 +16,7 @@ export default function Projects() {
   };
 
   return (
-    <Section id="#projects" className="">
+    <Section id="projects" className="">
       <SectionHeader
         heading="Projects"
         subTitle="Featured Work and Project Showcase"

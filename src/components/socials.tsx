@@ -32,7 +32,9 @@ const SocialLinks: React.FC<TSocialLink> = ({ layout, className }) => {
   ];
 
   return (
-    <div className={`flex flex-${layout} items-center space-y-4 ${className}`}>
+    <div
+      className={`flex flex-${layout} items-center justify-center  ${className}`}
+    >
       {socialLinks.map((link, index) => (
         <a
           key={index}

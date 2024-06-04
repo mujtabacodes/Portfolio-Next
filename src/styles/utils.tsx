@@ -1,4 +1,4 @@
-import { IRow } from '@/types/types';
+import { IRow, ISection } from '@/types/types';
 
 export const Section = ({ className, children, id }: ISection) => {
   return (

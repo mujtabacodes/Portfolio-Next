@@ -1,16 +1,18 @@
 import React from 'react';
 import { Button } from '../ui/button';
 import SocialLinks from '../socials';
+import { Heading } from '@/styles/typos';
+import { Row } from '@/styles/utils';
 
 export function ContactUs() {
   return (
-    <div>
-      <h1>Lets Work together</h1>
-      <div>
-        <Button variant="outline">Schedule 1:1 meeting</Button>
-        <Button>Message now</Button>
-      </div>
+    <Row className="flex-col justify-center gap-5">
+      <Heading className="text-center mb-4">Lets Work together</Heading>
+      <Row className="gap-2 items-center justify-center">
+        <Button variant="outlineStyled">Schedule 1:1 meeting</Button>
+        <Button variant="primaryStyled">Message now</Button>
+      </Row>
       <SocialLinks layout="row" />
-    </div>
+    </Row>
   );
 }
