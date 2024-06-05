@@ -45,7 +45,7 @@ export default function Projects() {
           {projects.map((project) => (
             <TabPanel
               key={project.id}
-              className="rounded-xl bg-secondary shadow-lg p-3 md:ml-3 md:h-full"
+              className="rounded-xl bg-secondary shadow-lg p-3 md:ml-3"
             >
               <ProjectCard project={project} />
             </TabPanel>

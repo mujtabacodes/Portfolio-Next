@@ -25,10 +25,11 @@ export interface IProjectCard {
   project: {
     id: number;
     name: string;
+    project_type: string;
     description: string;
     image: string;
-    live_url: string;
-    github_url: string;
+    live_url?: string;
+    github_url?: string;
     techstack: string[];
   };
 }

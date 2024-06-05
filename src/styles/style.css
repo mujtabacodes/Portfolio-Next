@@ -3,7 +3,7 @@
 }
 
 .tab {
-  @apply flex-shrink-0 p-4  rounded-lg md:rounded-r-none mb-1 shadow-md bg-secondary-foreground text-primary-foreground  dark:text-secondary;
+  @apply flex-shrink-0 p-4  rounded-lg md:rounded-r-none mb-1 shadow-md bg-secondary-foreground text-primary-foreground active:border-none focus:border-none  dark:text-secondary;
 }
 .active-tab {
   @apply text-secondary bg-heightlightColor dark:bg-primary dark:text-heightlightColor;
