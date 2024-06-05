@@ -2,11 +2,10 @@ import { H3, P } from '@/styles/typos';
 import { ITechStack } from '@/types/types';
 import React from 'react';
 
-const TechStack = ({ key, children, className }: ITechStack) => {
+const TechStack = ({ children, className }: ITechStack) => {
   return (
     <P
-      key={key}
-      className={`${className} bg-secondary-foreground px-2 py-1 rounded-md !text-primary text-sm text-center`}
+      className={`${className} bg-secondary-foreground px-1 py-[0.1rem] rounded-md text-sm text-center`}
     >
       #{children}
     </P>

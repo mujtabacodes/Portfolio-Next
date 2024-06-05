@@ -17,9 +17,9 @@ export default function Accordion({ data, open }: IExperience) {
 
   return (
     <Disclosure as="div" defaultOpen={open}>
-      <DisclosureButton className="flex group w-full items-center justify-between p-4 bg-secondary rounded-lg">
-        <Row className="w-2/4 group-data-[hover]:opacity-80">
-          <div className="flex items-center justify-center">
+      <DisclosureButton className="flex flex-col md:flex-row group w-full items-center justify-between p-4 bg-secondary rounded-lg">
+        <Row className="w-full md:w-2/4  group-data-[hover]:opacity-80">
+          <div className="flex items-center justify-start">
             <Image
               width={50}
               height={50}
@@ -33,7 +33,7 @@ export default function Accordion({ data, open }: IExperience) {
             <SubtitleH3>{company}</SubtitleH3>
           </div>
         </Row>
-        <Row className="w-2/4  justify-end items-center gap-2 group-data-[hover]:opacity-80">
+        <Row className="w-full md:w-2/4  justify-end items-center gap-2 group-data-[hover]:opacity-80">
           <SubtitleH3>{date}</SubtitleH3>
           <IoMdArrowDropupCircle className="size-5  group-data-[hover]:opacity-80 group-data-[open]:rotate-180 rounded-full transition-transform shadow-md" />
         </Row>
@@ -49,7 +49,7 @@ export default function Accordion({ data, open }: IExperience) {
       >
         <DisclosurePanel className=" p-2 md:p-3 origin-top text-sm leading-5 text-primary-foreground bg-opacity-50 border-b-2 rounded-b-lg">
           {description.map((item, index) => (
-            <p key={index}>
+            <P key={index}>
               &#8226;{' '}
               {item.split(' ').map((word, i) =>
                 techStack.includes(word) ? (
@@ -60,7 +60,7 @@ export default function Accordion({ data, open }: IExperience) {
                   <span key={i}>{word} </span>
                 ),
               )}
-            </p>
+            </P>
           ))}
         </DisclosurePanel>
       </Transition>

@@ -1,5 +1,5 @@
 .x-gap {
-  @apply px-[1rem] md:px-[2rem];
+  @apply px-[1rem] md:px-[2rem] pt-28;
 }
 
 .tab {

@@ -24,28 +24,29 @@ const ProjectCard = ({ project }: IProjectCard) => {
         width={500}
         height={100}
         alt={name}
-        className="w-full rounded-md md:w-1/2 h-auto md:h-full object-cover rounded-b-none md:rounded-md md:rounded-r-none"
+        className="w-full rounded-md md:w-1/2 h-auto md:h-full object-cover hover:shadow-inner hover:cursor-pointer"
       />
-      <Card className="flex-1 justify-between bg-secondary h-full  overflow-hidden rounded-t-none md:rounded-md md:rounded-l-none">
-        <CardHeader className="bg-orange-400 space-y-0.5">
+      <Card className="flex-1 justify-between  h-full shadow-none overflow-hidden border-0 ">
+        <CardHeader className="pd-0">
           <H3 className="text-heightlightColor">Card Description</H3>
           <H1>{name}</H1>
         </CardHeader>
         <CardContent className="overflow-auto max-h-[calc(100%-8rem)] p-4 ">
-          <P>{description}</P>
+          <P className="text-primary-foreground">{description}</P>
         </CardContent>
-        <CardFooter className="flex gap-1 flex-col item-left">
-          <div className="flex flex-wrap gap-1">
+        <CardFooter className="flex gap-1 flex-col items-start h-auto justify-between">
+          <P className="flex flex-wrap items-center gap-2 text-primary">
             Tech Stack:
             {techstack.map((tech, index) => (
               <TechStack key={index} className="flex-shrink-0">
                 {tech}
               </TechStack>
             ))}
-          </div>
-          <div className="flex gap-2">
+          </P>
+          <div className="flex gap-2 mt-1">
             <Icon iconOf="gitHub" url={github_url} />
             <Icon iconOf="liveUrl" url={live_url} />
+            <Icon iconOf="documentation" url={live_url} />
           </div>
         </CardFooter>
       </Card>

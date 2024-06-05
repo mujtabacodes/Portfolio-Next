@@ -5,8 +5,10 @@ import React from 'react';
 export function SectionHeader({ heading, subTitle, align }: ISectionHeader) {
   return (
     <div className={`flex flex-col items-${align} py-3`}>
-      <Title>{heading}</Title>
-      <Subtitle>{subTitle}</Subtitle>
+      <Title className={`text-${align} `}>{heading}</Title>
+      <Subtitle className={`text-${align == 'end' ? 'right' : align} `}>
+        {subTitle}
+      </Subtitle>
     </div>
   );
 }

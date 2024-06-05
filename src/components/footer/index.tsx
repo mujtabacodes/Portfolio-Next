@@ -7,11 +7,11 @@ export function Footer() {
   return (
     <Section
       id="contact"
-      className="flex flex-col justify-between items-center w-full !min-h-[50vh]"
+      className="flex flex-col justify-between items-center w-full gap-28 md:mt-16"
     >
       <ContactUs />
       <SubtitleH3>
-        All right reserverd 2024 <em>Created with ❤️ and coffee☕....</em>
+        <em>Created with ❤️ and coffee☕....</em>
       </SubtitleH3>
     </Section>
   );

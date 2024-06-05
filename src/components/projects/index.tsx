@@ -16,7 +16,7 @@ export default function Projects() {
   };
 
   return (
-    <Section id="projects" className="">
+    <Section id="projects">
       <SectionHeader
         heading="Projects"
         subTitle="Featured Work and Project Showcase"
@@ -25,7 +25,7 @@ export default function Projects() {
 
       <TabGroup
         as="div"
-        className="flex flex-col md:flex-row w-full h-[60vh]"
+        className="flex flex-col md:flex-row w-full md:h-[60vh]"
         selectedIndex={activeProject}
       >
         <TabList className="flex gap-2 md:gap-1 overflow-x-auto md:flex-col md:overflow-y-auto md:max-h-full projects-scrollbar">
@@ -45,7 +45,7 @@ export default function Projects() {
           {projects.map((project) => (
             <TabPanel
               key={project.id}
-              className="rounded-xl bg-secondary-foreground p-3 md:ml-3 md:h-full"
+              className="rounded-xl bg-secondary shadow-lg p-3 md:ml-3 md:h-full"
             >
               <ProjectCard project={project} />
             </TabPanel>
