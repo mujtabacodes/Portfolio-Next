@@ -10,15 +10,16 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from '@/components/ui/drawer';
-import { MenuIcon } from 'lucide-react';
+
 import Link from 'next/link';
+import { RiMenu3Fill } from 'react-icons/ri';
 
 export function MobileNav() {
   return (
     <Drawer>
       <DrawerTrigger asChild>
         <Button variant="outline" className="bg-transparent" size="sm">
-          <MenuIcon className="h-5 w-5" />
+          <RiMenu3Fill className="h-5 w-5" />
         </Button>
       </DrawerTrigger>
 

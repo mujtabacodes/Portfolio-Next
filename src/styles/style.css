@@ -3,10 +3,10 @@
 }
 
 .tab {
-  @apply flex-shrink-0 p-4  rounded-lg md:rounded-r-none mb-1 shadow-md text-secondary bg-secondary-foreground;
+  @apply flex-shrink-0 p-4  rounded-lg md:rounded-r-none mb-1 shadow-md bg-secondary-foreground text-primary-foreground  dark:text-secondary;
 }
 .active-tab {
-  @apply text-heightlightColor bg-primary;
+  @apply text-secondary bg-heightlightColor dark:bg-primary dark:text-heightlightColor;
 }
 
 @media (max-width: 768px) {

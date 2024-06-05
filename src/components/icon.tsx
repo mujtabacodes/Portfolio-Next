@@ -1,12 +1,7 @@
-import {
-  Book,
-  FileText,
-  Github,
-  Linkedin,
-  SquareArrowOutUpRight,
-} from 'lucide-react';
 import Link from 'next/link';
 import React from 'react';
+import { FaLinkedin, FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import { IoDocumentText } from 'react-icons/io5';
 type TIcon = {
   iconOf: 'linkedIn' | 'gitHub' | 'documentation' | 'liveUrl';
   url: string;
@@ -15,13 +10,13 @@ const Icon = ({ iconOf, url }: TIcon) => {
   const renderIcon = () => {
     switch (iconOf) {
       case 'linkedIn':
-        return <Linkedin />;
+        return <FaLinkedin />;
       case 'gitHub':
-        return <Github />;
+        return <FaGithub />;
       case 'documentation':
-        return <FileText />;
+        return <IoDocumentText />;
       case 'liveUrl':
-        return <SquareArrowOutUpRight />;
+        return <FaExternalLinkAlt />;
       default:
         return null;
     }
@@ -32,7 +27,7 @@ const Icon = ({ iconOf, url }: TIcon) => {
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      className="icon-link bg-primary-foreground rounded-full p-2 hover:bg-primary"
+      className="icon-link bg-slate-200 dark:bg-primary-foreground rounded-full p-2  hover:scale-105"
     >
       {renderIcon()}
     </Link>

@@ -33,7 +33,7 @@ export default function Projects() {
             <Tab
               key={id}
               className={({ selected }) =>
-                selected ? 'active-tab tab' : 'tab'
+                selected ? 'tab active-tab' : 'tab'
               }
               onClick={() => handleProjectClick(index)}
             >

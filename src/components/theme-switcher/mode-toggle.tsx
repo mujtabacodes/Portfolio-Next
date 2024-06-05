@@ -11,6 +11,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
+import { MdMonitor } from 'react-icons/md';
 
 export function ModeToggle() {
   const { setTheme } = useTheme();
@@ -26,13 +27,13 @@ export function ModeToggle() {
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         <DropdownMenuItem onClick={() => setTheme('light')}>
-          Light
+          <SunIcon className="mr-3" /> Light
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme('dark')}>
-          Dark
+          <MoonIcon className="mr-3" /> Dark
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme('system')}>
-          System
+          <MdMonitor className="mr-3" /> System
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

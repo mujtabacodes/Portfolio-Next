@@ -3,16 +3,13 @@ import { cn } from '@/lib/utils';
 import { Heading, Desc, ButtonText } from '@/styles/typos';
 import Link from 'next/link';
 import { Button } from '../ui/button';
+import SocialLinks from '../socials';
+import dynamic from 'next/dynamic';
+import { Section } from '@/styles/utils';
+import { FaCloudDownloadAlt } from 'react-icons/fa';
 const Design3D = dynamic(() => import('../design-3D'), {
   loading: () => <p>Loading...</p>,
 });
-// import Design3D from '../design-3D';
-import SocialLinks from '../socials';
-import { Card } from '../ui/card';
-import GradientOverlay from '../gradient';
-import dynamic from 'next/dynamic';
-import { DownloadCloudIcon } from 'lucide-react';
-import { Section } from '@/styles/utils';
 
 export function Header() {
   return (
@@ -38,10 +35,10 @@ export function Header() {
           variant="outlineStyled"
           className="mt-5 relative overflow-hidden w-full sm:w-auto"
         >
-          <div className="pointer-events-none flex">
-            <DownloadCloudIcon />
-            <ButtonText className="ml-2">Resume</ButtonText>
-          </div>
+          <ButtonText className="pointer-events-none flex gap-2 py-2">
+            <FaCloudDownloadAlt className="text-xl" />
+            Resume
+          </ButtonText>
           <Link
             href={'/resume.pdf'}
             download="Mujtaba Shafique.pdf"
