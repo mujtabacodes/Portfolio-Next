@@ -1,6 +1,6 @@
 import React from 'react';
 import { cn } from '@/lib/utils';
-import { Heading, Desc } from '@/styles/typos';
+import { Heading, Desc, ButtonText } from '@/styles/typos';
 import Link from 'next/link';
 import { Button } from '../ui/button';
 const Design3D = dynamic(() => import('../design-3D'), {
@@ -17,7 +17,7 @@ import { Section } from '@/styles/utils';
 export function Header() {
   return (
     <Section
-      id="experiences"
+      id="#"
       className="flex flex-col-reverse md:flex-row w-full justify-between py-[1rem]"
     >
       <div className="flex mt-2 md:mt-0 flex-col w-full md:w-[55%] lg:w-[65%] items-start text-center md:text-left justify-center">
@@ -40,7 +40,7 @@ export function Header() {
         >
           <div className="pointer-events-none flex">
             <DownloadCloudIcon />
-            <span className="ml-2">Resume</span>
+            <ButtonText className="ml-2">Resume</ButtonText>
           </div>
           <Link
             href={'/resume.pdf'}

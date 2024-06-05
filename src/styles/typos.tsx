@@ -111,6 +111,13 @@ export const SubtitleH3 = ({ children, className, onClick }: ITypo) => {
   );
 };
 
-export const BoxedText = ({ children, className, onClick }: ITypo) => {
-  return <P>{children}</P>;
+export const ButtonText = ({ children, className, onClick }: ITypo) => {
+  return (
+    <p
+      className={`text-md md:text-lg 2xl:text-xl text-center ${className}  ${title.className}`}
+      onClick={onClick}
+    >
+      {children}
+    </p>
+  );
 };

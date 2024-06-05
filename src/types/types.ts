@@ -73,3 +73,9 @@ export interface IExperience {
   };
   open?: boolean;
 }
+
+export interface ILottie {
+  data: any;
+  length: number;
+  width: number;
+}

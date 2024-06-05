@@ -3,6 +3,7 @@ import { Logo } from '@/components/logo';
 import Link from 'next/link';
 import { ModeToggle } from '../../theme-switcher/mode-toggle';
 import { Button } from '../../ui/button';
+import { ButtonText } from '@/styles/typos';
 
 export function Navbar() {
   return (
@@ -11,22 +12,30 @@ export function Navbar() {
       <ul className="flex gap-2">
         <li>
           <Button size={'lg'} variant="link">
-            <Link href={'#'}>About</Link>
+            <Link href={'#'}>
+              <ButtonText>About</ButtonText>
+            </Link>
           </Button>
         </li>
         <li>
           <Button size={'lg'} variant="link">
-            <Link href={'#projects'}>Projects</Link>
+            <Link href={'#projects'}>
+              <ButtonText>Projects</ButtonText>
+            </Link>
           </Button>
         </li>
         <li>
           <Button size={'lg'} variant="link">
-            <Link href={'#experiences'}>Experiences</Link>
+            <Link href={'#experiences'}>
+              <ButtonText>Experience</ButtonText>
+            </Link>
           </Button>
         </li>
         <li>
           <Button size={'lg'} variant="link">
-            <Link href={'#testimonials'}>Testimonails</Link>
+            <Link href={'#testimonials'}>
+              <ButtonText>Testimonials</ButtonText>
+            </Link>
           </Button>
         </li>
       </ul>
@@ -38,7 +47,9 @@ export function Navbar() {
         <li>|</li>
         <li>
           <Button size="lg" variant="primaryStyled">
-            <Link href={'#contact'}>Contact</Link>
+            <Link href={'#contact'}>
+              <ButtonText>Contact</ButtonText>
+            </Link>
           </Button>
         </li>
       </ul>
