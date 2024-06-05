@@ -35,14 +35,14 @@ const ProjectCard = ({ project }: IProjectCard) => {
           <P className="text-primary-foreground">{description}</P>
         </CardContent>
         <CardFooter className="flex gap-1 flex-col items-start h-auto justify-between">
-          <P className="flex flex-wrap items-center gap-2 text-primary">
+          <H3 className="flex flex-wrap items-center gap-2 text-primary">
             Tech Stack:
             {techstack.map((tech, index) => (
               <TechStack key={index} className="flex-shrink-0">
                 {tech}
               </TechStack>
             ))}
-          </P>
+          </H3>
           <div className="flex gap-2 mt-1">
             <Icon iconOf="gitHub" url={github_url} />
             <Icon iconOf="liveUrl" url={live_url} />

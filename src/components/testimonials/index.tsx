@@ -52,8 +52,8 @@ const Testimonials: React.FC = () => (
       modules={[Autoplay, Pagination, Navigation]}
     >
       {testimonials.map(({ id, avator, name, comment }) => (
-        <SwiperSlide key={id} className="rounded-full text-center w-full">
-          <Card className="border-none w-full">
+        <SwiperSlide key={id} className="rounded-full text-center w-full ">
+          <Card className="border-none w-full shadow-xl">
             <CardHeader>
               <div className="flex items-center justify-center">
                 <Image
