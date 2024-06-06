@@ -5,10 +5,14 @@
     "company": "Moosh Digital",
     "date": "May 2023 to Present",
     "description": [
-      "Developed React components using TypeScript. And Explored TypeScript features",
-      "Implemented component-based styling.",
-      "Followed coding standards and best practices.",
-      "Collaborated with team members."
+      "Took the lead in front-end development for an E-commerce project, utilizing Next.js for the front end while coordinating with the Laravel backend team. This involved delivering new features, resolving bugs, and ensuring smooth integration between the front-end and back-end systems.",
+      "Manage and maintain virtual servers, particularly utilizing Amazon LightSail on AWS, ensuring optimal performance and reliability for the E-commerce project.",
+      "Utilize Bitbucket for efficient code sharing and version control, fostering collaboration and ensuring code quality throughout the development process.",
+      "Manage other websites, leveraging React.js, Next.js, and Node.js stacks, to address bug fixes and implement enhancements, demonstrating proficiency in front-end and back-end technologies.",
+      "Demonstrate expertise in front-end technologies including Next.js, React.js, Tailwind CSS, Material UI, and Bootstrap, ensuring a visually appealing and user-friendly interface for the E-commerce project.",
+      "Utilize back-end technologies such as Node.js, Express.js, and Nest.js to develop robust and scalable backend systems, facilitating efficient data handling and API development. ",
+      "Manage various AWS services including EC2 instances, S3 storage, CloudFront CDN, and LightSail virtual servers, along with experience with DigitalOcean Droplets and Hostinger VPS, optimizing infrastructure for performance and cost-effectiveness.",
+      "Implement containerization with Docker, exploring the benefits of a monorepo architecture for managing multiple projects efficiently ."
     ],
     "image": "/mooshdigital-logo.jpg",
     "companyUrl": "https://mujtabacodes.tech"
@@ -19,10 +23,13 @@
     "company": "CodeJunkie",
     "date": "Feb 2023 to May 2023",
     "description": [
-      "Developed React components using TypeScript. And Explored TypeScript features",
-      "Implemented component-based styling.",
-      "Followed coding standards and best practices.",
-      "Collaborated with team members."
+      " Actively participated in Agile ceremonies such as sprint planning, daily stand-ups, sprint reviews, and retrospectives, contributing to the project's alignment with revenue goals and customer needs.",
+      "Leveraged Git for seamless code sharing and version control, ensuring smooth collaboration and tracking of changes throughout the development process.",
+      "Developed React components using TypeScript, employing modular and reusable design patterns to optimize development speed and revenue generation potential.",
+      "Explored and applied TypeScript features to improve code quality and maintainability, enhancing the project's revenue-generating capabilities.",
+      "Implemented component-based styling techniques to ensure a consistent and engaging user experience, ultimately driving user engagement and revenue growth.",
+      "Adhered to coding standards and best practices to maintain code quality and scalability, supporting the project's long-term revenue goals and sustainability.",
+      "Engaged in active collaboration with team members to share insights, brainstorm solutions, and address challenges, fostering a dynamic and productive Agile development environment focused on revenue generation."
     ],
     "image": "/codejunkie-logo.png",
     "companyUrl": "https://mujtabacodes.tech"

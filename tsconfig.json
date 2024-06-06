@@ -24,7 +24,8 @@
       "@types/*": ["./src/types/*"],
       "@db/*": ["./src/db/*"],
       "@config/*": ["./src/config/*"],
-      "@assets/*": ["./src/assets/*"]
+      "@assets/*": ["./src/assets/*"],
+      "@images/*": ["./src/assets/images/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

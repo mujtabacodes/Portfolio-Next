@@ -30,9 +30,8 @@
 .projects-scrollbar::-webkit-scrollbar-track {
   @apply bg-secondary-foreground rounded-md md:rounded-l-none;
 }
-
 .swiper-pagination-bullet {
-  @apply !bg-secondary-foreground;
+  @apply !bg-primary-foreground;
 }
 .swiper-pagination-bullet-active {
   @apply !bg-heightlightColor;

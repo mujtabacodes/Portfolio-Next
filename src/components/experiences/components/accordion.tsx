@@ -1,3 +1,4 @@
+import { techStack } from '@/config';
 import { H3, P, Subtitle, SubtitleH3 } from '@/styles/typos';
 import { Row } from '@/styles/utils';
 import { IExperience } from '@/types/types';
@@ -7,13 +8,11 @@ import {
   DisclosurePanel,
   Transition,
 } from '@headlessui/react';
-import { ChevronDownIcon } from 'lucide-react';
 import Image from 'next/image';
 import { IoMdArrowDropupCircle } from 'react-icons/io';
 
 export default function Accordion({ data, open }: IExperience) {
   const { title, company, date, description, image } = data;
-  const techStack = ['React', 'TypeScript', 'NextJS', 'NodeJS'];
 
   return (
     <Disclosure as="div" defaultOpen={open}>
@@ -47,7 +46,7 @@ export default function Accordion({ data, open }: IExperience) {
         leaveFrom="opacity-100 translate-y-0"
         leaveTo="opacity-0 -translate-y-6"
       >
-        <DisclosurePanel className=" p-2 md:p-3 origin-top text-sm leading-5 text-primary-foreground bg-opacity-50 border-b-2 rounded-b-lg">
+        <DisclosurePanel className=" p-2 md:px-10 pb-4 origin-top text-sm leading-5 text-primary-foreground bg-opacity-50 border-b-2 rounded-b-lg">
           {description.map((item, index) => (
             <P key={index}>
               &#8226;{' '}
