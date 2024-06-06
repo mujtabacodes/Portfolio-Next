@@ -1,12 +1,44 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Porfolio Website
 
-## Getting Started
+This is my personal portfolio website. It is a full-stack application, with both the frontend and backend built using NextJS. You can view the demo
+https://mujtabacodes.com
 
-First, run the development server:
+## Tech Stack
+
+- NextJS
+- ReactJS
+- TailwindCSS
+- Prisma
+- PostgreSQL
+
+## Want to work with this?
+
+First, clone the repository and install the dependencies:
 
 ```bash
-npm run dev
+git clone https://github.com/mujtabacodes/Portfolio-Next.git
+```
+
+```bash
 # or
+yarn install
+# or
+npm install
+
+```
+
+hen, change .env.example to .env and put the actual database URL. For the initial stage, you can use [Neon](https://neon.tech/)
+
+```bash
+npx prisma migrate
+# then
+npx prisma generate
+
+```
+
+Start the development server:
+
+```bash
 yarn dev
 # or
 pnpm dev
@@ -14,23 +46,16 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## React to me
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<div align="center"> 
+  <a href="mailto:mujtaba.shafique@outlook.com">
+    <img src="https://img.shields.io/badge/Gmail-333333?style=for-the-badge&logo=gmail&logoColor=red" />
+  </a>
+  <a href="https://www.linkedin.com/in/mujtaba-shafique/" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank" />
+  </a>
+  <a href="https://mujtabacodes.com/" target="_blank">
+     <img src="https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=todoist&logoColor=white" target="_blank" /> <!-- sqlite, safari, google-chrome are other good icon options -->
+  </a>
+</div>
