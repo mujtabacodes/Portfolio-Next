@@ -46,11 +46,11 @@ export function Navbar() {
         </li>
         <li>|</li>
         <li>
-          <Button size="lg" variant="primaryStyled">
-            <Link href={'#contact'}>
+          <Link href={'#contact'}>
+            <Button size="lg" variant="primaryStyled">
               <ButtonText>Contact</ButtonText>
-            </Link>
-          </Button>
+            </Button>
+          </Link>
         </li>
       </ul>
     </div>
