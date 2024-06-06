@@ -42,7 +42,7 @@ export function ResponsiveBG() {
               enable: true,
               mode: 'repulse',
 
-              distance: 400,
+              // distance: 400,
             },
             resize: true,
           },
@@ -71,7 +71,7 @@ export function ResponsiveBG() {
             enable: true,
           },
           move: {
-            directions: 'none',
+            // directions: 'none',
             enable: true,
             outModes: {
               default: 'bounce',

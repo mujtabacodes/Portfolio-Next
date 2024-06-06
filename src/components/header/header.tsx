@@ -40,8 +40,9 @@ export function Header() {
             Resume
           </ButtonText>
           <Link
-            href={'/resume.pdf'}
-            download="Mujtaba Shafique.pdf"
+            href={'/Mujtaba_Shafique.pdf'}
+            target="_blank"
+            download="Mujtaba Shafique +1.5y MERN.pdf"
             className="absolute inset-0 z-10"
             style={{ display: 'block', width: '100%', height: '100%' }}
           />
