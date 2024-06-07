@@ -5,7 +5,7 @@ import Accordion from './components/accordion';
 import experiences from '@config/experiences.json';
 function Experiences() {
   return (
-    <Section id="experiences">
+    <Section id="experiences" className="mt-10">
       <SectionHeader
         heading="Experience"
         subTitle="A story of growth, leanring & Professional Development"

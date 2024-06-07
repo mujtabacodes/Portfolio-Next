@@ -80,3 +80,12 @@ export interface ILottie {
   length: number;
   width: number;
 }
+
+export interface IParallax {
+  children: ReactNode;
+  baseVelocity: number;
+}
+export interface ISkillCard {
+  children: ReactNode;
+  className?: string;
+}

@@ -72,52 +72,52 @@ export function Text({ children, className, onClick }: ITypo) {
 
 export const P = ({ children, className, onClick }: ITypo) => {
   return (
-    <p
+    <div
       className={`text-lg md:text-xl 2xl:text-2xl text-left  ${p.className} text-justify ${className}`}
       onClick={onClick}
     >
       {children}
-    </p>
+    </div>
   );
 };
 export const H1 = ({ children, className, onClick }: ITypo) => {
   return (
-    <p
+    <div
       className={`text-xl md:text-2xl 2xl:text-3xl ${className}  ${title.className}`}
       onClick={onClick}
     >
       {children}
-    </p>
+    </div>
   );
 };
 export const H3 = ({ children, className, onClick }: ITypo) => {
   return (
-    <p
+    <div
       className={`text-lg md:text-xl 2xl:text-2xl text-left ${className}  ${title.className}`}
       onClick={onClick}
     >
       {children}
-    </p>
+    </div>
   );
 };
 export const SubtitleH3 = ({ children, className, onClick }: ITypo) => {
   return (
-    <p
+    <div
       className={`text-sm md:text-md 2xl:text-lg ${className}  ${subtitle.className}`}
       onClick={onClick}
     >
       {children}
-    </p>
+    </div>
   );
 };
 
 export const ButtonText = ({ children, className, onClick }: ITypo) => {
   return (
-    <p
+    <div
       className={`text-md md:text-lg 2xl:text-xl text-center ${className}  ${title.className}`}
       onClick={onClick}
     >
       {children}
-    </p>
+    </div>
   );
 };

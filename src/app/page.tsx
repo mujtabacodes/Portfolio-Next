@@ -9,11 +9,13 @@ import Testimonails from '@/components/testimonials';
 import { Footer } from '@/components/footer';
 import '@styles/style.css';
 import Experiences from '@/components/experiences';
+import Skills from '@/components/skills';
 export default function Home() {
   return (
     <React.Fragment>
       <Nav />
       <Header />
+      <Skills />
       <Projects />
       <Experiences />
       <Testimonails />

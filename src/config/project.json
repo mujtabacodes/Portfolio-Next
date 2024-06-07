@@ -1,16 +1,39 @@
 [
   {
     "id": 1,
+    "name": "AskPDF",
+    "project_type": "Industry Project",
+    "description": "AskPDF is like a chatbot, but specifically designed for complex documents to simplify understanding of how it works. Users upload documents and are then able to ask questions about them. AskPDF generates responses using the ChatGPT API and stores uploaded files in embedded form in the database. It provides the most relevant answers and also offers subscription plans on a monthly basis.",
+    "image": "/projects/askpdf.jpg",
+    "live_url": "https://askpdf.mujtabacodes.com/",
+    "techstack": [
+      "NextJS",
+      "React",
+      "Typescript",
+      "TailwindCSS",
+      "ChatGPT API",
+      "Shadcn-ui",
+      "Stripe",
+      "Zod",
+      "Prisma",
+      "MySQL",
+      "WebSockets",
+      "Vector database"
+    ]
+  },
+  {
+    "id": 2,
     "name": "Ecommerce Web Application",
     "project_type": "Personal Project",
     "description": "A modern, high-performance online store with a sleek, responsive design for a seamless shopping experience on any device. Built using NextJS, ReactJS, TailwindCSS, Sanity, and Stripe for efficient and secure transactions.",
     "image": "/projects/ecommerce.webp",
-    "live_url": "https://buy-now-ecommerce-store.vercel.app/",
+    "live_url": "https://ecommerce.mujtabacodes.com/",
     "github_url": "https://github.com/mujtabacodes/BuyNow-ecommerce-store",
     "techstack": ["NextJS", "ReactJS", "TailwindCSS", "Sanity", "Stripe"]
   },
+
   {
-    "id": 2,
+    "id": 3,
     "name": "Afroboost ",
     "project_type": "Industry Project",
     "description": "Revived and enhanced Afroboost, an application showcasing African artists and entrepreneurs. Updated dependencies, added payment methods, online coaching, attendance, and meeting features. Deployed on a VPS server with Nginx. Worked on full-stack development using MySQL for the backend and ReactJS for the front end.",
@@ -19,12 +42,12 @@
     "techstack": ["ReactJS", "MUI", "Redux", "Node.js", "MySQL", "Paypal"]
   },
   {
-    "id": 3,
+    "id": 4,
     "name": "Netflix Clone",
     "project_type": "Personal Project",
     "description": "Developed a Netflix Clone with a user-friendly interface, secure payment integration, and real-time database. Features include user authentication and a responsive design. Created this project to learn and master Typescript, enhance ReactJS and TailwindCSS skills, and explore Firebase integration.",
     "image": "/projects/netflix.webp",
-    "live_url": "https://netflix-clone-six-rouge.vercel.app/",
+    "live_url": "https://netflix.mujtabacodes.com/",
     "github_url": "https://github.com/mujtabacodes/Netflix-Clone-ReactJS-TailwindCSS-Sanity-",
     "techstack": [
       "ReactJS",
@@ -37,7 +60,7 @@
     ]
   },
   {
-    "id": 4,
+    "id": 5,
     "name": "Deliveroo Clone",
     "project_type": "Personal Project",
     "description": "Developed a Deliveroo Clone for food delivery with a sleek interface and real-time updates. Built with React Native and TailwindCSS, featuring a backend powered by Sanity. Created this project to learn and master React Native.",
@@ -47,7 +70,7 @@
     "techstack": ["React Native", "TailwindCSS", "Sanity"]
   },
   {
-    "id": 5,
+    "id": 6,
     "name": "Ecommerce website",
     "project_type": "Industry Project",
     "description": "Developed an ecommerce website from scratch using WooCommerce and WordPress. Responsible for maintenance and deployment on managed hosting, featuring a user-friendly interface and integrated contact form for seamless customer interaction.",
@@ -55,22 +78,22 @@
     "techstack": ["Woocomerce", "Wordpress", "Contact form"]
   },
   {
-    "id": 6,
+    "id": 7,
     "name": "React Calculator",
     "project_type": "Personal Project",
     "description": "Built a React Calculator to master state management with Redux. Features a responsive design and efficient state handling for smooth calculations.",
     "image": "/projects/react-calculator.webp",
-    "live_url": "https://react-calculator-mujtaba4li.vercel.app/",
+    "live_url": "https://calculator.mujtabacodes.com/",
     "github_url": "https://github.com/mujtabacodes/React-calculator",
     "techstack": ["ReactJS", "Redux", "Redux"]
   },
   {
-    "id": 7,
+    "id": 8,
     "name": "Admin Dashboard",
     "project_type": "Uni Project",
     "description": "Developed an admin dashboard for user verification and management. Features include data display, user verification, and the ability to block/unblock users.",
     "image": "/projects/dashboard.webp",
-    "live_url": "https://admin-dashboard-fyp.vercel.app/dashboard",
+    "live_url": "https://dashboard.mujtabacodes.com/dashboard",
     "github_url": "https://github.com/recipe-app",
     "techstack": ["ReactJS", "Material UI", "CharterJS"]
   }
