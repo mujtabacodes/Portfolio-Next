@@ -1,5 +1,5 @@
 import { ISkillCard } from '@/types/types';
-import React from 'react';
+import React, { memo } from 'react';
 
 const SkillCard = ({ children, className }: ISkillCard) => {
   return (
@@ -7,4 +7,4 @@ const SkillCard = ({ children, className }: ISkillCard) => {
   );
 };
 
-export default SkillCard;
+export default memo(SkillCard);

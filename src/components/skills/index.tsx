@@ -1,15 +1,27 @@
 import { Section } from '@/styles/utils';
-import Parallax from './parallax';
-import SkillCard from './skill-card';
-import { FaAws, FaCss3Alt, FaGithubSquare, FaReact } from 'react-icons/fa';
+import dynamic from 'next/dynamic';
+import { memo } from 'react';
+import {
+  FaAws,
+  FaCss3Alt,
+  FaGithubSquare,
+  FaReact,
+  FaHtml5,
+  FaJava,
+} from 'react-icons/fa';
 import { RiNextjsFill, RiNodejsFill, RiTailwindCssFill } from 'react-icons/ri';
 import { BsEmojiExpressionlessFill } from 'react-icons/bs';
 import { AiOutlineJavaScript } from 'react-icons/ai';
 import { SiTypescript, SiExpress, SiMysql, SiNginx } from 'react-icons/si';
 import { TbBrandRedux } from 'react-icons/tb';
-import { FaHtml5, FaJava } from 'react-icons/fa';
 import { DiMongodb } from 'react-icons/di';
 import { BiLogoPostgresql } from 'react-icons/bi';
+import SkillCard from './skill-card';
+
+const Parallax = dynamic(() => import('./parallax'), {
+  loading: () => <p>Loading...</p>,
+});
+
 const Skills = () => {
   return (
     <Section id="skills" className="skills_section">
@@ -52,7 +64,6 @@ const Skills = () => {
           <SkillCard>
             <FaAws className="text-orange-400" />
           </SkillCard>
-
           <SkillCard>
             <DiMongodb className="text-green-600" />
           </SkillCard>
@@ -80,4 +91,4 @@ const Skills = () => {
   );
 };
 
-export default Skills;
+export default memo(Skills);
