@@ -49,7 +49,7 @@ const Skills = () => {
             <SiTypescript className="text-blue-500" />
           </SkillCard>
           <SkillCard>
-            <FaHtml5 />
+            <FaHtml5 className="text-red-500" />
           </SkillCard>
           <SkillCard>
             <FaCss3Alt className="text-blue-500" />
@@ -74,7 +74,7 @@ const Skills = () => {
             <BiLogoPostgresql className="text-blue-500" />
           </SkillCard>
           <SkillCard>
-            <FaJava />
+            <FaJava className="text-orange-500" />
           </SkillCard>
           <SkillCard>
             <SiNginx className="text-green-500" />

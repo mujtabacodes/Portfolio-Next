@@ -3,7 +3,9 @@ import React, { memo } from 'react';
 
 const SkillCard = ({ children, className }: ISkillCard) => {
   return (
-    <div className="bg-secondary rounded-lg p-3 shadow-lg">{children}</div>
+    <div className="bg-secondary rounded-lg p-3 shadow-lg shadow-boxShadow mb-6 hover:scale-105">
+      {children}
+    </div>
   );
 };
 

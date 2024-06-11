@@ -11,7 +11,7 @@ function Experiences() {
         subTitle="A story of growth, leanring & Professional Development"
         align="end"
       />
-      <div className="bg-secondary  rounded-xl shadow-lg">
+      <div className="bg-secondary  rounded-xl shadow-lg shadow-boxShadow">
         {experiences.map((experience) => (
           <div key={experience.id}>
             <Accordion

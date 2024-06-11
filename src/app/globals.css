@@ -36,6 +36,8 @@
     --radius: 0.5rem;
     --highlight: #007ccb;
     --highlight-foreground: #007dcb85;
+
+    --box-shadow: #0208172d;
   }
 
   .dark {
@@ -70,6 +72,7 @@
     --radius: 0.5rem;
     --highlight: #7fb7e5;
     --highlight-foreground: #7fb7e58a;
+    --box-shadow: rgba(255, 255, 255, 0.1);
   }
 }
 

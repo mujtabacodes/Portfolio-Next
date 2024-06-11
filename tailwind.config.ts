@@ -60,6 +60,7 @@ const config = {
           DEFAULT: 'var(--highlight)',
           foreground: 'var(--highlight-foreground)',
         },
+        boxShadow: 'var(--box-shadow)',
       },
       borderRadius: {
         lg: 'var(--radius)',
