@@ -8,10 +8,9 @@ import Lottie from '../lottie';
 
 export function Footer() {
   return (
-    <Section
+    <div
       id="contact"
-      className="flex flex-col justify-between items-center w-full gap-28 md:mt-16"
-      data-aos="zoom-in-up"
+      className="flex flex-col justify-between items-center w-full md:mt-[15rem] gap-28"
     >
       <ContactUs />
       <SubtitleH3>
@@ -25,6 +24,6 @@ export function Footer() {
           ....
         </em>
       </SubtitleH3>
-    </Section>
+    </div>
   );
 }

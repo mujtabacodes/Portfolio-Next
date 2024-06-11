@@ -13,5 +13,5 @@ export const Section = ({ className, children, id }: ISection) => {
 };
 
 export const Row = ({ className, children }: IRow) => {
-  return <div className={`${className} flex `}>{children}</div>;
+  return <div className={`flex  ${className} `}>{children}</div>;
 };
