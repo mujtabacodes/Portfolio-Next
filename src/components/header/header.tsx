@@ -16,8 +16,12 @@ export function Header() {
     <Section
       id="#"
       className="flex flex-col-reverse md:flex-row w-full justify-between py-[1rem]"
+      data-aos="zoom-in-up"
     >
-      <div className="flex mt-2 md:mt-0 flex-col w-full md:w-[55%] lg:w-[65%] items-start text-center md:text-left justify-center">
+      <div
+        className="flex mt-2 md:mt-0 flex-col w-full md:w-[55%] lg:w-[65%] items-start text-center md:text-left justify-center"
+        data-aos="fade-up-right"
+      >
         <Desc className="self-start">Hello 👋 My name is</Desc>
         <Heading>Mujtaba Shafique</Heading>
         <Desc className="md:mt-2">
@@ -48,7 +52,10 @@ export function Header() {
           />
         </Button>
       </div>
-      <div className="flex w-full md:w-[45%] lg:w-[35%] min-h-[30vh] items-center design3d">
+      <div
+        className="flex w-full md:w-[45%] lg:w-[35%] min-h-[30vh] items-center design3d"
+        data-aos="fade-up-left"
+      >
         <Design3D />
         <SocialLinks layout="col" className="hidden md:block" />
       </div>

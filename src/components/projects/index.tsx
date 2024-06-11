@@ -16,7 +16,7 @@ export default function Projects() {
   };
 
   return (
-    <Section id="projects">
+    <Section id="projects" data-aos="zoom-out-up">
       <SectionHeader
         heading="Projects"
         subTitle="Featured Work and Project Showcase"

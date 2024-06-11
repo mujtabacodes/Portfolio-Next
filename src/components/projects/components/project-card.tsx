@@ -26,7 +26,7 @@ const ProjectCard = ({ project }: IProjectCard) => {
   } = project;
 
   return (
-    <div className="flex flex-col md:flex-row h-full">
+    <div data-aos="flip-right" className="flex flex-col md:flex-row h-full">
       <Image
         src={image}
         width={500}

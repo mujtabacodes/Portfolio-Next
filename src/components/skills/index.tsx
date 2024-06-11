@@ -24,7 +24,7 @@ const Parallax = dynamic(() => import('./parallax'), {
 
 const Skills = () => {
   return (
-    <Section id="skills" className="skills_section">
+    <Section id="skills" className="skills_section pt-10">
       <Parallax baseVelocity={-5}>
         <div className="flex gap-4">
           <SkillCard>

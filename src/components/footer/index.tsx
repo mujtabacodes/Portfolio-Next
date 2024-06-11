@@ -11,6 +11,7 @@ export function Footer() {
     <Section
       id="contact"
       className="flex flex-col justify-between items-center w-full gap-28 md:mt-16"
+      data-aos="zoom-in-up"
     >
       <ContactUs />
       <SubtitleH3>
