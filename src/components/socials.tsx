@@ -42,7 +42,6 @@ const SocialLinks: React.FC<TSocialLink> = ({ layout, className }) => {
   return (
     <div
       className={`flex flex-${layout} items-center justify-center  ${className}`}
-      data-aos="flip-down"
     >
       {socialLinks.map((link, index) => (
         <Link
