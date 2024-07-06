@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "name": "AskPDF",
+    "name": "AskPDF (Chat with PDFs)",
     "project_type": "Industry Project",
     "description": "AskPDF is like a chatbot, but specifically designed for complex documents to simplify understanding of how it works. Users upload documents and are then able to ask questions about them. AskPDF generates responses using the ChatGPT API and stores uploaded files in embedded form in the database. It provides the most relevant answers and also offers subscription plans on a monthly basis.",
     "image": "/projects/askpdf.jpg",
@@ -94,7 +94,6 @@
     "description": "Developed an admin dashboard for user verification and management. Features include data display, user verification, and the ability to block/unblock users.",
     "image": "/projects/dashboard.webp",
     "live_url": "https://dashboard.mujtabacodes.com/dashboard",
-    "github_url": "https://github.com/recipe-app",
     "techstack": ["ReactJS", "Material UI", "CharterJS"]
   }
 ]

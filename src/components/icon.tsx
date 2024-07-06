@@ -25,17 +25,25 @@ const Icon = ({ iconOf, url }: TIcon) => {
   };
 
   return (
-    <Button size="sm" variant="primaryStyled" className="bg-heightlightColor">
-      <Link
-        href={url}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="flex gap-2 justify-center items-center "
-      >
-        {renderIcon()}
-        {iconOf === 'liveUrl' && <H3>Live URL</H3>}
-      </Link>
-    </Button>
+    <Link
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`flex gap-1 justify-center items-center text-secondary  ${iconOf === 'liveUrl' ? 'bg-transparent' : 'bg-black/60 dark:bg-primary'} px-2 rounded-full hover:opacity-90`}
+    >
+      {iconOf === 'liveUrl' ? (
+        <Button
+          size="sm"
+          variant="primaryStyled"
+          className="px-3 py-1 flex gap-2"
+        >
+          {renderIcon()}
+          <H3>Live URL</H3>
+        </Button>
+      ) : (
+        <>{renderIcon()}</>
+      )}
+    </Link>
   );
 };
 
