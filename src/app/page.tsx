@@ -7,7 +7,6 @@ import { Footer } from '@/components/footer';
 import Experiences from '@/components/experiences';
 import Skills from '@/components/skills';
 import '@styles/style.css';
-import 'aos/dist/aos.css';
 import AOSWrapper from '@/components/aos-wrapper';
 export default function Home() {
   return (

@@ -89,3 +89,8 @@ export interface ISkillCard {
   children: ReactNode;
   className?: string;
 }
+
+export interface IAOSWrapper {
+  children: ReactNode;
+  animationType?: string;
+}

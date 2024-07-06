@@ -1,15 +1,10 @@
-// AOSWrapper.tsx
 'use client';
 import React, { useEffect, ReactNode } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { IAOSWrapper } from '@/types/types';
 
-interface AOSWrapperProps {
-  children: ReactNode;
-  animationType?: string;
-}
-
-const AOSWrapper: React.FC<AOSWrapperProps> = ({
+const AOSWrapper: React.FC<IAOSWrapper> = ({
   children,
   animationType = 'fade-up',
 }) => {
