@@ -12,7 +12,7 @@ import { Desc, H1, H3, P } from '@/styles/typos';
 import Image from 'next/image';
 import TechStack from './techstack';
 import Icon from '../../icon';
-import ThreeDCard from '@/components/Card3D';
+import Card3D from '@/components/card-3D';
 
 const ProjectCard = ({ project }: IProjectCard) => {
   const {
@@ -30,7 +30,7 @@ const ProjectCard = ({ project }: IProjectCard) => {
       data-aos="fade-left"
       className="flex flex-col md:flex-row items-center h-full bg-transparent bg-opacity-50"
     >
-      <ThreeDCard image={image} />
+      <Card3D image={image} />
       <Card className="flex-1 justify-between  h-full shadow-none overflow-hidden border-0 md:rounded-l-none bg-transparent">
         <CardHeader className="pb-0">
           <H3 className="text-heightlightColor">{project_type}</H3>

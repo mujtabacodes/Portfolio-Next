@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const ThreeDCard = ({ image }: any) => {
+const Card3D = ({ image }: any) => {
   const [isHovered, setIsHovered] = useState(false);
   const [transformStyle, setTransformStyle] = useState('');
   const [glowStyle, setGlowStyle] = useState('');
@@ -71,4 +71,4 @@ const ThreeDCard = ({ image }: any) => {
   );
 };
 
-export default ThreeDCard;
+export default Card3D;
