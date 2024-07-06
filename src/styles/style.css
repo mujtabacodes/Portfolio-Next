@@ -76,3 +76,71 @@
   display: block;
   margin-right: 30px;
 }
+/* project slider */
+
+.project-swiper {
+  @apply rounded-lg  bg-secondary;
+}
+
+.swiper-slide {
+  font-size: 18px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  @apply md:px-16 md:py-5;
+}
+
+.parallax-bg {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 130%;
+  height: 100%;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  @apply dark:opacity-40 opacity-0;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  @apply !bg-white/50 md:!bg-white !rounded-full py-[0.3rem] px-[0.5rem] md:py-[0.5rem] md:px-[0.8rem];
+  font-size: 1.5rem !important;
+}
+
+/* ThreeDCard */
+
+.card {
+  font-weight: bold;
+  padding: 1em;
+  text-align: right;
+  color: #181a1a;
+  height: 25rem;
+  box-shadow: 0 1px 5px #00000099;
+
+  border-radius: 10px;
+  background-size: cover;
+
+  position: relative;
+
+  transition-duration: 300ms;
+  transition-property: transform, box-shadow;
+  transition-timing-function: ease-out;
+  transform-style: preserve-3d;
+  transform-origin: center;
+  background-position: center;
+}
+
+.card.hovered {
+  transition-duration: 150ms;
+  box-shadow: 0 5px 20px 5px #00000044;
+}
+
+.card .glow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+
+  background-image: radial-gradient(circle at 50% -20%, #ffffff22, #0000000f);
+}
