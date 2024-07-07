@@ -9,7 +9,12 @@ import {
   Transition,
 } from '@headlessui/react';
 import Image from 'next/image';
-import { IoMdArrowDropupCircle } from 'react-icons/io';
+import {
+  IoMdArrowDropupCircle,
+  IoIosArrowDropdownCircle,
+} from 'react-icons/io';
+import { SlArrowDown } from 'react-icons/sl';
+import { TfiArrowCircleDown } from 'react-icons/tfi';
 
 export default function Accordion({ data, open }: IExperience) {
   const { title, company, date, description, image } = data;
@@ -32,9 +37,9 @@ export default function Accordion({ data, open }: IExperience) {
             <SubtitleH3>{company}</SubtitleH3>
           </div>
         </Row>
-        <Row className="w-full md:w-2/4  justify-end items-center gap-2 group-data-[hover]:opacity-80">
+        <Row className="w-full md:w-2/4  justify-end items-center gap-3 group-data-[hover]:opacity-80">
           <SubtitleH3>{date}</SubtitleH3>
-          <IoMdArrowDropupCircle className="size-5  group-data-[hover]:opacity-80 group-data-[open]:rotate-180 rounded-full transition-transform shadow-md" />
+          <TfiArrowCircleDown className="text-lg group-data-[hover]:opacity-80 group-data-[open]:rotate-180 rounded-full transition-transform shadow-md" />
         </Row>
       </DisclosureButton>
 
