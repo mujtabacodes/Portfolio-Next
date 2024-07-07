@@ -1,3 +1,4 @@
+import { StaticImageData } from 'next/image';
 import { ReactNode } from 'react';
 
 export interface ITypo {
@@ -93,4 +94,9 @@ export interface ISkillCard {
 export interface IAOSWrapper {
   children: ReactNode;
   animationType?: string;
+}
+export interface ILinkTab {
+  image: StaticImageData;
+  title: string;
+  icon?: string;
 }
