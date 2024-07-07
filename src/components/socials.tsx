@@ -24,13 +24,13 @@ const SocialLinks: React.FC<TSocialLink> = ({ layout, className }) => {
     },
     {
       icon: <FaInstagram />,
-      username: 'mujtaba.codes_',
-      url: 'https://instagram.com/mujtaba.codes_',
+      username: 'mujtabacodes',
+      url: 'https://instagram.com/mujtabacodes',
     },
     {
       icon: <BsTwitterX />,
       username: 'mujtabacodes',
-      url: 'https://twitter.com/mujtabacodes',
+      url: 'https://x.com/mujtabacodes',
     },
     {
       icon: <MdOutlineEmail />,

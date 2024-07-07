@@ -66,12 +66,12 @@ export const findMeLinks = [
   {
     title: 'Instagram',
     image: instgram,
-    href: 'https://instagram.com/mujtaba.codes_',
+    href: 'https://instagram.com/mujtabacodes',
   },
   {
     title: 'Threads',
     image: threads,
-    href: 'https://threads.net/mujtaba.codes_',
+    href: 'https://threads.net/mujtabacodes',
   },
 
   {
