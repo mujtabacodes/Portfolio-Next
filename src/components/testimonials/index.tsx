@@ -47,7 +47,7 @@ const Testimonials: React.FC = () => (
               <SubtitleH3>{comment}</SubtitleH3>
             </CardContent>
             <CardFooter>
-              {url && <Icon iconOf="linkedIn" url={url} />}
+              {url && <Icon iconOf="linkedIn" url={url} className="p-2" />}
             </CardFooter>
           </Card>
         </SwiperSlide>
