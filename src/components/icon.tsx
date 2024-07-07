@@ -7,8 +7,9 @@ import { Button } from './ui/button';
 type TIcon = {
   iconOf: 'linkedIn' | 'gitHub' | 'documentation' | 'liveUrl';
   url: string;
+  className?: string;
 };
-const Icon = ({ iconOf, url }: TIcon) => {
+const Icon = ({ iconOf, url, className }: TIcon) => {
   const renderIcon = () => {
     switch (iconOf) {
       case 'linkedIn':
@@ -29,7 +30,7 @@ const Icon = ({ iconOf, url }: TIcon) => {
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      className={`flex gap-1 justify-center items-center text-secondary  ${iconOf === 'liveUrl' ? 'bg-transparent' : 'bg-black/60 dark:bg-primary'} px-2 rounded-full hover:opacity-90`}
+      className={`flex gap-1 justify-center items-center text-secondary  ${iconOf === 'liveUrl' ? 'bg-transparent' : 'bg-black/60 dark:bg-primary'} px-2 rounded-full hover:opacity-90 ${className}`}
     >
       {iconOf === 'liveUrl' ? (
         <Button

@@ -14,20 +14,15 @@
   },
   {
     "id": 3,
-    "avator": "/bassi.webp",
-    "name": "Bassi",
-    "comment": "Mujtaba is an incredible developer very patient, fast he finds the same solutions to some things that you did not imagine, he is a passionate and perfectionist, I found the right developer thank you brother"
+    "avator": "/boy-profile.webp",
+    "name": "Ghukam Mustafa",
+    "comment": "I had the honor of working with Mujtaba Shafique on many important projects. His skills in full-stack development and Docker were impressive. He is one of the best colleagues I've ever had. He understands complex issues well and works effectively in a team. He's focused on goals and always finds solutions to problems, especially in website-related issues such as MERN stack, Next.js, and managing servers with Nginx. He was very professional and dedicated, which greatly contributed to the success of our projects. He's always eager to learn new things. I highly recommend Mujtaba for his excellent skills and valuable contributions to teamwork.",
+    "url": "https://www.linkedin.com/in/ghulam-mustafa-702b4b197"
   },
   {
     "id": 4,
     "avator": "/girl-profile.webp",
     "name": "Letlotlompete",
-    "comment": "The service was seemless. He communicates all the time and the work was exceptional and punctual. I am extremely satisfied with the work he has done me!!!"
-  },
-  {
-    "id": 5,
-    "avator": "/jef.webp",
-    "name": "Jefowles",
-    "comment": "Polite and easy to communicate with."
+    "comment": "The service was seemless. He communicates all the time and the work was exceptional and punctual. I am extremely satisfied with the work he has done with me!!!"
   }
 ]
