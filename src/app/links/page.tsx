@@ -7,7 +7,7 @@ import { links, findMeLinks } from '@config/index';
 import LinkTab from '@/components/link-tab';
 const Links = () => {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center  text-primary my-2">
+    <div className="min-h-screen flex flex-col items-center justify-center  text-primary mx-5">
       <div className="text-center">
         <Image
           src={profile}
@@ -16,14 +16,14 @@ const Links = () => {
           width={100}
           height={100}
         />
-        <H1>@mujtaba.codes_</H1>
+        <H1>@mujtabacodes</H1>
       </div>
       <div className="mt-8 w-full max-w-md">
         {links.map((link, index) => (
           <Link
             key={index}
             href={link.href}
-            className="flex items-center p-4 mb-4 bg-secondary rounded-lg shadow-lg hover:scale-105 "
+            className="flex items-center p-4 mb-4 bg-slate-50 dark:bg-secondary rounded-lg shadow-md dark:shadow-slate-600 hover:scale-105 "
             target="_blank"
           >
             <LinkTab image={link.image} title={link.title} icon={link.icon} />
@@ -36,7 +36,7 @@ const Links = () => {
           <Link
             key={index}
             href={link.href}
-            className="flex items-center p-4 mb-4 bg-secondary rounded-lg shadow-lg hover:scale-105"
+            className="flex items-center p-4 mb-4 bg-slate-50 dark:bg-secondary rounded-lg shadow-md dark:shadow-slate-600 hover:scale-105 "
             target="_blank"
           >
             <LinkTab image={link.image} title={link.title} />

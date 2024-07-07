@@ -1,5 +1,5 @@
 import { techStack } from '@/config';
-import { H3, P, Subtitle, SubtitleH3 } from '@/styles/typos';
+import { H3, P, SubtitleH3 } from '@/styles/typos';
 import { Row } from '@/styles/utils';
 import { IExperience } from '@/types/types';
 import {
@@ -9,11 +9,6 @@ import {
   Transition,
 } from '@headlessui/react';
 import Image from 'next/image';
-import {
-  IoMdArrowDropupCircle,
-  IoIosArrowDropdownCircle,
-} from 'react-icons/io';
-import { SlArrowDown } from 'react-icons/sl';
 import { TfiArrowCircleDown } from 'react-icons/tfi';
 
 export default function Accordion({ data, open }: IExperience) {
