@@ -14,6 +14,9 @@ import { useOutsideClick } from '@/hooks/use-outside-click';
 import { HiArrowNarrowLeft, HiArrowNarrowRight } from 'react-icons/hi';
 import { RxCross2 } from 'react-icons/rx';
 import { H3 } from '@/styles/typos';
+import { GitHubLogoIcon } from '@radix-ui/react-icons';
+import Link from 'next/link';
+import Icon from '../icon';
 interface CarouselProps {
   items: JSX.Element[];
   initialScroll?: number;
@@ -43,7 +46,7 @@ export const CarouselContext = createContext<{
   currentIndex: 0,
 });
 
-export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
+export const Carousel = ({ items, initialScroll = -300 }: CarouselProps) => {
   const carouselRef = React.useRef<HTMLDivElement>(null);
   const [canScrollLeft, setCanScrollLeft] = React.useState(false);
   const [canScrollRight, setCanScrollRight] = React.useState(true);
@@ -274,6 +277,15 @@ export const Card = ({ card, index, layout = false }: ICard) => {
           fill
           className="object-cover absolute z-10 inset-0"
         />
+        <div className="relative z-40 p-8 h-full w-full ">
+          <div className="absolute bottom-2 right-2 flex gap-2">
+            {card.videoDemoUrl && (
+              <Icon iconOf="youtube" url={card.videoDemoUrl} />
+            )}
+            {card.githubUrl && <Icon iconOf="gitHub" url={card.githubUrl} />}
+            {card.liveUrl && <Icon iconOf="liveUrl" url={card.liveUrl} />}
+          </div>
+        </div>
       </motion.button>
     </>
   );

@@ -7,6 +7,9 @@ export const projectData = [
     description:
       'Developed a Netflix Clone with a user-friendly interface, secure payment integration, and real-time database. Features include user authentication and a responsive design. Created this project to learn and master Typescript, enhance ReactJS and TailwindCSS skills, and explore Firebase integration.',
     techstack: ['react', 'tailwindcss', 'nextjs'],
+    githubUrl: 'http://github.com',
+    liveUrl: 'http://github.com',
+    videoDemoUrl: 'http://github.com',
   },
   {
     category: 'Productivity',
@@ -16,6 +19,7 @@ export const projectData = [
     description:
       'Developed a Netflix Clone with a user-friendly interface, secure payment integration, and real-time database. Features include user authentication and a responsive design. Created this project to learn and master Typescript, enhance ReactJS and TailwindCSS skills, and explore Firebase integration.',
     techstack: ['react', 'tailwindcss', 'nextjs'],
+    githubUrl: 'http://github.com',
   },
   {
     category: 'Product',
@@ -25,6 +29,9 @@ export const projectData = [
     description:
       'Developed a Netflix Clone with a user-friendly interface, secure payment integration, and real-time database. Features include user authentication and a responsive design. Created this project to learn and master Typescript, enhance ReactJS and TailwindCSS skills, and explore Firebase integration.',
     techstack: ['react', 'tailwindcss', 'nextjs'],
+    githubUrl: 'http://github.com',
+    liveUrl: 'http://github.com',
+    videoDemoUrl: 'http://github.com',
   },
 
   {
