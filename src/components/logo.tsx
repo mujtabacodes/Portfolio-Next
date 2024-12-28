@@ -13,7 +13,10 @@ export const Logo: React.FC = () => {
   }, [resolvedTheme]);
 
   return (
-    <div className="flex items-center">
+    <div
+      className="flex items-center cursor-pointer"
+      onClick={() => window.scrollTo(0, 0)}
+    >
       {currentTheme === 'dark' ? (
         <Image
           src="/darkLogo.png"

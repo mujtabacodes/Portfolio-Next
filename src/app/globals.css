@@ -88,3 +88,52 @@
 html {
   scroll-behavior: smooth;
 }
+
+.link-active {
+  position: relative;
+  display: inline-block;
+}
+
+.link-active::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background-color: var(--primary);
+}
+
+.link-underline,
+.link-footer {
+  position: relative;
+  display: inline-block;
+}
+
+.link-underline::after,
+.link-footer:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background-color: var(--primary);
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+
+.link-footer:after {
+  background-color: var(--primary) !important;
+}
+
+.link-underline:hover::after,
+.link-footer:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.category-wrapper:hover .link-underline::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
