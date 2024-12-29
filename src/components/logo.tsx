@@ -5,12 +5,16 @@ import { useTheme } from 'next-themes';
 import Image from 'next/image';
 
 export const Logo: React.FC = () => {
-  const { theme, resolvedTheme } = useTheme(); // resolvedTheme gives the effective theme
-  const [currentTheme, setCurrentTheme] = useState(resolvedTheme);
+  const { resolvedTheme, systemTheme } = useTheme();
+  const [currentTheme, setCurrentTheme] = useState<string | undefined>(
+    undefined,
+  );
 
   useEffect(() => {
-    setCurrentTheme(resolvedTheme);
-  }, [resolvedTheme]);
+    setCurrentTheme(resolvedTheme || systemTheme);
+  }, [resolvedTheme, systemTheme]);
+
+  if (!currentTheme) return null;
 
   return (
     <div
@@ -24,6 +28,7 @@ export const Logo: React.FC = () => {
           className="h-8 w-auto"
           width={100}
           height={100}
+          priority
         />
       ) : (
         <Image
@@ -32,6 +37,7 @@ export const Logo: React.FC = () => {
           className="h-8 w-auto"
           width={100}
           height={100}
+          priority
         />
       )}
     </div>

@@ -2,7 +2,7 @@ import { IRow, ISection } from '@/types/types';
 
 export const Section = ({ className, children, id }: ISection) => {
   return (
-    <section id={id} className={`w-full  x-gap ${className}`}>
+    <section id={id} className={`container ${className}`}>
       {children}
     </section>
   );

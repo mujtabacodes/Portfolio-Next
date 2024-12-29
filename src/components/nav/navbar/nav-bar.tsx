@@ -5,9 +5,10 @@ import Link from 'next/link';
 import { ModeToggle } from '../../theme-switcher/mode-toggle';
 import { ButtonText } from '@/styles/typos';
 import { Button } from '@/components/ui/button';
+import { Section } from '@/styles/utils';
 
 const NAV_ITEMS = [
-  { id: 'about', label: 'About', href: '' },
+  { id: 'about', label: 'About', href: '#' },
   { id: 'projects', label: 'Projects', href: '#projects' },
   { id: 'experiences', label: 'Experience', href: '#experiences' },
   { id: 'testimonials', label: 'Testimonials', href: '#testimonials' },
@@ -38,7 +39,8 @@ export function Navbar() {
   }, []);
 
   return (
-    <div
+    <Section
+      id="#"
       className={`hidden md:flex justify-between items-center  pl-6 m-5 fixed left-1/2 transform -translate-x-1/2 z-50 transition-all duration-500 ease-in-out ${
         isScrolled
           ? 'w-[85%] bg-secondary p-3 rounded-full shadow-lg '
@@ -74,6 +76,6 @@ export function Navbar() {
           </Link>
         </li>
       </ul>
-    </div>
+    </Section>
   );
 }
