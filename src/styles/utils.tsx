@@ -2,7 +2,7 @@ import { IRow, ISection } from '@/types/types';
 
 export const Section = ({ className, children, id }: ISection) => {
   return (
-    <section id={id} className={`container ${className}`}>
+    <section id={id} className={` ${className}`}>
       {children}
     </section>
   );
