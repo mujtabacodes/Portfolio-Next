@@ -9,7 +9,7 @@ const heading = Baloo_Bhai_2({
   weight: '800',
   subsets: ['latin'],
 });
-const title = Baloo_Bhai_2({
+export const title = Baloo_Bhai_2({
   weight: '700',
   subsets: ['latin'],
 });

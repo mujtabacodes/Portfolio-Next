@@ -43,7 +43,7 @@ const Icon = ({ iconOf, url, className }: TIcon) => {
         </div>
 
         <span className="opacity-0 group-hover:opacity-100 group-hover:translate-x-2 transition-all duration-300 ease-in-out">
-          <H3 className="text-sm">
+          <h1 className="text-sm md:text-base font-medium font-sans">
             {iconOf === 'liveUrl'
               ? 'Live URL'
               : iconOf === 'gitHub'
@@ -51,7 +51,7 @@ const Icon = ({ iconOf, url, className }: TIcon) => {
                 : iconOf === 'youtube'
                   ? 'Demo Video '
                   : iconOf}
-          </H3>
+          </h1>
         </span>
       </div>
     </Link>

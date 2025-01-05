@@ -19,7 +19,7 @@ export default function Home() {
         <Skills />
         <Projects />
       </AOSWrapper>
-      <Timeline data={timelineData} />
+
       <Experiences />
       <AOSWrapper animationType="zoom-in-up">
         <Testimonails />

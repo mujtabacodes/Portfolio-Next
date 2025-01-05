@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export const timelineData = [
   {
-    title: '2024',
+    title: 'Sr.Software',
     content: (
       <div>
         <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">

@@ -13,7 +13,7 @@ import Image, { ImageProps } from 'next/image';
 import { useOutsideClick } from '@/hooks/use-outside-click';
 import { HiArrowNarrowLeft, HiArrowNarrowRight } from 'react-icons/hi';
 import { RxCross2 } from 'react-icons/rx';
-import { H3 } from '@/styles/typos';
+import { H3, title } from '@/styles/typos';
 import { GitHubLogoIcon } from '@radix-ui/react-icons';
 import Link from 'next/link';
 import Icon from '../icon';
@@ -129,7 +129,7 @@ export const Carousel = ({ items, initialScroll = -300 }: CarouselProps) => {
                   y: 0,
                   transition: {
                     duration: 0.5,
-                    delay: 0.2 * index,
+                    delay: 0.4 * index,
                     ease: 'easeOut',
                     once: true,
                   },
@@ -254,19 +254,19 @@ export const Card = ({ card, index, layout = false }: ICard) => {
       <motion.button
         layoutId={layout ? `card-${card.title}` : undefined}
         onClick={handleOpen}
-        className="rounded-3xl bg-gray-100 dark:bg-neutral-900 h-80 w-56 md:h-[40rem] md:w-96 overflow-hidden flex flex-col items-start justify-start relative z-10"
+        className="rounded-3xl bg-gray-100 dark:bg-neutral-900 h-80 w-56 md:h-[40rem] md:w-[40rem] hover:border overflow-hidden flex flex-col items-start justify-start relative z-10"
       >
         <div className="absolute h-full top-0 inset-x-0 bg-gradient-to-b from-black/50 via-transparent to-transparent z-30 pointer-events-none" />
         <div className="relative z-40 p-8">
           <motion.p
             layoutId={layout ? `category-${card.category}` : undefined}
-            className=" text-sm md:text-base font-medium font-sans text-left text-heightlightColor"
+            className=" text-sm md:text-base font-medium font-sans text-left text-[#bbe0ff] "
           >
             {card.category}
           </motion.p>
           <motion.p
             layoutId={layout ? `title-${card.title}` : undefined}
-            className="text-white text-xl md:text-3xl font-semibold max-w-xs text-left [text-wrap:balance] font-sans mt-2"
+            className={`text-white text-xl md:text-3xl font-extrabold max-w-xs text-left [text-wrap:balance] font-sans mt-2 ${title.className}`}
           >
             {card.title}
           </motion.p>
