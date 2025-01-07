@@ -17,6 +17,15 @@ import { H3, title } from '@/styles/typos';
 import { GitHubLogoIcon } from '@radix-ui/react-icons';
 import Link from 'next/link';
 import Icon from '../icon';
+import {
+  Dialog,
+  DialogClose,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from './dialog';
 interface CarouselProps {
   items: JSX.Element[];
   initialScroll?: number;
@@ -198,59 +207,42 @@ export const Card = ({ card, index, layout = false }: ICard) => {
 
   return (
     <>
-      <AnimatePresence>
-        {open && (
-          <div className="fixed inset-0 h-screen md:mt-[38rem] z-50 overflow-auto flex justify-center items-center">
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="bg-black/80 backdrop-blur-lg h-full w-full fixed inset-0 "
-            />
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              ref={containerRef}
-              layoutId={layout ? `card-${card.title}` : undefined}
-              className="max-w-5xl mx-auto bg-white dark:bg-neutral-900 h-fit  z-[60] my-10 p-4 md:p-10 rounded-3xl font-sans relative"
+      <Dialog open={open} onOpenChange={handleClose}>
+        <DialogContent>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.9 }}
+            layoutId={layout ? `card-${card.title}` : undefined}
+          >
+            <DialogClose asChild></DialogClose>
+            <motion.p
+              layoutId={layout ? `category-${card.title}` : undefined}
+              className="text-base font-medium text-black dark:text-white"
             >
-              <button
-                className="sticky top-4 h-8 w-8 right-0 ml-auto bg-black dark:bg-white rounded-full flex items-center justify-center"
-                onClick={handleClose}
-              >
-                <RxCross2 className="h-6 w-6 text-neutral-100 dark:text-neutral-900" />
-              </button>
-              <motion.p
-                layoutId={layout ? `category-${card.title}` : undefined}
-                className="text-base font-medium text-black dark:text-white"
-              >
-                {card.category}
-              </motion.p>
-              <motion.p
-                layoutId={layout ? `title-${card.title}` : undefined}
-                className="text-2xl md:text-5xl font-semibold text-neutral-700 mt-4 dark:text-white"
-              >
-                {card.title}
-              </motion.p>
+              {card.category}
+            </motion.p>
+            <motion.p
+              layoutId={layout ? `title-${card.title}` : undefined}
+              className="text-2xl md:text-5xl font-semibold text-neutral-700 mt-4 dark:text-white"
+            >
+              {card.title}
+            </motion.p>
+            <div className="py-10">{card.description}</div>
+            <h3 className="flex flex-wrap items-center gap-2 text-primary">
+              Tech Stack:
+              {card.techstack.map((tech, index) => (
+                <div key={index} className="flex-shrink-0">
+                  <p className="bg-slate-200 dark:bg-secondary-foreground px-1 py-[0.1rem] rounded-md text-[1rem] text-center">
+                    #{tech}
+                  </p>
+                </div>
+              ))}
+            </h3>
+          </motion.div>
+        </DialogContent>
+      </Dialog>
 
-              <div className="py-10">{card.description}</div>
-              <H3 className="flex flex-wrap items-center gap-2 text-primary ">
-                Tech Stack:
-                {card.techstack.map((tech, index) => (
-                  <div key={index} className="flex-shrink-0">
-                    <p
-                      className={` bg-slate-200 dark:bg-secondary-foreground px-1 py-[0.1rem] rounded-md text-[1rem] text-center `}
-                    >
-                      #{tech}
-                    </p>
-                  </div>
-                ))}
-              </H3>
-            </motion.div>
-          </div>
-        )}
-      </AnimatePresence>
       <motion.button
         layoutId={layout ? `card-${card.title}` : undefined}
         onClick={handleOpen}
