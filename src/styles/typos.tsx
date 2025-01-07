@@ -1,15 +1,15 @@
 import { ITypo } from '@/types/types';
 import React from 'react';
 import { Monomaniac_One, Baloo_Bhai_2, Kalam } from 'next/font/google';
-const desc = Monomaniac_One({
+const desc = Baloo_Bhai_2({
   weight: '400',
   subsets: ['latin-ext'],
 });
-const heading = Baloo_Bhai_2({
+export const heading = Baloo_Bhai_2({
   weight: '800',
   subsets: ['latin'],
 });
-const title = Baloo_Bhai_2({
+export const title = Baloo_Bhai_2({
   weight: '700',
   subsets: ['latin'],
 });
@@ -25,7 +25,7 @@ const subtitle = Kalam({
 export function Desc({ children, className }: ITypo) {
   return (
     <div
-      className={`text-md md:text-2xl 2xl:text-3xl ${className}  ${desc.className} text-justify text-primary-foreground`}
+      className={`text-md md:text-2xl 2xl:text-3xl ${className}  ${desc.className} text-justify text-primary`}
     >
       {children}
     </div>

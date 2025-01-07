@@ -1,16 +1,23 @@
+'use client';
+import Image from 'next/image';
+import React from 'react';
+import { Carousel, Card } from '@/components/ui/apple-cards-carousel';
 import { Section } from '@/styles/utils';
 import { SectionHeader } from '../section-header';
-import Slider from './components/slider';
+import { projectData } from '@/config/data';
+export function Projects() {
+  const cards = projectData.map((card, index) => (
+    <Card key={card.posterImage} card={card} index={index} />
+  ));
 
-export default function Projects() {
   return (
-    <Section id="projects" data-aos="zoom-out-up">
+    <Section id="projects" data-aos="zoom-out-up" className="relative">
       <SectionHeader
         heading="Projects"
         subTitle="Featured Work and Project Showcase"
         align="start"
       />
-      <Slider />
+      <Carousel items={cards} />
     </Section>
   );
 }
