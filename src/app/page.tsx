@@ -16,8 +16,8 @@ export default function Home() {
       <Nav />
       <Header />
       <AOSWrapper animationType="zoom-in-up">
-        <Skills />
         <Projects />
+        <Skills />
       </AOSWrapper>
 
       <Experiences />

@@ -1,144 +1,270 @@
+'use client';
+import HeroVideoDialog from '@/components/ui/hero-video-dialog';
 import Image from 'next/image';
 
 export const timelineData = [
   {
-    title: 'Sr.Software',
+    title: 'Sr.Software Engineer',
+    date: 'Jun 2024 - Present',
     content: (
-      <div>
+      <div className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal">
         <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-          Built and launched Aceternity UI and Aceternity UI Pro from scratch
+          Built and launched Multiple Ecommerce Projects from scratch
         </p>
         <div className="grid grid-cols-2 gap-4">
-          <Image
-            src="https://assets.aceternity.com/templates/startup-1.webp"
-            alt="startup template"
-            width={500}
-            height={500}
-            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-          />
-          <Image
-            src="https://assets.aceternity.com/templates/startup-2.webp"
-            alt="startup template"
-            width={500}
-            height={500}
-            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-          />
-          <Image
-            src="https://assets.aceternity.com/templates/startup-3.webp"
-            alt="startup template"
-            width={500}
-            height={500}
-            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-          />
-          <Image
-            src="https://assets.aceternity.com/templates/startup-4.webp"
-            alt="startup template"
-            width={500}
-            height={500}
-            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-          />
+          <div className="relative group h-20 md:h-44 lg:h-60 w-full">
+            <Image
+              src="/projects/avenue39.PNG"
+              alt="Avenue39 Project"
+              width={500}
+              height={500}
+              onClick={() =>
+                window.open('https://avenue39.vercel.app', '_blank')
+              }
+              className="rounded-lg cursor-pointer hover:scale-105 transition-transform duration-300 object-cover h-full w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+            />
+            <div
+              onClick={() =>
+                window.open('https://avenue39.vercel.app', '_blank')
+              }
+              className="absolute inset-0 cursor-pointer border bg-black bg-opacity-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg text-white text-sm font-medium"
+            >
+              View Project 🚀
+            </div>
+          </div>
+
+          <div className="relative group h-20 md:h-44 lg:h-60 w-full">
+            <Image
+              src="/projects/Interriorfilm.PNG"
+              alt="Interrior Film Project"
+              width={500}
+              height={500}
+              className="rounded-lg cursor-pointer hover:scale-105 transition-transform duration-300 object-cover h-full w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+            />
+            <div
+              onClick={() => window.open('https://interiorfilm.ae', '_blank')}
+              className="absolute inset-0 cursor-pointer border bg-black bg-opacity-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg text-white text-sm font-medium"
+            >
+              View Project 🚀
+            </div>
+          </div>
+
+          <div className="relative group h-20 md:h-44 lg:h-60 w-full">
+            <Image
+              src="/projects/Bnc.PNG"
+              alt="BNC Project"
+              width={500}
+              height={500}
+              className="rounded-lg cursor-pointer hover:scale-105 transition-transform duration-300 object-cover h-full w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+            />
+            <div
+              onClick={() =>
+                window.open('https://b-c-eight.vercel.app/', '_blank')
+              }
+              className="absolute inset-0 cursor-pointer border bg-black bg-opacity-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg text-white text-sm font-medium"
+            >
+              View Project 🚀
+            </div>
+          </div>
+
+          <div className="relative group h-20 md:h-44 lg:h-60 w-full">
+            <Image
+              src="/projects/artiart.PNG"
+              alt="Artiart Project"
+              width={500}
+              height={500}
+              className="rounded-lg cursor-pointer hover:scale-105 transition-transform duration-300 object-cover h-full w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+            />
+            <div
+              onClick={() => window.open('https://artiart.ae', '_blank')}
+              className="absolute inset-0 cursor-pointer border bg-black bg-opacity-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg text-white text-sm font-medium"
+            >
+              View Project 🚀
+            </div>
+          </div>
+        </div>
+        <div className="mt-8">
+          <h3 className="text-xl md:text-2xl font-semibold text-neutral-800 dark:text-neutral-200 mb-4">
+            Key Contributions <span className="text-primary">🔑</span>
+          </h3>
+          <ul className="list-disc pl-5 space-y-2 text-neutral-700 dark:text-neutral-300">
+            <li>
+              <span className="text-primary">🚀</span> Increased website traffic
+              by 60% after optimizing the site’s <b>SEO</b> and UI/UX. Optimized
+              API performance by implementing <b>Redis caching</b> and query
+              optimization, reducing response times by <b>40%</b>, and improving
+              user satisfaction and scalability.
+            </li>
+            <li>
+              <span className="text-primary">💳</span> Integrated secure payment
+              systems such as <b>Paymob</b>, <b>Stripe</b>, and <b>PayPal</b>,
+              streamlining payment workflows and increasing checkout success
+              rates by <b>30%</b>, while ensuring robust transaction security
+              with <b>NestJS</b> and <b>PostgreSQL</b>.
+            </li>
+            <li>
+              <span className="text-primary">📱</span> Built and deployed
+              mobile-first, responsive interfaces using <b>React 19</b>,{' '}
+              <b>Next.js 15</b>, and <b>Tailwind CSS</b>, resulting in a{' '}
+              <b>25%</b> increase in mobile user engagement. Leveraged{' '}
+              <b>Node.js</b> and <b>Express</b> for backend services and{' '}
+              <b>MongoDB</b> for data persistence.
+            </li>
+            <li>
+              <span className="text-primary">🛠️</span> Streamlined deployment
+              processes by leveraging <b>Docker containers</b> and automating
+              CI/CD pipelines on <b>AWS EC2 servers</b>, cutting deployment time
+              by <b>50%</b> and ensuring high availability and scalability.
+            </li>
+          </ul>
         </div>
       </div>
     ),
   },
   {
-    title: 'Early 2023',
+    title: 'Software Engineer',
+    date: 'May 2023 - July 2024',
     content: (
-      <div>
-        <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-          I usually run out of copy, but when I see content this big, I try to
-          integrate lorem ipsum.
+      <div className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal">
+        <p className=" mb-8">
+          My journey has been nothing short of remarkable, and it has led me to
+          the incredible opportunity of leading the development of a
+          cutting-edge Multi-Vendor E-Commerce Platform.
         </p>
-        <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-          Lorem ipsum is for people who are too lazy to write copy. But we are
-          not. Here are some more example of beautiful designs I built.
-        </p>
-        <div className="grid grid-cols-2 gap-4">
-          <Image
-            src="https://assets.aceternity.com/pro/hero-sections.png"
-            alt="hero template"
-            width={500}
-            height={500}
-            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+
+        <div className="relative">
+          <HeroVideoDialog
+            className="dark:hidden block"
+            animationStyle="from-center"
+            videoSrc="https://www.youtube.com/embed/SyVvMAHSCQg?si=EWhsJa6zCmeLnW4f"
+            thumbnailSrc="/projects/chelseafarm.png"
+            thumbnailAlt="Hero Video"
           />
-          <Image
-            src="https://assets.aceternity.com/features-section.png"
-            alt="feature template"
-            width={500}
-            height={500}
-            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+          <HeroVideoDialog
+            className="hidden dark:block"
+            animationStyle="from-center"
+            videoSrc="https://www.youtube.com/embed/SyVvMAHSCQg?si=EWhsJa6zCmeLnW4f"
+            thumbnailSrc="/projects/chelseafarm.png"
+            thumbnailAlt="Hero Video"
           />
-          <Image
-            src="https://assets.aceternity.com/pro/bento-grids.png"
-            alt="bento template"
-            width={500}
-            height={500}
-            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-          />
-          <Image
-            src="https://assets.aceternity.com/cards.png"
-            alt="cards template"
-            width={500}
-            height={500}
-            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-          />
+        </div>
+        <div className="grid grid-cols-2 gap-4 mt-1">
+          <div className="relative group h-20 md:h-44 lg:h-60 w-full">
+            <Image
+              src="/projects/afroboost.webp"
+              alt="Artiart Project"
+              width={500}
+              height={500}
+              className="rounded-lg cursor-pointer hover:scale-105 transition-transform duration-300 object-cover h-full w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+            />
+            <div
+              onClick={() => window.open('https://afroboost.com', '_blank')}
+              className="absolute inset-0 cursor-pointer border bg-black bg-opacity-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg text-white text-sm font-medium"
+            >
+              View Project 🚀
+            </div>
+          </div>
+          <div className="relative group h-20 md:h-44 lg:h-60 w-full">
+            <Image
+              src="/projects/drkate.png"
+              alt="Artiart Project"
+              width={500}
+              height={500}
+              className="rounded-lg cursor-pointer hover:scale-105 transition-transform duration-300 object-cover h-full w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+            />
+            <div
+              onClick={() =>
+                window.open('https://drkatebeauty.co.uk/', '_blank')
+              }
+              className="absolute inset-0 cursor-pointer border bg-black bg-opacity-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg text-white text-sm font-medium"
+            >
+              View Project 🚀
+            </div>
+          </div>
+        </div>
+        <div className="mt-8">
+          <h3 className="text-lg md:text-xl font-bold text-neutral-800 dark:text-neutral-200 mb-3">
+            Core Accomplishments🎉
+          </h3>
+          <ul className="list-none space-y-3 text-neutral-700 dark:text-neutral-300">
+            <li>
+              🚀 Enhanced React skills by leading multiple projects utilizing{' '}
+              <b>Next.js</b> and <b>Tailwind CSS</b>. Delivered responsive,
+              scalable user interfaces and optimized team workflows.
+            </li>
+            <li>
+              🛠️ Streamlined deployment workflows with <b>CI/CD pipelines</b>,
+              utilizing <b>Docker</b> and <b>Nginx</b> for efficient releases
+              and server management, reducing deployment time significantly.
+            </li>
+            <li>
+              🔧 Diagnosed and resolved issues in existing websites, improving
+              performance, usability, and user experience.
+            </li>
+            <li>
+              🌐 Collaborated with backend teams to integrate APIs effectively
+              and managed <b>EC2 servers</b> for hosting, ensuring high
+              reliability and scalability.
+            </li>
+          </ul>
         </div>
       </div>
     ),
   },
   {
-    title: 'Changelog',
+    title: 'Jr.Software Engineer',
+    date: 'May 2021 - May 2023',
     content: (
-      <div>
+      <div className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal">
         <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-4">
-          Deployed 5 new components on Aceternity today
+          My first job was a pivotal learning experience where I honed my skills
+          in teamwork, version control, and writing quality code. It laid the
+          foundation for my growth as a developer.
         </p>
         <div className="mb-8">
           <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-            ✅ Card grid component
+            ✅ Learned and implemented Git for seamless version control and
+            collaboration.
           </div>
           <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-            ✅ Startup template Aceternity
+            ✅ Gained experience using Jira to manage sprints and track project
+            progress effectively.
           </div>
           <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-            ✅ Random file upload lol
+            ✅ Developed high-quality, reusable React components and improved
+            code readability with TypeScript.
           </div>
           <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-            ✅ Himesh Reshammiya Music CD
-          </div>
-          <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-            ✅ Salman Bhai Fan Club registrations open
+            ✅ Acquired expertise in full-stack development, leveraging
+            technologies like React, Next.js, MongoDB, Node.js, and Express.
           </div>
         </div>
+
         <div className="grid grid-cols-2 gap-4">
           <Image
-            src="https://assets.aceternity.com/pro/hero-sections.png"
+            src="/projects/agson.png"
             alt="hero template"
             width={500}
             height={500}
             className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
           />
-          <Image
-            src="https://assets.aceternity.com/features-section.png"
-            alt="feature template"
-            width={500}
-            height={500}
-            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-          />
-          <Image
-            src="https://assets.aceternity.com/pro/bento-grids.png"
-            alt="bento template"
-            width={500}
-            height={500}
-            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-          />
-          <Image
-            src="https://assets.aceternity.com/cards.png"
-            alt="cards template"
-            width={500}
-            height={500}
-            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-          />
+          <div className="relative group h-20 md:h-44 lg:h-60 w-full">
+            <Image
+              src="/tryreach.png"
+              alt="Artiart Project"
+              width={500}
+              height={500}
+              className="rounded-lg cursor-pointer hover:scale-105 transition-transform duration-300 object-cover h-full w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+            />
+            <div
+              onClick={() =>
+                window.open('https://codejunkie.co/our-portfolio/', '_blank')
+              }
+              className="absolute inset-0 cursor-pointer border bg-black bg-opacity-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg text-white text-sm font-medium"
+            >
+              Want to know more? s
+            </div>
+          </div>
         </div>
       </div>
     ),

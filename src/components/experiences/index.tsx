@@ -14,13 +14,6 @@ function Experiences() {
         align="end"
       />
       <Timeline data={timelineData} />
-      {/* <div className="bg-secondary  rounded-xl shadow-lg shadow-boxShadow">
-        {experiences.map((experience) => (
-          <div key={experience.id}>
-            <Accordion data={experience} open={false} />
-          </div>
-        ))}
-      </div> */}
     </Section>
   );
 }
