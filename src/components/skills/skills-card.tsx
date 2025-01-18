@@ -5,7 +5,7 @@ import { MagicCard } from '../ui/magic-card';
 interface ISkillsCard {
   title: string;
   subtitle: string;
-  skills: { icon: JSX.Element; name: string }[]; // Correctly set 'icon' as JSX.Element
+  skills: { icon: JSX.Element; name: string }[];
 }
 
 const SkillsCard: React.FC<ISkillsCard> = ({ title, subtitle, skills }) => {

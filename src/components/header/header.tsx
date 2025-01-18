@@ -31,7 +31,7 @@ export function Header() {
   return (
     <Section
       id="header"
-      className=" container flex flex-col-reverse md:flex-row Fw-full justify-center items-center min-h-[100vh] mx-1"
+      className=" flex flex-col-reverse md:flex-row Fw-full justify-center items-center min-h-[100vh] mx-1"
       data-aos="zoom-in-up"
     >
       <div
