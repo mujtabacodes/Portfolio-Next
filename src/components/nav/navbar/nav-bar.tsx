@@ -41,7 +41,7 @@ export function Navbar() {
   return (
     <Section
       id="#"
-      className={`hidden md:flex justify-between items-center  pl-6 m-5 fixed left-1/2 transform -translate-x-1/2 z-50 transition-all duration-500 ease-in-out ${
+      className={`hidden md:flex justify-between items-center  pl-6 mt-5 mx-2 fixed left-1/2 transform -translate-x-1/2 z-50 transition-all duration-500 ease-in-out ${
         isScrolled
           ? 'w-[85%] bg-secondary p-3 rounded-full shadow-lg '
           : 'w-[90%] top-2 p-4 border rounded-full'

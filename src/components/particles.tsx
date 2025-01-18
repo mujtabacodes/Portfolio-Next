@@ -3,7 +3,7 @@
 import { useCallback } from 'react';
 import type { Container, Engine } from 'tsparticles-engine';
 import Particles from 'react-particles';
-import { loadSlim } from 'tsparticles-slim'; // if you are going to use `loadSlim`, install the "tsparticles-slim" package too.
+import { loadSlim } from 'tsparticles-slim';
 
 export function ResponsiveBG() {
   const particlesInit = useCallback(async (engine: Engine) => {

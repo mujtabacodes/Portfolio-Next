@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { Button } from '../ui/button';
 import dynamic from 'next/dynamic';
 import { Section } from '@/styles/utils';
-import { FaCloudDownloadAlt } from 'react-icons/fa';
+import { FaCloudDownloadAlt, FaFastForward } from 'react-icons/fa';
 import SocialLinks from '../socials';
 import NumberTicker from '../ui/number-ticker';
 import MorphingText from '../ui/morphing-text';
@@ -20,14 +20,22 @@ const Design3D = dynamic(() => import('../design-3D'), {
 });
 
 export function Header() {
+  const startDate = new Date('2021-05-01');
+  const currentDate = new Date();
+  const experienceInYears = parseFloat(
+    (
+      (currentDate.getTime() - startDate.getTime()) /
+      (1000 * 60 * 60 * 24 * 365)
+    ).toFixed(1),
+  );
   return (
     <Section
       id="header"
-      className="flex flex-col-reverse md:flex-row w-full justify-center items-center min-h-[100vh]"
+      className=" flex flex-col-reverse md:flex-row Fw-full justify-center items-center min-h-[100vh] mx-1"
       data-aos="zoom-in-up"
     >
       <div
-        className="flex flex-col gap-2 items-center md:items-start text-center md:text-left justify-center w-full md:w-[55%] lg:w-[60%] px-6"
+        className=" flex flex-col gap-2 items-center md:items-start text-center md:text-left justify-center w-full md:w-[55%] lg:w-[60%] px-6"
         data-aos="fade-up-right"
       >
         <Desc className="text-lg">Hello 👋 My name is</Desc>
@@ -50,20 +58,22 @@ export function Header() {
           />{' '}
         </Desc>
         <Desc>
-          🎯 Delivered <NumberTicker value={15} />+ successful projects
+          🎯 Successfully delivered <NumberTicker value={15} />+ high-impact
+          industrial projects
         </Desc>
         <Desc>
-          💼 <NumberTicker value={3.5} decimalPlaces={1} />+ years of Full-Stack
-          experience
+          ✨ Our{' '}
+          <NumberTicker value={Number(experienceInYears)} decimalPlaces={1} />+
+          years of proven expertise as a Full-Stack Developer
         </Desc>
 
         <Button
           size="lg"
           variant="outlineStyled"
-          className="mt-5 relative overflow-hidden w-full sm:w-auto"
+          className="mt-5 relative overflow-hidden w-full sm:w-auto bg-secondary"
         >
           <AnimatedShinyText>
-            <ButtonText className="pointer-events-none flex gap-2 py-2">
+            <ButtonText className="pointer-events-none flex gap-2 py-2 border-black">
               🎉 | Resume
             </ButtonText>
           </AnimatedShinyText>
