@@ -16,6 +16,10 @@ import { TbBrandRedux } from 'react-icons/tb';
 import { DiMongodb } from 'react-icons/di';
 import { BiLogoPostgresql } from 'react-icons/bi';
 import SkillCard from './skill-card';
+import { Header } from '../header/header';
+import { SectionHeader } from '../section-header';
+import SkillsCard from './skills-card';
+import { skillsData } from './data';
 
 const Parallax = dynamic(() => import('./parallax'), {
   loading: () => <p>Loading...</p>,
@@ -24,7 +28,25 @@ const Parallax = dynamic(() => import('./parallax'), {
 const Skills = () => {
   return (
     <Section id="skills" className="skills_section py-2">
-      <Parallax baseVelocity={-5}>
+      <SectionHeader
+        heading="Skills"
+        subTitle="The Core of Excellence"
+        align="center"
+      />
+      <div
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+        data-aos="fade-up"
+      >
+        {skillsData.map((category, index) => (
+          <SkillsCard
+            key={index}
+            title={category.title}
+            subtitle={category.subtitle}
+            skills={category.skills}
+          />
+        ))}
+      </div>
+      {/* <Parallax baseVelocity={-5}>
         <div className="flex gap-4">
           <SkillCard title="React" link="https://reactjs.org/">
             <FaReact className="text-heightlightColor" />
@@ -94,7 +116,7 @@ const Skills = () => {
             <AiOutlineJavaScript className="text-yellow-500" />
           </SkillCard>
         </div>
-      </Parallax>
+      </Parallax> */}
     </Section>
   );
 };

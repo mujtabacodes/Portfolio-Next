@@ -8,7 +8,7 @@ function Nav() {
   return (
     <>
       <Navbar />
-      <div className="p-4 flex md:hidden w-full justify-between">
+      <div className="p-4 flex md:hidden w-full  justify-between">
         <Logo />
         <div>
           <ModeToggle />

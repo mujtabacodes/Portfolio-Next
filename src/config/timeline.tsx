@@ -250,7 +250,7 @@ export const timelineData = [
           />
           <div className="relative group h-20 md:h-44 lg:h-60 w-full">
             <Image
-              src="/tryreach.png"
+              src="/projects/tryreach.png"
               alt="Artiart Project"
               width={500}
               height={500}
@@ -262,7 +262,7 @@ export const timelineData = [
               }
               className="absolute inset-0 cursor-pointer border bg-black bg-opacity-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg text-white text-sm font-medium"
             >
-              Want to know more? s
+              Want to know more?🤷🏻‍♂️💬
             </div>
           </div>
         </div>
