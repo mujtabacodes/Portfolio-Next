@@ -51,6 +51,7 @@ export const projectData = [
       'Prisma ORM',
       'PostgreSQL',
     ],
+      liveUrl: 'https://blindsandcurtains.ae/',
   },
   {
     category: 'Content Sharing Plateform',
@@ -77,7 +78,7 @@ export const projectData = [
       'Redux',
       'React Query',
     ],
-    liveUrl: 'https://avenue39.vercel.app/',
+    liveUrl: 'https://avenue39-eight.vercel.app/',
   },
 
   {
