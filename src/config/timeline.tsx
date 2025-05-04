@@ -18,15 +18,11 @@ export const timelineData = [
               alt="Avenue39 Project"
               width={500}
               height={500}
-              onClick={() =>
-                window.open('https://avenue39.vercel.app', '_blank')
-              }
+              onClick={() => window.open('https://avenue39.com/', '_blank')}
               className="rounded-lg cursor-pointer hover:scale-105 transition-transform duration-300 object-cover h-full w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
             />
             <div
-              onClick={() =>
-                window.open('https://avenue39.vercel.app', '_blank')
-              }
+              onClick={() => window.open('https://avenue39.com/', '_blank')}
               className="absolute inset-0 cursor-pointer border bg-black bg-opacity-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg text-white text-sm font-medium"
             >
               View Project 🚀
@@ -59,7 +55,7 @@ export const timelineData = [
             />
             <div
               onClick={() =>
-                window.open('https://b-c-eight.vercel.app/', '_blank')
+                window.open('http://blindsandcurtains.ae/', '_blank')
               }
               className="absolute inset-0 cursor-pointer border bg-black bg-opacity-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg text-white text-sm font-medium"
             >

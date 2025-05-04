@@ -100,3 +100,14 @@ export interface ILinkTab {
   title: string;
   icon?: string;
 }
+
+export type TCard = {
+  posterImage: string;
+  title: string;
+  category: string;
+  description: string;
+  liveUrl?: string;
+  githubUrl?: string;
+  videoDemoUrl?: string;
+  techstack: string[];
+};

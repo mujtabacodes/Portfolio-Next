@@ -26,24 +26,14 @@ import {
   DialogTitle,
   DialogTrigger,
 } from './dialog';
+import { TCard } from '@/types/types';
 interface CarouselProps {
   items: JSX.Element[];
   initialScroll?: number;
 }
 
-type Card = {
-  posterImage: string;
-  title: string;
-  category: string;
-  description: string;
-  liveUrl?: string;
-  githubUrl?: string;
-  videoDemoUrl?: string;
-  techstack: string[];
-};
-
 interface ICard {
-  card: Card;
+  card: TCard;
   index: number;
   layout?: boolean;
 }

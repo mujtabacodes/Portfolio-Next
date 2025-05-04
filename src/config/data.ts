@@ -1,4 +1,15 @@
-export const projectData = [
+import { TCard } from '@/types/types';
+// export type TCard = {
+//   posterImage: string;
+//   title: string;
+//   category: string;
+//   description: string;
+//   liveUrl?: string;
+//   githubUrl?: string;
+//   videoDemoUrl?: string;
+//   techstack: string[];
+// };
+export const projectData: TCard[] = [
   {
     category: 'AI Project',
     title: 'AskPDF (Chat with PDFs)',
@@ -20,6 +31,7 @@ export const projectData = [
       'Vector database',
     ],
     liveUrl: 'https://askpdf.mujtabacodes.com/',
+    videoDemoUrl: 'https://youtu.be/SdqBKlXfxEk',
   },
   {
     category: 'Ecommerce Project',
@@ -36,6 +48,7 @@ export const projectData = [
       'Express.js',
     ],
     liveUrl: 'https://interiorfilm.ae',
+    videoDemoUrl: 'https://youtu.be/OS38rIm6sjw',
   },
   {
     category: 'Ecommerce Project',
@@ -51,7 +64,8 @@ export const projectData = [
       'Prisma ORM',
       'PostgreSQL',
     ],
-      liveUrl: 'https://blindsandcurtains.ae/',
+    liveUrl: 'https://blindsandcurtains.ae/',
+    videoDemoUrl: 'https://youtu.be/eOPKEVPb8L8',
   },
   {
     category: 'Content Sharing Plateform',
@@ -61,6 +75,7 @@ export const projectData = [
       'Revived and enhanced Afroboost, an application showcasing African artists and entrepreneurs. Updated dependencies, added payment methods, online coaching, attendance, and meeting features. Deployed on a VPS server with Nginx. Worked on full-stack development using MySQL for the backend and ReactJS for the front end.',
     techstack: ['ReactJS', 'MUI', 'Redux', 'Node.js', 'MySQL', 'Paypal'],
     liveUrl: 'https://afroboost.com/',
+    videoDemoUrl: 'https://youtu.be/PR9ixcrsXSY',
   },
   {
     category: 'Ecommerce Project',
@@ -78,7 +93,8 @@ export const projectData = [
       'Redux',
       'React Query',
     ],
-    liveUrl: 'https://avenue39-eight.vercel.app/',
+    liveUrl: 'https://avenue39.com/',
+    videoDemoUrl: 'https://youtu.be/Jqk6VD8RumI',
   },
 
   {
@@ -90,6 +106,7 @@ export const projectData = [
     techstack: ['React Native', 'TailwindCSS', 'Sanity'],
     liveUrl: 'https://vimeo.com/756063945',
     githubUrl: 'https://github.com/mujtabacodes/Pak-Deliveroo-React-Native',
+    videoDemoUrl: 'https://youtu.be/GJ7YqqLtxos',
   },
   {
     category: 'AI Project | IBM Watsonx Challenge',
@@ -110,6 +127,21 @@ export const projectData = [
     githubUrl: 'https://github.com/mujtabacodes/sphera',
   },
   {
+    category: 'Booking Platform',
+    title: 'Dr. Kate Beauty',
+    posterImage: '/projects/drkate.png',
+    description: `Dr. Kate Beauty is an appointment booking system integrated with an online luxury beauty store. Built the frontend for a seamless user experience, handled server deployment, and added booking flow management features. Gained hands-on experience in developing scalable booking systems and integrating e-commerce functionalities.`,
+    techstack: [
+      'React.js',
+      'TailwindCSS',
+      'CSS',
+      'Frontend Development',
+      'MVC Architecture',
+    ],
+    liveUrl: 'https://drkatebeauty.co.uk/',
+    videoDemoUrl: 'https://youtu.be/1BV3wSLuLiE',
+  },
+  {
     category: 'Ecommerce Project',
     title: 'Artiart',
     posterImage: '/projects/artiart.PNG',
@@ -124,6 +156,7 @@ export const projectData = [
       'CI/CD',
     ],
     liveUrl: 'http://artiart.ae',
+    videoDemoUrl: 'https://youtu.be/AMF_yiLmVy8',
   },
   {
     category: 'Property Development',
@@ -132,20 +165,7 @@ export const projectData = [
     description: `Agson is a platform for showcasing property developments with detailed client portfolios and project information. Contributed by adding responsive components and deploying the platform on A2 Hosting. Optimized the domain and hosting configurations for better performance and scalability.`,
     techstack: ['React.js', 'NextJS', 'Express.js', 'MongoDB', 'A2 Hosting'],
   },
-  {
-    category: 'Booking Platform',
-    title: 'Dr. Kate Beauty',
-    posterImage: '/projects/drkate.png',
-    description: `Dr. Kate Beauty is an appointment booking system integrated with an online luxury beauty store. Built the frontend for a seamless user experience, handled server deployment, and added booking flow management features. Gained hands-on experience in developing scalable booking systems and integrating e-commerce functionalities.`,
-    techstack: [
-      'React.js',
-      'TailwindCSS',
-      'CSS',
-      'Frontend Development',
-      'MVC Architecture',
-    ],
-    liveUrl: 'https://drkatebeauty.co.uk/',
-  },
+
   {
     category: 'SaaS Platform',
     title: 'TryReach',
@@ -175,6 +195,7 @@ export const projectData = [
       'AWS',
       'Nginx',
     ],
+    videoDemoUrl: 'https://youtu.be/SyVvMAHSCQg',
   },
   {
     category: 'Personal Project',
@@ -185,6 +206,7 @@ export const projectData = [
     techstack: ['NextJS', 'ReactJS', 'TailwindCSS', 'Sanity', 'Stripe'],
     liveUrl: 'https://ecommerce.mujtabacodes.com/',
     githubUrl: 'https://github.com/mujtabacodes/BuyNow-ecommerce-store',
+    videoDemoUrl: 'https://youtu.be/Wx_q4CeK6CM',
   },
 
   {

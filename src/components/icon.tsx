@@ -37,13 +37,13 @@ const Icon = ({ iconOf, url, className }: TIcon) => {
       rel="noopener noreferrer"
       className={`flex items-center text-secondary ${className}`}
     >
-      <div className="relative flex items-center  gap-1 px-2 hover:px-4 py-2 w-8 h-8 hover:w-fit  rounded-full bg-primary transition-all duration-500 ease-in-out group">
-        <div className="transition-transform duration-300 ease-in-out group-hover:-translate-x-2">
+      <div className="relative flex items-center gap-1 px-2 hover:px-4 py-2 w-8 h-8 hover:w-fit rounded-full bg-gradient-to-tr from-pink-500 via-purple-500 to-blue-500 shadow-md hover:shadow-xl transition-all duration-300 ease-in-out group ring-0 hover:ring-4 hover:ring-blue-300/60 hover:scale-110">
+        <div className="transition-transform duration-300 ease-in-out group-hover:-translate-x-2 text-white">
           {renderIcon()}
         </div>
 
         <span className="opacity-0 group-hover:opacity-100 group-hover:translate-x-2 transition-all duration-300 ease-in-out">
-          <h1 className="text-sm md:text-base font-medium font-sans">
+          <h1 className="text-sm md:text-base font-medium font-sans text-white drop-shadow">
             {iconOf === 'liveUrl'
               ? 'Live URL'
               : iconOf === 'gitHub'
