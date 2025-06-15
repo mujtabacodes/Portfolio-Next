@@ -369,7 +369,7 @@ const GitHubSection = () => {
                 )}
 
                 <span
-                  className={`relative block  ${activeTab === tab ? 'text-black' : 'text-slate-50'}`}
+                  className={`relative block  ${activeTab === tab ? 'text-black' : 'text-black dark:text-slate-50'}`}
                 >
                   {tab.charAt(0).toUpperCase() + tab.slice(1)}
                 </span>

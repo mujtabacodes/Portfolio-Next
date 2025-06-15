@@ -30,6 +30,23 @@ const Icon = ({ iconOf, url, className }: TIcon) => {
     }
   };
 
+  const getBackgroundColor = () => {
+    switch (iconOf) {
+      case 'linkedIn':
+        return 'bg-blue-600 hover:ring-blue-300/60'; // LinkedIn blue
+      case 'gitHub':
+        return 'bg-gray-800 hover:ring-gray-600/60'; // GitHub dark
+      case 'documentation':
+        return 'bg-indigo-600 hover:ring-indigo-300/60'; // A documentation-friendly blue-ish purple
+      case 'youtube':
+        return 'bg-red-600 hover:ring-red-300/60'; // YouTube red
+      case 'liveUrl':
+        return 'bg-[#020817] hover:ring-[#02081783]'; // Green for live URL
+      default:
+        return 'bg-gray-500 hover:ring-gray-300/60'; // Default gray
+    }
+  };
+
   return (
     <Link
       href={url}
@@ -37,7 +54,9 @@ const Icon = ({ iconOf, url, className }: TIcon) => {
       rel="noopener noreferrer"
       className={`flex items-center text-secondary ${className}`}
     >
-      <div className="relative flex items-center gap-1 px-2 hover:px-4 py-2 w-8 h-8 hover:w-fit rounded-full bg-gradient-to-tr from-pink-500 via-purple-500 to-blue-500 shadow-md hover:shadow-xl transition-all duration-300 ease-in-out group ring-0 hover:ring-4 hover:ring-blue-300/60 hover:scale-110">
+      <div
+        className={`relative flex items-center gap-1 px-2 hover:px-4 py-2 w-8 h-8 hover:w-fit rounded-full shadow-md hover:shadow-xl transition-all duration-300 ease-in-out group ring-0 hover:ring-2 hover:scale-5 ${getBackgroundColor()}`}
+      >
         <div className="transition-transform duration-300 ease-in-out group-hover:-translate-x-2 text-white">
           {renderIcon()}
         </div>

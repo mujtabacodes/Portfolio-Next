@@ -11,6 +11,7 @@ const NAV_ITEMS = [
   { id: 'about', label: 'About', href: '#' },
   { id: 'projects', label: 'Projects', href: '#projects' },
   { id: 'experiences', label: 'Experience', href: '#experiences' },
+  { id: 'github', label: 'Github', href: '#github' },
   { id: 'testimonials', label: 'Testimonials', href: '#testimonials' },
 ];
 
