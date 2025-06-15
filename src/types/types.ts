@@ -8,6 +8,7 @@ export interface ITypo {
 }
 
 export interface ISectionHeader {
+  Icon?: any;
   heading: string;
   subTitle: string;
   align: 'start' | 'center' | 'end';

@@ -11,7 +11,7 @@ interface ISkillsCard {
 const SkillsCard: React.FC<ISkillsCard> = ({ title, subtitle, skills }) => {
   return (
     <MagicCard
-      className=" p-6 rounded-md shadow-md transition-transform duration-500 hover:scale-105"
+      className=" p-6 shadow-md transition-transform duration-500 hover:scale-105"
       data-aos="fade-up"
     >
       <h3 className="text-primary text-xl font-bold mb-2">{title}</h3>

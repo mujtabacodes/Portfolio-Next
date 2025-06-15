@@ -144,3 +144,19 @@
 
   background-image: radial-gradient(circle at 50% -20%, #ffffff22, #0000000f);
 }
+
+.nav-bar {
+  display: none;
+}
+.mobile-nav {
+  display: flex;
+}
+
+@media (min-width: 769px) {
+  .nav-bar {
+    display: flex !important;
+  }
+  .mobile-nav {
+    display: none !important;
+  }
+}

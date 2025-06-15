@@ -31,7 +31,7 @@ export function Header() {
   return (
     <Section
       id="header"
-      className=" flex flex-col-reverse md:flex-row Fw-full justify-center items-center min-h-[100vh] mx-1"
+      className=" flex flex-col-reverse md:flex-row justify-center items-center h-fit mx-1 pt-24"
       data-aos="zoom-in-up"
     >
       <div
@@ -81,17 +81,17 @@ export function Header() {
           <Link
             href={'/Mujtaba_Shafique.pdf'}
             target="_blank"
-            download="Mujtaba Shafique +1.5y MERN.pdf"
+            download="Mujtaba Shafique (Senior Software Engineer).pdf"
             className="absolute inset-0 z-10 block w-full h-full"
           />
         </Button>
       </div>
 
       <div
-        className="flex justify-center items-center w-full md:w-[45%] lg:w-[40%] min-h-[30vh] design3d"
+        className="flex gap-2 justify-center items-center w-full md:w-[45%] lg:w-[40%]  md:h-[40vh] min-w-[300px] flex-grow design3d"
         data-aos="fade-up-left"
       >
-        {/* <Design3D /> */}
+        <Design3D />
         <SocialLinks layout="col" className="hidden md:block" />
       </div>
     </Section>

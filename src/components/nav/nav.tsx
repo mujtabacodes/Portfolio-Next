@@ -18,13 +18,13 @@ function Nav() {
   }, []);
 
   return (
-    <div className="bg-red-900 container">
+    <div className="container mx-2">
       <Navbar />
       <div
-        className={`p-4 flex md:hidden w-full justify-between align-center fixed top-0 left-0 z-50 transition-all duration-500 ease-in-out mx-1 ${
+        className={`p-4 mobile-nav justify-between align-center fixed top-0 left-0 z-50 transition-all duration-500 ease-in-out mx-1 ${
           isScrolled
-            ? 'bg-secondary shadow-lg !p-1 mt-6 rounded-full border w-[14%] right-0 '
-            : 'bg-transparent'
+            ? 'bg-secondary shadow-lg !p-1 mt-6 rounded-full border w-fit right-0 '
+            : 'bg-transparent w-full'
         }`}
       >
         {!isScrolled && <Logo />}

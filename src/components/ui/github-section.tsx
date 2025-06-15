@@ -1,284 +1,415 @@
 'use client';
-import React, { useEffect, useState } from 'react';
+import Link from 'next/link';
+import React, { useState, useEffect } from 'react';
+import { useTheme } from 'next-themes';
 import {
-  Card,
-  CardHeader,
-  CardTitle,
-  CardDescription,
-  CardContent,
-} from './card';
+  FaGithub,
+  FaStar,
+  FaCodeBranch,
+  FaExternalLinkAlt,
+  FaCalendarAlt,
+  FaMapPin,
+  FaBuilding,
+  FaUsers,
+  FaBook,
+  FaEye,
+  FaExclamationCircle,
+} from 'react-icons/fa';
+import { motion } from 'motion/react';
+import { Card } from './card';
 import { SectionHeader } from '../section-header';
-import { motion } from 'framer-motion';
-import { FaGithub, FaStar, FaCodeBranch, FaCircle } from 'react-icons/fa';
+import { MagicCard } from './magic-card';
+import { Section } from '@/styles/utils';
+import { cn } from '@/lib/utils';
 
-const GITHUB_USERNAME = 'mujtabacodes';
-const PROFILE_URL = `https://api.github.com/users/${GITHUB_USERNAME}`;
-const REPOS_URL = `https://api.github.com/users/${GITHUB_USERNAME}/repos?per_page=100`;
-
-interface GithubProfile {
+interface ProfileData {
   avatar_url: string;
-  html_url: string;
-  name: string;
+  name: string | null;
   login: string;
-  bio: string;
-  public_repos: number;
+  bio: string | null;
+  location: string | null;
+  company: string | null;
+  blog: string | null;
+  created_at: string;
   followers: number;
   following: number;
+  public_repos: number;
 }
 
-interface GithubRepo {
-  id: number;
+interface Repository {
   name: string;
-  html_url: string;
-  description: string;
-  language: string;
-  stargazers_count: number;
-  forks_count: number;
+  repo: string;
+  description: string | null;
+  demo: string | null;
+  language: {
+    name: string;
+    color: string;
+  } | null;
+  stars: number;
+  forks: number;
+  updated_at: string;
+  topics: string[];
 }
 
-const LANG_COLORS: Record<string, string> = {
-  JavaScript: '#f1e05a',
-  TypeScript: '#3178c6',
-  Python: '#3572A5',
-  HTML: '#e34c26',
-  CSS: '#563d7c',
-  Shell: '#89e051',
-  Java: '#b07219',
-  C: '#555555',
-  Cpp: '#f34b7d',
-  Go: '#00ADD8',
-  PHP: '#4F5D95',
-  Ruby: '#701516',
-  Dart: '#00B4AB',
-  Other: '#ccc',
-};
-
-function getLangColor(lang: string) {
-  return LANG_COLORS[lang] || '#ccc';
-}
-
-export default function GithubSection() {
-  const [profile, setProfile] = useState<GithubProfile | null>(null);
-  const [repos, setRepos] = useState<GithubRepo[]>([]);
-  const [loading, setLoading] = useState(true);
+const GitHubSection = () => {
+  const [profileData, setProfileData] = useState<ProfileData | null>(null);
+  const [repositories, setRepositories] = useState<Repository[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
+  const [activeTab, setActiveTab] = useState<string>('overview');
+  const { theme } = useTheme();
+
+  const username = 'mujtabacodes';
 
   useEffect(() => {
-    async function fetchData() {
-      setLoading(true);
-      setError(null);
-      try {
-        const [profileRes, reposRes] = await Promise.all([
-          fetch(PROFILE_URL),
-          fetch(REPOS_URL),
-        ]);
-        if (!profileRes.ok || !reposRes.ok) throw new Error('GitHub API error');
-        const profileData = await profileRes.json();
-        const reposData = await reposRes.json();
-        setProfile(profileData);
-        setRepos(reposData);
-      } catch (e) {
-        setError('Failed to load GitHub data.');
-      } finally {
-        setLoading(false);
-      }
-    }
-    fetchData();
+    fetchGitHubData();
   }, []);
 
-  // Language stats for doughnut chart
-  const languageStats = repos.reduce((acc: Record<string, number>, repo) => {
-    if (repo.language) {
-      acc[repo.language] = (acc[repo.language] || 0) + 1;
+  const fetchGitHubData = async () => {
+    try {
+      setLoading(true);
+      setError(null);
+
+      // Fetch profile data
+      const profileResponse = await fetch(
+        `https://api.github.com/users/${username}`,
+      );
+      if (!profileResponse.ok) {
+        throw new Error('Failed to fetch profile data');
+      }
+      const profile: ProfileData = await profileResponse.json();
+
+      // Fetch repositories
+      const reposResponse = await fetch(
+        `https://pinned.berrysauce.dev/get/${username}`,
+      );
+      if (!reposResponse.ok) {
+        throw new Error('Failed to fetch pinned repositories');
+      }
+      const repos: Repository[] = await reposResponse.json();
+
+      setProfileData(profile);
+      setRepositories(repos);
+    } catch (err: any) {
+      setError(err.message);
+    } finally {
+      setLoading(false);
     }
-    return acc;
-  }, {});
-  const languages = Object.keys(languageStats);
-  const totalLang = Object.values(languageStats).reduce((a, b) => a + b, 0);
+  };
 
-  // Top 8 repos by stars
-  const topRepos = [...repos]
-    .sort((a, b) => b.stargazers_count - a.stargazers_count)
-    .slice(0, 8);
+  const formatDate = (dateString: string): string => {
+    const date = new Date(dateString);
+    const now = new Date();
+    const diffTime = Math.abs(now.getTime() - date.getTime()); // Use getTime() for numeric subtraction
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
 
-  // Doughnut chart SVG
-  function DoughnutChart() {
-    const size = 120;
-    const stroke = 18;
-    let offset = 0;
-    const radius = (size - stroke) / 2;
-    const circumference = 2 * Math.PI * radius;
-    return (
-      <svg width={size} height={size} className="rotate-[-90deg]">
-        {languages.map((lang, i) => {
-          const value = languageStats[lang];
-          const percent = value / totalLang;
-          const dash = percent * circumference;
-          const dashArray = `${dash} ${circumference - dash}`;
-          const circle = (
-            <circle
-              key={lang}
-              cx={size / 2}
-              cy={size / 2}
-              r={radius}
-              fill="none"
-              stroke={getLangColor(lang)}
-              strokeWidth={stroke}
-              strokeDasharray={dashArray}
-              strokeDashoffset={offset}
-            />
-          );
-          offset -= dash;
-          return circle;
-        })}
-      </svg>
-    );
-  }
+    if (diffDays === 1) return '1 day ago';
+    if (diffDays < 30) return `${diffDays} days ago`;
+    if (diffDays < 365) return `${Math.ceil(diffDays / 30)} months ago`;
+    return `${Math.ceil(diffDays / 365)} years ago`;
+  };
 
-  return (
-    <section
-      className="relative w-full max-w-7xl mx-auto py-20 px-4 md:px-8 overflow-hidden"
-      id="github"
-    >
-      {/* Animated gradient background */}
-      <div className="absolute inset-0 -z-10 bg-gradient-to-br from-[#0f2027] via-[#2c5364] to-[#203a43] opacity-90 blur-2xl animate-pulse" />
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, ease: 'easeOut' }}
-      >
-        <h2 className="text-4xl md:text-6xl font-extrabold text-center mb-2 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-pulse">
-          <span>My GitHub</span>
-        </h2>
-        <p className="text-center text-lg md:text-xl text-gray-200 mb-12 animate-fade-in">
-          Open source, code, and collaboration.
-        </p>
-      </motion.div>
-      {loading ? (
-        <div className="text-center py-10 text-white/80">
-          Loading GitHub data...
-        </div>
-      ) : error ? (
-        <div className="text-center text-red-400 py-10">{error}</div>
-      ) : profile ? (
-        <>
-          {/* Hero Card */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.7, ease: 'easeOut' }}
-            className="mx-auto max-w-3xl mb-16 bg-white/10 backdrop-blur-lg rounded-3xl shadow-2xl border border-white/20 p-8 flex flex-col md:flex-row items-center gap-8"
+  const LoadingSpinner = () => (
+    <div className="flex items-center justify-center py-12">
+      <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 dark:border-blue-400"></div>
+    </div>
+  );
+
+  const ErrorMessage = () => (
+    <div className="bg-red-50 border border-red-200 dark:border-red-700 rounded-xl p-6">
+      <div className="flex items-center gap-3">
+        <FaExclamationCircle className="w-6 h-6 text-red-600" />
+        <div>
+          <h3 className="text-lg font-semibold text-red-800 dark:text-red-300">
+            Error Loading GitHub Data
+          </h3>
+          <p className="text-red-600 dark:text-red-400">{error}</p>
+          <button
+            onClick={fetchGitHubData}
+            className="mt-3 px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors"
           >
+            Try Again
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+
+  const ProfileOverview = () => {
+    if (!profileData) return null;
+    return (
+      <Card className=" rounded-xl p-6 shadow-lg">
+        <div className="flex flex-col md:flex-row gap-6">
+          <div className="flex-shrink-0">
             <img
-              src={profile.avatar_url}
-              alt={profile.login}
-              className="w-32 h-32 rounded-full border-4 border-white/30 shadow-lg mb-4 md:mb-0"
+              src={profileData.avatar_url}
+              alt={profileData.name || profileData.login}
+              className="w-32 h-32 rounded-full border-4 border-gray-100 dark:border-gray-700"
             />
-            <div className="flex-1 text-center md:text-left">
-              <div className="flex items-center justify-center md:justify-start gap-2 mb-2">
-                <span className="text-2xl md:text-3xl font-bold text-white drop-shadow">
-                  {profile.name || profile.login}
-                </span>
-                <a
-                  href={profile.html_url}
+          </div>
+          <div className="flex-grow">
+            <h2 className="text-2xl font-bold text-gray-800 dark:text-white">
+              {profileData.name || profileData.login}
+            </h2>
+            <div className="lex flex-col gap-1 mb-2">
+              <p className="text-lg text-gray-600 dark:text-gray-300">
+                @{profileData.login}
+              </p>
+              {profileData.bio && (
+                <p className="text-gray-700 dark:text-gray-300 ">
+                  {profileData.bio}
+                </p>
+              )}
+
+              {profileData.location && (
+                <div className="flex items-center gap-2">
+                  <FaMapPin className="w-4 h-4" />
+                  <span className="text-gray-600 dark:text-gray-300">
+                    {profileData.location}
+                  </span>
+                </div>
+              )}
+              <div className="flex items-center gap-2">
+                <FaExternalLinkAlt className="w-3 h-3" />
+                <Link
+                  href={'https://github.com/mujtabacodes'}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="ml-2 text-gray-300 hover:text-primary transition"
-                  title="View on GitHub"
+                  className="text-blue-600 hover:underline dark:text-blue-400 dark:hover:text-blue-300"
                 >
-                  <FaGithub size={28} />
-                </a>
+                  https://github.com/mujtabacodes
+                </Link>
               </div>
-              <div className="text-blue-200 text-lg font-mono">
-                @{profile.login}
-              </div>
-              <div className="mt-2 text-white/90 text-base md:text-lg max-w-xl mx-auto md:mx-0">
-                {profile.bio}
-              </div>
-              <div className="flex gap-6 mt-4 justify-center md:justify-start text-white/80">
-                <span>Repos: {profile.public_repos}</span>
-                <span>Followers: {profile.followers}</span>
-                <span>Following: {profile.following}</span>
-              </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-3 text-sm text-gray-600 mb-4">
+              {[
+                {
+                  icon: <FaUsers className="w-4 h-4" />,
+                  value: profileData.followers,
+                  label: 'followers',
+                },
+                {
+                  icon: <FaUsers className="w-4 h-4" />,
+                  value: profileData.following,
+                  label: 'following',
+                },
+                {
+                  icon: <FaBook className="w-4 h-4" />,
+                  value: profileData.public_repos,
+                  label: 'repositories',
+                },
+              ].map((stat, index) => (
+                <div
+                  key={index}
+                  className="text-center p-4 bg-blue-50 dark:bg-slate-50 rounded-lg mt-2 flex flex-col items-center "
+                >
+                  <span className="flex gap-2">
+                    {stat.icon}
+                    <span className="font-semibold">{stat.value}</span>
+                  </span>
+                  <span className="">{stat.label}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+          <img
+            src="https://github-readme-stats-salesp07.vercel.app/api/top-langs/?username=mujtabacodes&hide=HTML&langs_count=8&layout=compact&theme=react&border_radius=10&size_weight=0.5&count_weight=0.5&exclude_repo=github-readme-stats"
+            alt="top langs"
+          />
+        </div>
+      </Card>
+    );
+  };
+
+  const RepositoryCard = ({ repo }: { repo: Repository }) => (
+    <MagicCard className=" p-6 transition-transform duration-500 hover:scale-105">
+      <div className="flex justify-between items-start mb-3">
+        <h3 className="text-lg font-semibold text-gray-800 dark:text-white flex items-center gap-2">
+          <FaBook className="w-5 h-5" />
+          {repo.name}
+        </h3>
+        <a
+          href={repo.repo}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gray-500 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors"
+        >
+          <FaExternalLinkAlt className="w-5 h-5" />
+        </a>
+      </div>
+
+      {repo.description && (
+        <p className="text-gray-600 dark:text-gray-300 mb-4 text-sm leading-relaxed">
+          {repo.description}
+        </p>
+      )}
+
+      <div className="flex items-center justify-between text-sm text-gray-600 dark:text-gray-300">
+        <div className="flex items-center gap-4">
+          {repo.language && (
+            <div className="flex items-center gap-1">
+              <div className="w-3 h-3 rounded-full bg-blue-500"></div>
+              <span>{repo.language.name}</span>
+            </div>
+          )}
+          <div className="flex items-center gap-1">
+            <FaStar className="w-4 h-4" />
+            <span>{repo.stars}</span>
+          </div>
+          <div className="flex items-center gap-1">
+            <FaCodeBranch className="w-4 h-4" />
+            <span>{repo.forks}</span>
+          </div>
+        </div>
+      </div>
+
+      {repo.topics && repo.topics.length > 0 && (
+        <div className="flex flex-wrap gap-2 mt-3">
+          {repo.topics.slice(0, 3).map((topic, index) => (
+            <span
+              key={index}
+              className="px-2 py-1 bg-blue-50 dark:bg-blue-900 text-blue-700 dark:text-blue-200 rounded-md text-xs"
+            >
+              {topic}
+            </span>
+          ))}
+          {repo.topics.length > 3 && (
+            <span className="px-2 py-1 bg-gray-50 dark:bg-gray-700 text-gray-600 dark:text-gray-300 rounded-md text-xs">
+              +{repo.topics.length - 3} more
+            </span>
+          )}
+        </div>
+      )}
+    </MagicCard>
+  );
+
+  const GitHubStats = () => {
+    return (
+      <Card className=" rounded-xl p-6 shadow-lg">
+        <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-6 flex items-center gap-2">
+          <FaGithub className="w-5 h-5 " />
+          GitHub Stats
+        </h3>
+        <div className="flex flex-col items-center w-full">
+          <div className="grid grid-cols-1 md:grid-cols-2  gap-6 mb-6">
+            <img
+              src="https://github-readme-stats-salesp07.vercel.app/api?username=mujtabacodes&count_private=true&show_icons=true&theme=react&rank_icon=github&border_radius=10"
+              alt="readme stats"
+            />
+            <img
+              src="https://github-readme-streak-stats-salesp07.vercel.app/?user=mujtabacodes&count_private=true&theme=react&border_radius=10"
+              alt="streak stats"
+            />
+          </div>
+          <img
+            src="https://github-readme-activity-graph.vercel.app/graph?username=mujtabacodes&theme=react-dark&hide_border=true&hide_title=false&area=true&custom_title=Total%20contribution%20graph%20in%20all%20repo"
+            width="95%"
+            alt="activity graph"
+          />
+        </div>
+      </Card>
+    );
+  };
+
+  const StatCard = ({
+    icon,
+    label,
+    value,
+  }: {
+    icon: React.ReactNode;
+    label: string;
+    value: string | number;
+  }) => (
+    <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg flex items-center gap-4">
+      <div className="text-blue-600 text-2xl dark:text-blue-400">{icon}</div>
+      <div>
+        <p className="text-gray-600 dark:text-gray-300 text-sm">{label}</p>
+        <p className="text-gray-900 dark:text-white font-bold text-lg">
+          {value}
+        </p>
+      </div>
+    </div>
+  );
+
+  if (loading) return <LoadingSpinner />;
+  if (error) return <ErrorMessage />;
+  if (!profileData) return null;
+  const tabs = ['overview', 'repositories'];
+
+  return (
+    <Section id="github" className="py-16 ">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <SectionHeader
+          Icon={<FaGithub className="w-10 h-10" />}
+          heading="GitHub Portfolio"
+          subTitle="Explore my latest projects and contributions"
+          align="center"
+        />
+
+        <div className="flex justify-center mb-8">
+          <div className="bg-secondary rounded-full p-1 shadow-lg">
+            {tabs.map((tab) => (
+              <button
+                key={tab}
+                onClick={() => setActiveTab(tab)}
+                className={cn('relative px-4 py-2 rounded-full')}
+                style={{
+                  transformStyle: 'preserve-3d',
+                }}
+              >
+                {activeTab === tab && (
+                  <motion.div
+                    layoutId="clickedbutton"
+                    transition={{ type: 'spring', bounce: 0.3, duration: 0.6 }}
+                    className={cn(
+                      'absolute inset-0 bg-blue-50 dark:bg-slate-50 rounded-full ',
+                    )}
+                  />
+                )}
+
+                <span
+                  className={`relative block  ${activeTab === tab ? 'text-black' : 'text-slate-50'}`}
+                >
+                  {tab.charAt(0).toUpperCase() + tab.slice(1)}
+                </span>
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {activeTab === 'overview' && (
+          <div className="space-y-8">
+            <ProfileOverview />
+            <GitHubStats />
+          </div>
+        )}
+
+        {activeTab === 'repositories' && (
+          <div>
+            <div className="flex justify-between items-center mb-6">
+              <h3 className="text-2xl font-bold text-gray-800 dark:text-white">
+                Latest Repositories
+              </h3>
               <a
-                href={profile.html_url}
+                href={`https://github.com/${username}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block mt-6 px-6 py-2 rounded-full bg-gradient-to-r from-blue-500 to-pink-500 text-white font-bold shadow-lg hover:scale-105 hover:shadow-xl transition-all text-lg"
+                className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 font-medium flex items-center gap-2"
               >
-                View on GitHub
+                View All <FaExternalLinkAlt className="w-4 h-4" />
               </a>
             </div>
-            {/* Doughnut chart */}
-            {languages.length > 0 && (
-              <div className="flex flex-col items-center gap-2">
-                <DoughnutChart />
-                <div className="flex flex-wrap gap-2 mt-2 justify-center">
-                  {languages.map((lang) => (
-                    <span
-                      key={lang}
-                      className="flex items-center gap-1 text-xs text-white/80"
-                    >
-                      <FaCircle style={{ color: getLangColor(lang) }} /> {lang}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            )}
-          </motion.div>
-
-          {/* Repo grid */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease: 'easeOut', delay: 0.2 }}
-            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8"
-          >
-            {topRepos.map((repo) => (
-              <motion.div
-                whileHover={{ scale: 1.04, y: -4 }}
-                key={repo.id}
-                className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl shadow-xl p-6 flex flex-col gap-3 transition-all hover:shadow-2xl hover:bg-white/20"
-              >
-                <div className="flex items-center gap-2 mb-1">
-                  <FaGithub className="text-gray-300" />
-                  <a
-                    href={repo.html_url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="font-bold text-lg text-white hover:underline"
-                  >
-                    {repo.name}
-                  </a>
-                </div>
-                <div className="text-gray-200 text-sm mb-2 min-h-[40px]">
-                  {repo.description || (
-                    <span className="italic text-gray-400">No description</span>
-                  )}
-                </div>
-                <div className="flex flex-wrap gap-3 mt-auto text-xs text-white/80">
-                  {repo.language && (
-                    <span className="flex items-center gap-1 px-2 py-1 rounded-full bg-white/20">
-                      <FaCircle
-                        style={{ color: getLangColor(repo.language) }}
-                      />
-                      {repo.language}
-                    </span>
-                  )}
-                  <span className="flex items-center gap-1 px-2 py-1 rounded-full bg-white/20">
-                    <FaStar className="text-yellow-300" />{' '}
-                    {repo.stargazers_count}
-                  </span>
-                  <span className="flex items-center gap-1 px-2 py-1 rounded-full bg-white/20">
-                    <FaCodeBranch className="text-blue-300" />{' '}
-                    {repo.forks_count}
-                  </span>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </>
-      ) : null}
-    </section>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {repositories.map((repo) => (
+                <RepositoryCard key={repo.name} repo={repo} />
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+    </Section>
   );
-}
+};
+
+export default GitHubSection;

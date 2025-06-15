@@ -10,6 +10,7 @@ import AOSWrapper from '@/components/aos-wrapper';
 import { Projects } from '@/components/projects';
 import { Timeline } from '@/components/ui/timeline';
 import { timelineData } from '@/config/timeline';
+import GithubSection from '@/components/ui/github-section';
 export default function Home() {
   return (
     <React.Fragment>
@@ -21,6 +22,7 @@ export default function Home() {
       </AOSWrapper>
 
       <Experiences />
+      <GithubSection />
       <AOSWrapper animationType="zoom-in-up">
         <Testimonails />
       </AOSWrapper>
