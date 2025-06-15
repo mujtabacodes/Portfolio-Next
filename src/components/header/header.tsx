@@ -91,7 +91,7 @@ export function Header() {
         className="flex justify-center items-center w-full md:w-[45%] lg:w-[40%] min-h-[30vh] design3d"
         data-aos="fade-up-left"
       >
-        <Design3D />
+        {/* <Design3D /> */}
         <SocialLinks layout="col" className="hidden md:block" />
       </div>
     </Section>
