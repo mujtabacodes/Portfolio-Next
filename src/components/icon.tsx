@@ -33,7 +33,7 @@ const Icon = ({ iconOf, url, className }: TIcon) => {
   const getBackgroundColor = () => {
     switch (iconOf) {
       case 'linkedIn':
-        return 'bg-blue-600 hover:ring-blue-300/60'; // LinkedIn blue
+        return 'bg-[#0072b1] hover:ring-[#0073b19a]'; // LinkedIn blue
       case 'gitHub':
         return 'bg-gray-800 hover:ring-gray-600/60'; // GitHub dark
       case 'documentation':
