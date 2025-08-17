@@ -12,7 +12,7 @@ export function ContactUs() {
       <Heading className="text-center mb-4">Lets Work together</Heading>
       <Row className="gap-2 flex-col md:flex-row items-center justify-center">
         <Button variant="outlineStyled" size="lg" data-aos="zoom-out-right">
-          <Link href="https://calendly.com/mujtaba-shafique" target="_blank">
+          <Link href="https://calendly.com/mujtabacodes/30min" target="_blank">
             <ButtonText>Schedule 1:1 meeting</ButtonText>
           </Link>
         </Button>
