@@ -13,7 +13,7 @@ import { timelineData } from '@/config/timeline';
 import GithubSection from '@/components/ui/github-section';
 export default function Home() {
   return (
-    <React.Fragment>
+    <div className="mx-3">
       <Nav />
       <Header />
       <AOSWrapper animationType="zoom-in-up">
@@ -28,6 +28,6 @@ export default function Home() {
       </AOSWrapper>
 
       <Footer />
-    </React.Fragment>
+    </div>
   );
 }

@@ -339,7 +339,7 @@ const GitHubSection = () => {
 
   return (
     <Section id="github" className="py-16 ">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
         <SectionHeader
           Icon={<FaGithub className="w-10 h-10" />}
           heading="GitHub Portfolio"
